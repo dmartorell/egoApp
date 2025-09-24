@@ -20,7 +20,9 @@
       "Bash(yarn list:*)",
       "Bash(npx prettier:*)",
       "Bash(npx eslint:*)",
-      "Bash(yarn format)"
+      "Bash(yarn format)",
+      "Bash(gh:*)",
+      "Bash(git remote add:*)"
     ],
     "deny": [],
     "ask": []

@@ -8,76 +8,108 @@ EgoApp is a web application designed to analyze journalistic texts and suggest s
 
 ## Project Structure
 
+This is a **Turborepo monorepo** with three main packages:
+
+- **@egoapp/backend** - Fastify API server
+- **@egoapp/frontend** - React + Vite application
+- **@egoapp/shared** - Shared types and utilities
+
+> Use the `/prime` command to see the current project structure and files.
+
+## Development Status
+
+> See `docs/mvp_task_manager.md` for current development phases, tasks, and progress tracking.
+
+## Technology Stack & Architecture
+
+### Core Architecture Decisions
+
+- **Monorepo**: Turborepo + Yarn workspaces for unified development
+- **Type Safety**: TypeScript across all packages with shared types
+- **Frontend**: React 18 + Vite for modern development experience
+- **Backend**: Fastify for high-performance API server
+- **AI Integration**: Anthropic Claude SDK for text analysis
+- **Database Strategy**: PostgreSQL for user data + SQLite for journalism rules
+- **Testing**: Package-specific testing (Jest for backend, Vitest for frontend)
+
+### Package Structure
+
+- **Backend**: API server, AI integration, business logic
+- **Frontend**: User interface, Monaco editor, real-time analysis
+- **Shared**: Types, interfaces, and shared utilities
+
+### Infrastructure Strategy
+
+- **Deployment**: Serverless-first (Vercel for frontend, Railway/Render for backend)
+- **Monitoring**: Sentry for error tracking and performance
+- **Caching**: Aggressive AI response caching to manage costs
+
+## Development Workflow
+
+### Available Scripts
+
+**Root level commands:**
+
+```bash
+yarn dev          # Start all packages in development mode
+yarn build        # Build all packages
+yarn lint         # Lint all packages
+yarn lint:fix     # Fix linting issues
+yarn type-check   # Run TypeScript checks
+yarn test         # Run all tests
+yarn clean        # Clean build artifacts
+yarn format       # Format code with Prettier
+yarn quality      # Run all quality checks (lint + type-check + format)
+yarn quality:fix  # Fix all quality issues
 ```
-egoApp/
-├── assets/                 # Static resources and reference materials
-│   └── manual-de-estilo-de-el-pais.pdf
-├── logs/                   # Application logs
-├── mvp_plan_egoApp.md     # Detailed MVP development plan
-└── mvp_plan_egoApp_v2.md  # Updated MVP plan with examples
+
+**Package-specific commands:**
+
+```bash
+# Backend development
+cd packages/backend
+yarn dev          # Start backend with hot reload
+yarn build        # Build backend
+yarn start        # Start production build
+
+# Frontend development
+cd packages/frontend
+yarn dev          # Start frontend dev server
+yarn build        # Build frontend for production
+yarn preview      # Preview production build
+
+# Shared package
+cd packages/shared
+yarn dev          # Watch and build shared types
+yarn build        # Build shared package
 ```
 
-## Development Phases
+### Development Setup
 
-The project follows a structured 8-10 week MVP development plan:
+1. **Install dependencies**: `yarn install`
+2. **Start development**: `yarn dev` (starts all packages)
+3. **Run quality checks**: `yarn quality`
+4. **Run tests**: `yarn test`
 
-1. **Phase 1 (Weeks 1-3)**: Research and Knowledge Base
-   - Extract ~20 high-impact style rules from authoritative sources
-   - Create SQLite database with rules, examples, and justifications
+### Package Dependencies
 
-2. **Phase 2 (Week 4)**: Technical Architecture Setup
-   - Frontend: React 18 + TypeScript + Monaco Editor + Tailwind CSS + shadcn/ui
-   - Backend: Node.js with Express/Fastify
-   - Database: PostgreSQL for production, SQLite for rules
-   - AI/NLP: Claude SDK, natural.js, compromise.js
+- **Backend** depends on **Shared** for types
+- **Frontend** will depend on **Shared** for types
+- All packages use shared ESLint and TypeScript configurations
 
-3. **Phase 3 (Weeks 5-8)**: Core MVP Development
-   - API endpoints for text analysis
-   - Integration with AI for style suggestions
-   - Real-time highlighting editor interface
+## Core Product Features
 
-4. **Phase 4 (Weeks 9-10)**: Testing and Optimization
+**Primary Goal**: Analyze journalistic texts and suggest style improvements using AI and established journalism guidelines.
 
-## Technology Stack
+**Key Features**:
 
-### Frontend
+- Real-time text analysis with Monaco editor integration
+- Categorized suggestions based on journalism best practices
+- Authoritative citations from established style guides
+- Support for different text types (news, reports, chronicles)
+- Performance metrics and readability scoring
 
-- React 18 with TypeScript
-- Monaco Editor (VS Code editor)
-- Tailwind CSS + shadcn/ui
-- Zustand for state management
-
-### Backend
-
-- Node.js with Express or Fastify
-- PostgreSQL (production) + Redis (cache)
-- Claude SDK for AI analysis
-- natural.js and compromise.js for NLP
-
-### Infrastructure
-
-- Frontend: Vercel
-- Backend: Railway, Render, or Heroku
-- Monitoring: Sentry
-
-## Core Features
-
-1. **Text Editor** with real-time highlighting
-2. **Suggestions Panel** categorized by type
-3. **Contextual Explanations** with authoritative citations
-4. **Readability Metrics** specific to journalism
-5. **Text Type Support**: News articles, reports, chronicles
-
-## Style Rules Focus
-
-The MVP implements at least 20 journalism-specific rules including:
-
-- Paragraph length (>4 sentences flagged)
-- Sentence complexity (>25 words)
-- Passive voice usage
-- Lead effectiveness
-- Inverted pyramid structure (for news)
-- Transition quality between paragraphs
+> Detailed feature specifications and current implementation status are in `docs/mvp_task_manager.md`
 
 ## Key References
 
@@ -91,30 +123,77 @@ The project bases its style analysis on:
 
 ## Development Guidelines
 
-When implementing features:
+### Implementation Priorities
 
-1. Prioritize the 20 core style rules defined in the research phase
-2. Focus on journalism-specific writing patterns
-3. Ensure suggestions include authoritative citations
-4. Maintain separate analysis paths for different text types (news, reports, chronicles)
-5. Cache AI responses aggressively to manage API costs
+1. **Journalism Focus**: Prioritize the 20 core style rules defined in the research phase
+2. **Text Type Awareness**: Maintain separate analysis paths for different text types (news, reports, chronicles)
+3. **Authoritative Sources**: Ensure suggestions include citations from established journalism guides
+4. **Performance**: Cache AI responses aggressively to manage API costs
+5. **Type Safety**: Use shared types from `@egoapp/shared` across frontend and backend
+
+### Monorepo Guidelines
+
+1. **Package Organization**: Keep functionality in appropriate packages (UI in frontend, API in backend, types in shared)
+2. **Dependency Management**: Only add dependencies where needed (avoid bloating shared package)
+3. **Build Order**: Backend and frontend depend on shared package being built first
+4. **Testing**: Write tests at the package level, integration tests at the root level
+5. **Documentation**: Update package.json descriptions and maintain README files for each package
 
 ## Code Style Guidelines
 
-- Use named exports with arrow functions: `export const functionName = () => {}` instead of `export default functionName`
-- Never use TypeScript non-null assertion operator (`!`)
-- Always use TypeScript for all JavaScript code
+This project follows comprehensive code style guidelines organized in separate files for reusability:
+
+### Style Guide References
+
+- **[General Principles](./.claude/styles/general.md)** - Core coding principles and organization
+- **[TypeScript Rules](./.claude/styles/typescript.md)** - TypeScript-specific guidelines and best practices
+- **[React/Frontend](./.claude/styles/react.md)** - Component patterns, hooks, and JSX guidelines
+- **[Node.js/Backend](./.claude/styles/nodejs.md)** - Server-side patterns and API design
+- **[Naming Conventions](./.claude/styles/naming.md)** - Variable, function, component, and file naming
+- **[Performance Guidelines](./.claude/styles/performance.md)** - Optimization strategies for frontend and backend
+- **[Testing Approach](./.claude/styles/testing.md)** - Testing philosophy and best practices
+- **[Git Guidelines](./.claude/styles/git.md)** - Version control best practices and commit standards
+
+**Note:** All detailed style rules are in the referenced files above. This keeps the main CLAUDE.md focused on project-specific guidance while maintaining reusable, modular style guidelines.
 
 ## API Structure
 
-Core endpoints to implement:
+The backend package (`@egoapp/backend`) will expose the following REST API endpoints:
 
-- `POST /api/analyze` - Analyze text
-- `GET /api/rules` - Get available rules
-- `POST /api/suggestions` - Generate suggestions
+### Core Analysis Endpoints
+
+- `POST /api/analyze` - Analyze journalistic text and return suggestions
+- `GET /api/rules` - Get available style rules and categories
+- `POST /api/suggestions` - Generate AI-powered suggestions for text improvement
+
+### Health and Monitoring
+
+- `GET /health` - Health check endpoint
+- `GET /api/metrics` - API usage metrics
+
+### Type Definitions
+
+All API request/response types are defined in the `@egoapp/shared` package and shared between frontend and backend for type safety.
 
 ## Performance Targets
 
 - Analyze 5,000-word text in <5 seconds
 - <3% false positive rate for basic detections
 - Support real-time analysis with debouncing
+
+## Claude Behavior Rules
+
+**CRITICAL: Claude must NEVER perform git operations without explicit user permission.**
+
+### Git Operation Policy
+
+- NEVER use `git add`, `git commit`, `git push`, or any modifying git commands without explicit user request
+- ALWAYS ask before any git operation: "Should I commit these changes?" or "Should I push to the repository?"
+- Show changes first using `git status` and `git diff` before any commits
+- Only informational git commands are allowed: `git status`, `git log`, `git diff`, `git branch` (for listing only)
+
+### Code Modification Policy
+
+- Feel free to create, modify, and edit code files as requested
+- Always ask before committing any changes to git
+- Follow the [Git Guidelines](./.claude/styles/git.md) when suggesting commit messages
