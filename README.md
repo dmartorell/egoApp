@@ -40,6 +40,7 @@ egoApp/
 ## 🚀 Tech Stack
 
 ### Frontend
+
 - **React 18** with TypeScript
 - **Monaco Editor** (VS Code editor component)
 - **Tailwind CSS** + **shadcn/ui** components
@@ -47,6 +48,7 @@ egoApp/
 - **Vite** for build tooling
 
 ### Backend
+
 - **Node.js** with **Fastify** framework
 - **PostgreSQL** for user data and analytics
 - **SQLite** for style rules database
@@ -54,6 +56,7 @@ egoApp/
 - **Redis** for caching (production)
 
 ### Development
+
 - **Turbo** monorepo management
 - **TypeScript** throughout the stack
 - **ESLint** + **Prettier** for code quality
@@ -71,8 +74,8 @@ See [MVP Task Manager](docs/mvp_task_manager.md) for detailed development roadma
 
 ### Prerequisites
 
-- Node.js 18+
-- npm 9+
+- Node.js 20+
+- Yarn 1.22+
 - Git
 
 ### Installation
@@ -83,29 +86,29 @@ git clone https://github.com/your-username/egoapp.git
 cd egoapp
 
 # Install dependencies
-npm install
+yarn install
 
 # Setup pre-commit hooks
-npm run prepare
+yarn prepare
 ```
 
 ### Development
 
 ```bash
 # Start all development servers
-npm run dev
+yarn dev
 
 # Build all packages
-npm run build
+yarn build
 
 # Run tests
-npm run test
+yarn test
 
 # Lint code
-npm run lint
+yarn lint
 
 # Format code
-npm run format
+yarn format
 ```
 
 ## 📊 Core Features Implementation
@@ -121,7 +124,7 @@ npm run format
 7. **Inverted Pyramid** - Information hierarchy validation
 8. **Transition Quality** - Paragraph connectivity analysis
 
-*And 12 additional journalism-specific rules...*
+_And 12 additional journalism-specific rules..._
 
 ### Text Analysis Pipeline
 

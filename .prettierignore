@@ -1,11 +1,79 @@
-node_modules
-dist
-build
-.next
-.turbo
-coverage
-*.min.js
-*.min.css
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Build outputs
+dist/
+build/
+out/
+.next/
+.nuxt/
+.turbo/
+
+# Coverage and testing
+coverage/
+.coverage/
+.nyc_output/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Cache directories
+.cache/
+.eslintcache
+.stylelintcache
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Package files
 package-lock.json
 yarn.lock
 pnpm-lock.yaml
+
+# Auto-generated files
+*.min.js
+*.min.css
+*.bundle.js
+*.bundle.css
+
+# Documentation
+CHANGELOG.md
+CHANGELOG.html
+
+# Config files that shouldn't be formatted
+.gitignore
+.eslintignore
+.prettierignore
+
+# Binary and media files
+*.png
+*.jpg
+*.jpeg
+*.gif
+*.svg
+*.ico
+*.pdf
+*.woff
+*.woff2
+*.ttf
+*.eot

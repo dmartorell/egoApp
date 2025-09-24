@@ -41,18 +41,21 @@ The project follows a structured 8-10 week MVP development plan:
 ## Technology Stack
 
 ### Frontend
+
 - React 18 with TypeScript
 - Monaco Editor (VS Code editor)
 - Tailwind CSS + shadcn/ui
 - Zustand for state management
 
 ### Backend
+
 - Node.js with Express or Fastify
 - PostgreSQL (production) + Redis (cache)
 - Claude SDK for AI analysis
 - natural.js and compromise.js for NLP
 
 ### Infrastructure
+
 - Frontend: Vercel
 - Backend: Railway, Render, or Heroku
 - Monitoring: Sentry
@@ -68,6 +71,7 @@ The project follows a structured 8-10 week MVP development plan:
 ## Style Rules Focus
 
 The MVP implements at least 20 journalism-specific rules including:
+
 - Paragraph length (>4 sentences flagged)
 - Sentence complexity (>25 words)
 - Passive voice usage
@@ -78,6 +82,7 @@ The MVP implements at least 20 journalism-specific rules including:
 ## Key References
 
 The project bases its style analysis on:
+
 - Manual de estilo de El País
 - AP Stylebook
 - Fundéu (Fundación del Español Urgente)
@@ -87,6 +92,7 @@ The project bases its style analysis on:
 ## Development Guidelines
 
 When implementing features:
+
 1. Prioritize the 20 core style rules defined in the research phase
 2. Focus on journalism-specific writing patterns
 3. Ensure suggestions include authoritative citations
@@ -102,6 +108,7 @@ When implementing features:
 ## API Structure
 
 Core endpoints to implement:
+
 - `POST /api/analyze` - Analyze text
 - `GET /api/rules` - Get available rules
 - `POST /api/suggestions` - Generate suggestions

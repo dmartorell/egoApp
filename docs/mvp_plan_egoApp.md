@@ -13,6 +13,7 @@
 ## Fase 1: Investigación y Base de Conocimiento (2-3 semanas)
 
 ### Objetivos
+
 - Recopilar y digitalizar fuentes autoritativas
 - Extraer reglas de estilo específicas del periodismo
 - Crear base de datos de patrones y mejores prácticas
@@ -20,6 +21,7 @@
 ### Tareas específicas
 
 #### Semana 1: Recopilación de fuentes
+
 - [ ] **Manuales de estilo:**
   - Manual de estilo de El País
   - AP Stylebook (versión digital)
@@ -33,6 +35,7 @@
   - Papers sobre escritura clara y concisa
 
 #### Semana 2-3: Procesamiento y extracción
+
 - [ ] Digitalizar PDFs con OCR si es necesario
 - [ ] Crear base de datos estructurada con:
   - Reglas de estilo (ej: "evitar párrafos >50 palabras")
@@ -41,6 +44,7 @@
   - Categorías (claridad, concisión, estructura, etc.)
 
 ### Entregables
+
 - Base de datos SQLite con 100+ reglas categorizadas
 - Documentación de patrones identificados
 - Lista priorizada de reglas para MVP
@@ -52,20 +56,23 @@
 ### Stack tecnológico
 
 #### Frontend
+
 - **Framework:** React 18 con TypeScript
 - **Editor:** Monaco Editor (VS Code editor)
 - **UI:** Tailwind CSS + shadcn/ui
 - **Estado:** Zustand
 
 #### Backend
+
 - **API:** Node.js con Express/Fastify
 - **Base de datos:** PostgreSQL + Redis (cache)
-- **IA/NLP:** 
+- **IA/NLP:**
   - OpenAI GPT-4 API para análisis complejo
   - natural.js para análisis básico (longitud, complejidad)
   - readability-score para métricas de legibilidad
 
 #### Infraestructura
+
 - **Frontend:** Vercel
 - **Backend:** Railway, Render o Heroku
 - **Monitoreo:** Sentry
@@ -81,6 +88,7 @@
 ```
 
 ### Tareas
+
 - [ ] Setup repositorio con estructura monorepo
 - [ ] Configurar CI/CD pipeline
 - [ ] Setup base de datos y migraciones
@@ -92,7 +100,9 @@
 ## Fase 3: Desarrollo del Core MVP (4-5 semanas)
 
 ### Semana 1: Backend básico
+
 - [ ] **API endpoints fundamentales:**
+
   ```
   POST /api/analyze - Analizar texto
   GET /api/rules - Obtener reglas disponibles
@@ -100,18 +110,20 @@
   ```
 
 - [ ] **Modelos de datos:**
+
   ```sql
   -- Tabla de reglas
   rules (id, category, description, example, source)
-  
+
   -- Tabla de análisis
   analyses (id, text, suggestions, created_at)
-  
+
   -- Tabla de sugerencias
   suggestions (id, analysis_id, rule_id, position, original, suggested, reason)
   ```
 
 - [ ] **Librerías Node.js necesarias:**
+
   ```javascript
   // package.json dependencies
   express: "^4.18.0"
@@ -133,43 +145,47 @@
   - Palabras redundantes (natural.js stemmer)
 
 ### Semana 2: Integración con IA
+
 - [ ] **Prompt engineering para OpenAI:**
+
   ```
-  Actúa como editor de periodismo experto. 
+  Actúa como editor de periodismo experto.
   Analiza este texto y sugiere mejoras basándote en:
   - Principios de García Márquez sobre narrativa periodística
   - Manual de estilo de AP
   - Reglas de claridad y concisión
-  
+
   Formato de respuesta: JSON con posición, sugerencia y justificación
   ```
 
 - [ ] **Ejemplo de analizador básico en Node.js:**
+
   ```javascript
   // analyzers/basicAnalyzer.js
   const natural = require('natural');
   const readability = require('readability-score');
-  
+
   function analyzeBasicMetrics(text) {
     const sentences = text.split(/[.!?]+/);
     const paragraphs = text.split(/\n\s*\n/);
-    
+
     return {
       avgWordsPerSentence: calculateAverage(sentences),
       paragraphCount: paragraphs.length,
       passiveVoicePercentage: detectPassiveVoice(text),
-      readabilityScore: readability(text).flesch
+      readabilityScore: readability(text).flesch,
     };
   }
   ```
 
 - [ ] **Setup inicial del servidor:**
+
   ```javascript
   // server.js
   const express = require('express');
   const cors = require('cors');
   const helmet = require('helmet');
-  
+
   const app = express();
   app.use(helmet());
   app.use(cors());
@@ -177,6 +193,7 @@
   ```
 
 ### Semana 3: Frontend core
+
 - [ ] **Componentes principales:**
   - Editor de texto con Monaco
   - Panel lateral de sugerencias
@@ -190,12 +207,14 @@
   - Sugerencias aplicadas/rechazadas
 
 ### Semana 4: Integración y refinamiento
+
 - [ ] Conectar frontend con backend
 - [ ] Implementar highlighting en tiempo real
 - [ ] Sistema de aplicar/rechazar sugerencias
 - [ ] Manejo de errores y loading states
 
 ### Semana 5: Funcionalidades específicas
+
 - [ ] **Categorización de textos periodísticos:**
   - Noticia (estructura de pirámide invertida)
   - Reportaje (narrativa más libre)
@@ -211,12 +230,14 @@
 ## Fase 4: Testing y Optimización (1-2 semanas)
 
 ### Testing
+
 - [ ] **Unit tests** para analizadores
 - [ ] **Integration tests** para flujo completo
 - [ ] **E2E tests** con Playwright
 - [ ] **Performance tests** con textos largos
 
 ### Optimización
+
 - [ ] **Frontend:**
   - Lazy loading de componentes
   - Debouncing para análisis en tiempo real
@@ -228,6 +249,7 @@
   - Optimización de queries
 
 ### Validación con usuarios
+
 - [ ] Pruebas con 3-5 periodistas reales
 - [ ] Recopilar feedback sobre precisión
 - [ ] Ajustar sensibilidad de detecciones
@@ -238,6 +260,7 @@
 ## Funcionalidades del MVP
 
 ### Core Features ✅
+
 1. **Editor de texto** con highlighting en tiempo real
 2. **Panel de sugerencias** categorizadas por tipo
 3. **Explicaciones contextuales** con citas de autoridad
@@ -245,6 +268,7 @@
 5. **Tipos de texto** (noticia, reportaje, crónica)
 
 ### Reglas implementadas (mínimo 20)
+
 - ✅ Párrafos excesivamente largos (>4 oraciones)
 - ✅ Oraciones complejas (>25 palabras)
 - ✅ Uso excesivo de voz pasiva
@@ -257,6 +281,7 @@
 - ✅ Transiciones débiles entre párrafos
 
 ### Métricas mostradas
+
 - Índice de legibilidad
 - Promedio de palabras por oración
 - Porcentaje de voz pasiva
@@ -267,22 +292,23 @@
 
 ## Cronograma detallado
 
-| Semana | Fase | Tareas principales | Entregables |
-|--------|------|-------------------|-------------|
-| 1-2 | Investigación | Recopilar fuentes, extraer reglas | BD de reglas |
-| 3 | Setup | Arquitectura, infraestructura | Repo configurado |
-| 4 | Backend | API, modelos, analizadores básicos | API funcional |
-| 5 | IA Integration | OpenAI, prompts, cache | Análisis inteligente |
-| 6 | Frontend | Editor, componentes principales | UI básica |
-| 7 | Integración | Conectar F+B, highlighting | App funcional |
-| 8 | Features | Categorización, métricas específicas | MVP completo |
-| 9-10 | Testing | Tests, optimización, feedback | Producto listo |
+| Semana | Fase           | Tareas principales                   | Entregables          |
+| ------ | -------------- | ------------------------------------ | -------------------- |
+| 1-2    | Investigación  | Recopilar fuentes, extraer reglas    | BD de reglas         |
+| 3      | Setup          | Arquitectura, infraestructura        | Repo configurado     |
+| 4      | Backend        | API, modelos, analizadores básicos   | API funcional        |
+| 5      | IA Integration | OpenAI, prompts, cache               | Análisis inteligente |
+| 6      | Frontend       | Editor, componentes principales      | UI básica            |
+| 7      | Integración    | Conectar F+B, highlighting           | App funcional        |
+| 8      | Features       | Categorización, métricas específicas | MVP completo         |
+| 9-10   | Testing        | Tests, optimización, feedback        | Producto listo       |
 
 ---
 
 ## Presupuesto estimado
 
 ### Desarrollo (8-10 semanas)
+
 - Tiempo desarrollador: $4,000-6,000
 - Servicios cloud (Vercel, Railway/Heroku): $50-150/mes
 - OpenAI API: $200-500 (para testing y desarrollo)
@@ -295,16 +321,19 @@
 ## Métricas de éxito del MVP
 
 ### Técnicas
+
 - [ ] Analizar texto de 5,000 palabras en <5 segundos
 - [ ] 95% uptime
 - [ ] <3% false positives en detecciones básicas
 
 ### Usuario
+
 - [ ] 8/10 periodistas consideran sugerencias útiles
 - [ ] 70% de sugerencias son aplicadas
 - [ ] Tiempo promedio de uso >10 minutos por sesión
 
 ### Negocio
+
 - [ ] 100 usuarios registrados en primer mes
 - [ ] 20% de usuarios regresan en 7 días
 - [ ] 5 testimonios positivos de periodistas
@@ -314,11 +343,13 @@
 ## Riesgos y mitigaciones
 
 ### Riesgos técnicos
+
 - **OpenAI API costs:** Implementar cache agresivo y límites de uso
 - **Performance con textos largos:** Procesamiento en chunks
 - **False positives:** Validación constante con expertos
 
 ### Riesgos de producto
+
 - **Resistencia al cambio:** Focus en ser asistente, no reemplazo
 - **Competencia:** Diferenciación en especialización periodística
 - **Calidad de sugerencias:** Iteración constante con feedback real
@@ -328,6 +359,7 @@
 ## Próximos pasos después del MVP
 
 ### Funcionalidades avanzadas
+
 - Análisis de estructura narrativa
 - Sugerencias de titulares
 - Detección de sesgo
@@ -335,6 +367,7 @@
 - Integración con CMS periodísticos
 
 ### Escalabilidad
+
 - Modelo de suscripción
 - API para terceros
 - Versión enterprise para redacciones
@@ -351,6 +384,6 @@
 
 ---
 
-*Documento creado: [Fecha actual]*
-*Versión: 1.0*
-*Próxima revisión: Al finalizar cada fase*
+_Documento creado: [Fecha actual]_
+_Versión: 1.0_
+_Próxima revisión: Al finalizar cada fase_

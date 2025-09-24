@@ -8,7 +8,19 @@
       "Bash(ls:*)",
       "WebSearch",
       "Bash(~/.claude-code-docs/claude-docs-helper.sh:*)",
-      "Bash(git init:*)"
+      "Bash(git init:*)",
+      "Bash(yarn add:*)",
+      "Bash(yarn lint:*)",
+      "Bash(yarn remove:*)",
+      "Bash(cat:*)",
+      "Bash(yarn why:*)",
+      "Bash(xargs rm:*)",
+      "Bash(yarn install)",
+      "Bash(find:*)",
+      "Bash(yarn list:*)",
+      "Bash(npx prettier:*)",
+      "Bash(npx eslint:*)",
+      "Bash(yarn format)"
     ],
     "deny": [],
     "ask": []

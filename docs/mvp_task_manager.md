@@ -1,6 +1,7 @@
 # MVP General Task Manager - EgoApp Development Roadmap
 
 ## 📋 Project Overview
+
 **Product**: EgoApp - AI-powered journalism style editor
 **Timeline**: 8-10 weeks
 **Team**: 1 Full-stack Developer
@@ -9,21 +10,25 @@
 ---
 
 ## 🎯 PHASE 0: Project Initialization & Technical Decisions
+
 **Duration**: 2-3 days before Week 1
 **Status**: ⏳ Pending
 
 ### Repository Setup
+
 - [ ] Initialize Git repository with comprehensive .gitignore
 - [ ] Setup project structure
-- [ ] Configure branch protection rules (main, develop, feature/*)
+- [ ] Configure branch protection rules (main, develop, feature/\*)
 - [ ] Create GitHub Projects board for task tracking
 - [ ] Setup commit conventions (conventional commits)
 - [ ] Create initial README.md with project overview
 
 ### 🔄 DECISION POINT 1: Project Structure
+
 **Decision Required**: Choose repository architecture
 
 #### Option A: Monorepo ⭐ Recommended
+
 ```
 egoApp/
 ├── packages/
@@ -33,122 +38,149 @@ egoApp/
 ├── package.json
 └── turbo.json
 ```
+
 **Pros**: Shared dependencies, easier deployment coordination, single source of truth
 **Cons**: More complex initial setup, potential for larger repository
 **Tools**: Turborepo, Nx, or Lerna
 
 #### Option B: Separate Repositories
+
 ```
 egoApp-frontend/
 egoApp-backend/
 egoApp-shared/
 ```
+
 **Pros**: Independent deployment, cleaner separation, smaller repos
 **Cons**: Dependency management overhead, sync complexity
 
-**Your Choice**: [ ] Option A  [ ] Option B
+**Your Choice**: [ ] Option A [ ] Option B
 
 ### 🔄 DECISION POINT 2: Backend Framework
+
 **Decision Required**: Select Node.js framework
 
 #### Option A: Express.js
+
 ```javascript
 // Simple, minimal setup
 const express = require('express');
 const app = express();
 ```
+
 **Pros**: Minimal, flexible, huge ecosystem, lots of tutorials
 **Cons**: More boilerplate, manual structure needed
 **Best for**: Maximum flexibility and control
 
 #### Option B: Fastify ⭐ Recommended
+
 ```javascript
 // Performance-focused
 const fastify = require('fastify')({ logger: true });
 ```
+
 **Pros**: 2x faster than Express, built-in validation, TypeScript support
 **Cons**: Smaller ecosystem, different plugin system
 **Best for**: Performance-critical applications
 
 #### Option C: NestJS
+
 ```typescript
 // Enterprise-grade structure
 @Controller('analysis')
-export class AnalysisController { }
+export class AnalysisController {}
 ```
+
 **Pros**: Full TypeScript, structured architecture, built-in everything
 **Cons**: Steeper learning curve, more opinionated
 **Best for**: Large-scale applications
 
-**Your Choice**: [ ] Express  [ ] Fastify  [ ] NestJS
+**Your Choice**: [ ] Express [ ] Fastify [ ] NestJS
 
 ### 🔄 DECISION POINT 3: Database Strategy
+
 **Decision Required**: Database architecture
 
 #### Option A: PostgreSQL Only
+
 ```sql
 -- Single database for everything
 CREATE DATABASE egoapp;
 ```
+
 **Pros**: Simple architecture, single point of maintenance
 **Cons**: Rules mixed with user data
 
 #### Option B: PostgreSQL + SQLite ⭐ Recommended
+
 ```
 PostgreSQL: User data, analyses, sessions
 SQLite: Style rules (embedded, version-controlled)
 ```
+
 **Pros**: Rules portable and version-controlled, separation of concerns
 **Cons**: Two database systems to manage
 
 #### Option C: PostgreSQL + Redis
+
 ```
 PostgreSQL: All persistent data
 Redis: Cache, sessions, real-time data
 ```
+
 **Pros**: Best performance, scalable caching
 **Cons**: Additional infrastructure complexity
 
-**Your Choice**: [ ] PostgreSQL only  [ ] PostgreSQL + SQLite  [ ] PostgreSQL + Redis
+**Your Choice**: [ ] PostgreSQL only [ ] PostgreSQL + SQLite [ ] PostgreSQL + Redis
 
 ### 🔄 DECISION POINT 4: AI Integration Approach
+
 **Decision Required**: LLM integration strategy
 
 #### Option A: Direct Claude SDK ⭐ Recommended
+
 ```typescript
 import Anthropic from '@anthropic-ai/sdk';
 const claude = new Anthropic({ apiKey });
 ```
+
 **Pros**: Direct control, optimal for Claude-specific features
 **Cons**: Vendor lock-in
 
 #### Option B: LangChain Abstraction
+
 ```typescript
 import { ChatAnthropic } from 'langchain/chat_models';
 ```
+
 **Pros**: Provider agnostic, advanced chains
 **Cons**: Additional abstraction layer, overhead
 
 #### Option C: Hybrid with Fallback
+
 ```
 Primary: Claude for complex analysis
 Fallback: Local NLP for basic checks
 ```
+
 **Pros**: Cost optimization, offline capability
 **Cons**: Complex implementation
 
-**Your Choice**: [ ] Direct SDK  [ ] LangChain  [ ] Hybrid
+**Your Choice**: [ ] Direct SDK [ ] LangChain [ ] Hybrid
 
 ---
 
 ## 📚 PHASE 1: Research & Knowledge Base
+
 **Duration**: Weeks 1-3
 **Status**: ⏳ Pending
 
 ### Week 1: Source Material Collection
+
 **Objective**: Gather and digitize authoritative journalism resources
 
 #### Primary Sources
+
 - [ ] Extract rules from "Manual de estilo de El País" (PDF in assets/)
   - [ ] OCR processing if needed
   - [ ] Structured extraction of style guidelines
@@ -171,14 +203,17 @@ Fallback: Local NLP for basic checks
   - [ ] Genre-specific guidelines
 
 #### Deliverables
+
 - [ ] `research/sources.json` - Structured source material
 - [ ] `research/raw_rules.md` - Unprocessed rule compilation
 - [ ] `research/examples/` - Good and bad writing examples
 
 ### Week 2: Rule Extraction & Categorization
+
 **Objective**: Create core set of 20 high-impact rules
 
 #### Rule Structure Template
+
 ```json
 {
   "id": "RULE_001",
@@ -206,6 +241,7 @@ Fallback: Local NLP for basic checks
 ```
 
 #### Core Rules to Implement (Priority Order)
+
 1. [ ] **Paragraph Length** - Max 4 sentences for news
 2. [ ] **Sentence Complexity** - Max 25 words per sentence
 3. [ ] **Passive Voice** - Limit to <10% of text
@@ -228,9 +264,11 @@ Fallback: Local NLP for basic checks
 20. [ ] **Fact Density** - Information per paragraph
 
 ### Week 3: Database Schema & Prompt Engineering
+
 **Objective**: Design data structure and AI prompts
 
 #### Database Schema
+
 ```sql
 -- Rules table (SQLite)
 CREATE TABLE rules (
@@ -265,8 +303,10 @@ CREATE TABLE analyses (
 #### Prompt Engineering
 
 ##### System Prompt Template
+
 ```markdown
 You are an expert journalism editor with 20+ years of experience in Spanish-language media. Your expertise includes:
+
 - AP Stylebook and Manual de estilo de El País guidelines
 - Fundéu recommendations for Spanish language
 - García Márquez's principles of narrative journalism
@@ -275,12 +315,14 @@ You are an expert journalism editor with 20+ years of experience in Spanish-lang
 Your task is to analyze journalistic texts and provide specific, actionable improvement suggestions.
 
 Context:
+
 - Text Type: {text_type}
 - Target Audience: {audience}
 - Publication Style: {style_guide}
 ```
 
 ##### Analysis Prompt Template
+
 ```markdown
 Analyze the following {text_type} text for style improvements:
 
@@ -289,6 +331,7 @@ Analyze the following {text_type} text for style improvements:
 """
 
 Focus on these aspects:
+
 1. Structure and flow (paragraph length, transitions)
 2. Clarity and conciseness (wordiness, passive voice)
 3. Journalistic standards (attribution, objectivity)
@@ -296,29 +339,31 @@ Focus on these aspects:
 
 Provide suggestions in this JSON format:
 {
-  "suggestions": [
-    {
-      "type": "category",
-      "severity": "error|warning|suggestion",
-      "position": {"start": 0, "end": 10},
-      "issue": "description",
-      "suggestion": "improvement",
-      "explanation": "why this matters",
-      "source": "authoritative reference"
-    }
-  ],
-  "metrics": {
-    "readability_score": 0-100,
-    "clarity_score": 0-100,
-    "structure_score": 0-100
-  }
+"suggestions": [
+{
+"type": "category",
+"severity": "error|warning|suggestion",
+"position": {"start": 0, "end": 10},
+"issue": "description",
+"suggestion": "improvement",
+"explanation": "why this matters",
+"source": "authoritative reference"
+}
+],
+"metrics": {
+"readability_score": 0-100,
+"clarity_score": 0-100,
+"structure_score": 0-100
+}
 }
 ```
 
 ### 🔄 DECISION POINT 5: Rule Categories
+
 **Decision Required**: How to organize style rules
 
 #### Option A: Technical Categories
+
 - Grammar & Spelling
 - Syntax & Structure
 - Style & Tone
@@ -326,6 +371,7 @@ Provide suggestions in this JSON format:
 - Clarity & Conciseness
 
 #### Option B: Journalism-Specific ⭐ Recommended
+
 - Lead & Headlines
 - Story Structure
 - Attribution & Sources
@@ -333,6 +379,7 @@ Provide suggestions in this JSON format:
 - Clarity & Accessibility
 
 #### Option C: Hybrid Two-Level
+
 ```
 Main Category > Subcategory
 - Writing Quality > Grammar, Clarity, Conciseness
@@ -340,15 +387,17 @@ Main Category > Subcategory
 - Technical > Formatting, Consistency, Style
 ```
 
-**Your Choice**: [ ] Technical  [ ] Journalism  [ ] Hybrid
+**Your Choice**: [ ] Technical [ ] Journalism [ ] Hybrid
 
 ---
 
 ## 🏗️ PHASE 2: Technical Architecture Setup
+
 **Duration**: Week 4
 **Status**: ⏳ Pending
 
 ### Environment Setup
+
 - [ ] Create `.env.example` with all required variables
 - [ ] Setup development environment script
 - [ ] Configure ESLint and Prettier
@@ -356,6 +405,7 @@ Main Category > Subcategory
 - [ ] Create Docker configuration (optional)
 
 #### Environment Variables
+
 ```env
 # API Keys
 ANTHROPIC_API_KEY=
@@ -385,6 +435,7 @@ CHUNK_SIZE=2000
 ```
 
 ### CI/CD Pipeline Configuration
+
 - [ ] GitHub Actions workflow for testing
 - [ ] Build and deploy pipelines
 - [ ] Automated dependency updates (Dependabot)
@@ -392,6 +443,7 @@ CHUNK_SIZE=2000
 - [ ] Security scanning (npm audit)
 
 #### `.github/workflows/ci.yml`
+
 ```yaml
 name: CI
 on: [push, pull_request]
@@ -410,50 +462,59 @@ jobs:
 ```
 
 ### 🔄 DECISION POINT 6: Deployment Strategy
+
 **Decision Required**: Infrastructure approach
 
 #### Option A: Serverless ⭐ Recommended for MVP
+
 ```
 Frontend: Vercel (automatic from GitHub)
 Backend: Vercel Functions
 Database: Supabase (PostgreSQL)
 Cache: Upstash (Redis)
 ```
+
 **Monthly Cost**: ~$20-50
 **Pros**: Zero-config, auto-scaling, generous free tiers
 **Cons**: Vendor lock-in, cold starts
 
 #### Option B: Container-based
+
 ```
 Frontend: Vercel/Netlify
 Backend: Railway/Render/Fly.io
 Database: Railway PostgreSQL
 Cache: Railway Redis
 ```
+
 **Monthly Cost**: ~$25-60
 **Pros**: More control, consistent performance
 **Cons**: Manual scaling, more configuration
 
 #### Option C: VPS
+
 ```
 Single VPS: DigitalOcean/Linode ($20/month)
 Stack: Docker Compose with Nginx, Node, PostgreSQL, Redis
 ```
+
 **Monthly Cost**: $20-40
 **Pros**: Full control, cost-effective
 **Cons**: Manual everything, maintenance overhead
 
-**Your Choice**: [ ] Serverless  [ ] Container  [ ] VPS
+**Your Choice**: [ ] Serverless [ ] Container [ ] VPS
 
 ---
 
 ## 💻 PHASE 3: Core Development
+
 **Duration**: Weeks 5-8
 **Status**: ⏳ Pending
 
 ### Week 5: Backend Foundation
 
 #### API Structure
+
 ```
 backend/
 ├── src/
@@ -487,6 +548,7 @@ backend/
 ```
 
 #### Core Tasks
+
 - [ ] Setup Express/Fastify server with TypeScript
 - [ ] Configure middleware stack (CORS, helmet, compression)
 - [ ] Implement error handling and logging (Winston/Pino)
@@ -498,6 +560,7 @@ backend/
 #### API Endpoints
 
 ##### 1. Text Analysis
+
 ```typescript
 POST /api/v1/analyze
 Request:
@@ -538,6 +601,7 @@ Response:
 ```
 
 ##### 2. Rules Management
+
 ```typescript
 GET /api/v1/rules
 Response:
@@ -558,6 +622,7 @@ PUT /api/v1/rules/:id/toggle
 ```
 
 ##### 3. Metrics & Analytics
+
 ```typescript
 GET /api/v1/metrics/:analysisId
 POST /api/v1/metrics/compare
@@ -566,6 +631,7 @@ POST /api/v1/metrics/compare
 ### Week 6: AI Integration & Analysis Engine
 
 #### Claude Integration Service
+
 ```typescript
 // services/ai.service.ts
 export class AIService {
@@ -596,6 +662,7 @@ export class AIService {
 ```
 
 #### Text Processing Pipeline
+
 1. [ ] Text normalization and cleaning
 2. [ ] Sentence and paragraph segmentation
 3. [ ] Basic NLP analysis (natural.js)
@@ -606,6 +673,7 @@ export class AIService {
 8. [ ] Response formatting
 
 #### Caching Strategy
+
 - [ ] Implement Redis caching with TTL
 - [ ] Cache key generation based on text hash
 - [ ] Partial cache for text chunks
@@ -615,6 +683,7 @@ export class AIService {
 ### Week 7: Frontend Core
 
 #### Component Structure
+
 ```
 frontend/
 ├── src/
@@ -653,6 +722,7 @@ frontend/
 #### Core Components
 
 ##### Monaco Editor Integration
+
 ```typescript
 // components/Editor/MonacoEditor.tsx
 export const MonacoEditor: React.FC = () => {
@@ -682,6 +752,7 @@ export const MonacoEditor: React.FC = () => {
 ```
 
 ##### Suggestion Application System
+
 ```typescript
 // hooks/useAnalysis.ts
 export const useAnalysis = () => {
@@ -704,6 +775,7 @@ export const useAnalysis = () => {
 ```
 
 #### UI/UX Features
+
 - [ ] Real-time text highlighting with Monaco markers
 - [ ] Suggestion cards with apply/reject buttons
 - [ ] Metrics dashboard with gauges and charts
@@ -715,6 +787,7 @@ export const useAnalysis = () => {
 ### Week 8: Integration & Polish
 
 #### Integration Tasks
+
 - [ ] Connect frontend to backend API
 - [ ] Implement real-time analysis with debouncing
 - [ ] Add WebSocket support for live updates (optional)
@@ -723,6 +796,7 @@ export const useAnalysis = () => {
 - [ ] Offline mode with localStorage
 
 #### Performance Optimizations
+
 - [ ] Code splitting with React.lazy
 - [ ] Monaco Editor lazy loading
 - [ ] Virtual scrolling for long suggestion lists
@@ -731,6 +805,7 @@ export const useAnalysis = () => {
 - [ ] Service worker for caching (optional)
 
 #### Feature Completion
+
 - [ ] Suggestion filtering by category/severity
 - [ ] Bulk apply/reject suggestions
 - [ ] Undo/redo functionality
@@ -740,48 +815,56 @@ export const useAnalysis = () => {
 - [ ] Onboarding tour
 
 ### 🔄 DECISION POINT 7: Authentication Strategy
+
 **Decision Required**: User management approach
 
 #### Option A: No Authentication (MVP) ⭐ Recommended
+
 - Public tool with IP-based rate limiting
 - LocalStorage for user preferences
 - Anonymous usage analytics
 
 #### Option B: Basic Authentication
+
 ```typescript
 // Email/password with JWT
-POST /auth/register
-POST /auth/login
-POST /auth/refresh
+POST / auth / register;
+POST / auth / login;
+POST / auth / refresh;
 ```
+
 - User accounts with saved analyses
 - Subscription tiers (future)
 
 #### Option C: Social Authentication
+
 ```typescript
 // OAuth providers
-GET /auth/google
-GET /auth/github
+GET / auth / google;
+GET / auth / github;
 ```
+
 - Easier onboarding
 - Social features potential
 
-**Your Choice**: [ ] None  [ ] Basic  [ ] Social
+**Your Choice**: [ ] None [ ] Basic [ ] Social
 
 ---
 
 ## 🧪 PHASE 4: Testing & Optimization
+
 **Duration**: Weeks 9-10
 **Status**: ⏳ Pending
 
 ### Week 9: Testing Suite
 
 #### Unit Tests
+
 ```typescript
 // tests/services/analysis.test.ts
 describe('AnalysisService', () => {
   test('detects passive voice correctly', () => {
-    const text = "El documento fue revisado por el editor";
+    const text = 'El documento fue revisado por el editor';
     const results = analyzePassiveVoice(text);
     expect(results).toHaveLength(1);
     expect(results[0].type).toBe('passive_voice');
@@ -790,18 +873,21 @@ describe('AnalysisService', () => {
 ```
 
 Test Coverage Targets:
+
 - [ ] Services: 80%+ coverage
 - [ ] API endpoints: 90%+ coverage
 - [ ] Utility functions: 100% coverage
 - [ ] React components: 70%+ coverage
 
 #### Integration Tests
+
 - [ ] API endpoint integration tests
 - [ ] Database operations
 - [ ] Cache layer functionality
 - [ ] Claude API integration (mocked)
 
 #### E2E Tests
+
 ```typescript
 // tests/e2e/analysis.e2e.ts
 test('complete analysis flow', async () => {
@@ -814,6 +900,7 @@ test('complete analysis flow', async () => {
 ```
 
 #### Performance Tests
+
 - [ ] Load testing with k6/Artillery
   - Target: 100 concurrent users
   - Response time: <5s for 5000 words
@@ -824,6 +911,7 @@ test('complete analysis flow', async () => {
 ### Week 10: User Validation & Launch
 
 #### Beta Testing Protocol
+
 1. [ ] Recruit 5-10 journalists for testing
 2. [ ] Provide test scenarios and tasks
 3. [ ] Collect structured feedback via forms
@@ -831,36 +919,43 @@ test('complete analysis flow', async () => {
 5. [ ] A/B testing for UI variants
 
 #### Feedback Collection Template
+
 ```markdown
 ## Beta Test Feedback Form
 
 ### Accuracy (1-10)
+
 - How accurate were the suggestions?
 - Were there many false positives?
 - Did it miss important issues?
 
 ### Usability (1-10)
+
 - How intuitive was the interface?
 - Was the suggestion panel helpful?
 - Could you easily apply/reject changes?
 
 ### Performance (1-10)
+
 - How fast was the analysis?
 - Any lag or freezing?
 - Loading time acceptable?
 
 ### Value (1-10)
+
 - Would you use this tool regularly?
 - What's missing for daily use?
 - Worth paying for?
 
 ### Open Feedback
+
 - Most liked feature:
 - Most frustrating aspect:
 - Feature requests:
 ```
 
 #### Launch Preparation
+
 - [ ] Production environment setup
 - [ ] SSL certificates configuration
 - [ ] Domain setup and DNS
@@ -875,30 +970,33 @@ test('complete analysis flow', async () => {
 ## 📊 Success Metrics & KPIs
 
 ### Technical Metrics
-| Metric | Target | Measurement |
-|--------|--------|-------------|
-| Response Time | <5s for 5000 words | API monitoring |
-| Error Rate | <1% | Error tracking |
-| Uptime | >99% | Status page |
-| Cache Hit Rate | >60% | Redis metrics |
-| API Latency p95 | <500ms | APM tools |
+
+| Metric          | Target             | Measurement    |
+| --------------- | ------------------ | -------------- |
+| Response Time   | <5s for 5000 words | API monitoring |
+| Error Rate      | <1%                | Error tracking |
+| Uptime          | >99%               | Status page    |
+| Cache Hit Rate  | >60%               | Redis metrics  |
+| API Latency p95 | <500ms             | APM tools      |
 
 ### User Metrics
-| Metric | Target | Measurement |
-|--------|--------|-------------|
-| User Satisfaction | >8/10 | Surveys |
-| Suggestion Acceptance | >40% | Event tracking |
-| Daily Active Users | 50+ | Analytics |
-| Session Duration | >10 min | Analytics |
-| Return Rate (7 days) | >20% | Cohort analysis |
+
+| Metric                | Target  | Measurement     |
+| --------------------- | ------- | --------------- |
+| User Satisfaction     | >8/10   | Surveys         |
+| Suggestion Acceptance | >40%    | Event tracking  |
+| Daily Active Users    | 50+     | Analytics       |
+| Session Duration      | >10 min | Analytics       |
+| Return Rate (7 days)  | >20%    | Cohort analysis |
 
 ### Business Metrics
-| Metric | Target | Measurement |
-|--------|--------|-------------|
-| Registered Users | 100 in month 1 | Database |
+
+| Metric           | Target               | Measurement    |
+| ---------------- | -------------------- | -------------- |
+| Registered Users | 100 in month 1       | Database       |
 | Feature Adoption | 60% use all features | Event tracking |
-| Support Tickets | <5 per week | Help desk |
-| Cost per User | <$0.50 | Cloud bills |
+| Support Tickets  | <5 per week          | Help desk      |
+| Cost per User    | <$0.50               | Cloud bills    |
 
 ---
 
@@ -907,8 +1005,10 @@ test('complete analysis flow', async () => {
 ### Critical Risks & Mitigations
 
 #### 1. Claude API Costs
+
 **Risk**: Costs exceed budget with user growth
 **Mitigation**:
+
 - Aggressive caching (24-hour TTL)
 - Text chunking optimization
 - Implement usage quotas
@@ -916,8 +1016,10 @@ test('complete analysis flow', async () => {
 - Freemium model with limits
 
 #### 2. Performance Issues
+
 **Risk**: Slow analysis for long texts
 **Mitigation**:
+
 - Background job queue (Bull/BullMQ)
 - Progressive analysis (analyze as you type)
 - WebWorker for heavy processing
@@ -925,8 +1027,10 @@ test('complete analysis flow', async () => {
 - Database indexing optimization
 
 #### 3. High False Positive Rate
+
 **Risk**: Too many incorrect suggestions
 **Mitigation**:
+
 - Confidence scoring threshold
 - User feedback loop
 - Rule refinement based on data
@@ -934,8 +1038,10 @@ test('complete analysis flow', async () => {
 - A/B testing different prompts
 
 #### 4. Low User Adoption
+
 **Risk**: Journalists don't find value
 **Mitigation**:
+
 - Close beta feedback loop
 - Feature prioritization based on feedback
 - Better onboarding experience
@@ -947,6 +1053,7 @@ test('complete analysis flow', async () => {
 ## 🚀 Post-MVP Roadmap
 
 ### Phase 5: Enhancement (Weeks 11-12)
+
 - [ ] Advanced metrics dashboard
 - [ ] Custom style guide creation
 - [ ] Team collaboration features
@@ -955,6 +1062,7 @@ test('complete analysis flow', async () => {
 - [ ] Browser extension
 
 ### Phase 6: Scale (Months 3-4)
+
 - [ ] Multi-language support (English, Portuguese)
 - [ ] AI model fine-tuning
 - [ ] Enterprise features (SSO, audit logs)
@@ -963,6 +1071,7 @@ test('complete analysis flow', async () => {
 - [ ] Offline mode with local AI
 
 ### Phase 7: Monetization (Month 5+)
+
 - [ ] Subscription tiers (Free, Pro, Team)
 - [ ] Usage-based pricing model
 - [ ] Enterprise contracts
@@ -975,6 +1084,7 @@ test('complete analysis flow', async () => {
 ## 📝 Development Checklist
 
 ### Pre-Development
+
 - [ ] All technical decisions made
 - [ ] Development environment ready
 - [ ] Repository structure created
@@ -983,6 +1093,7 @@ test('complete analysis flow', async () => {
 - [ ] Database schema finalized
 
 ### During Development
+
 - [ ] Daily commits with conventional messages
 - [ ] Weekly progress reviews
 - [ ] Continuous testing
@@ -991,6 +1102,7 @@ test('complete analysis flow', async () => {
 - [ ] Security reviews
 
 ### Pre-Launch
+
 - [ ] All tests passing
 - [ ] Documentation complete
 - [ ] Performance benchmarks met
@@ -999,6 +1111,7 @@ test('complete analysis flow', async () => {
 - [ ] Production environment ready
 
 ### Post-Launch
+
 - [ ] Monitoring active
 - [ ] Support system ready
 - [ ] Feedback collection ongoing
@@ -1011,17 +1124,20 @@ test('complete analysis flow', async () => {
 ## 🔗 Resources & References
 
 ### Documentation
+
 - [Manual de estilo de El País](./assets/manual-de-estilo-de-el-pais.pdf)
 - [AP Stylebook](https://www.apstylebook.com/)
 - [Fundéu](https://www.fundeu.es/)
 
 ### Technical
+
 - [Claude API Docs](https://docs.anthropic.com/claude/reference/getting-started)
 - [Monaco Editor](https://microsoft.github.io/monaco-editor/)
 - [shadcn/ui](https://ui.shadcn.com/)
 - [Fastify](https://www.fastify.io/)
 
 ### Tools
+
 - Project Board: GitHub Projects
 - Design: Figma
 - API Testing: Postman/Insomnia
@@ -1033,12 +1149,13 @@ test('complete analysis flow', async () => {
 ## 📞 Support & Contact
 
 For questions or issues during development:
+
 - GitHub Issues: [Project Repository]
 - Documentation: [Wiki/Docs Site]
 - Slack/Discord: [Team Channel]
 
 ---
 
-*Last Updated: [Current Date]*
-*Version: 1.0.0*
-*Status: Ready for Development*
+_Last Updated: [Current Date]_
+_Version: 1.0.0_
+_Status: Ready for Development_
