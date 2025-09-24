@@ -16,10 +16,11 @@
     "types": ["node", "jest"],
     "baseUrl": ".",
     "paths": {
-      "@egoapp/shared": ["../shared/dist/types"],
+      "@egoapp/shared": ["../shared/dist/index"],
       "@egoapp/shared/*": ["../shared/dist/*"]
     }
   },
   "include": ["src/**/*", "scripts/**/*"],
-  "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.spec.ts"]
+  "exclude": ["node_modules", "dist", "**/*.test.ts", "**/*.spec.ts"],
+  "references": [{ "path": "../shared" }]
 }
