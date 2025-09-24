@@ -33,7 +33,7 @@ jobs:
         run: yarn format:check
 
       - name: Run tests (optional for now)
-        run: yarn test -- --passWithNoTests
+        run: npx turbo run test -- --passWithNoTests
 
       - name: Build
         run: yarn build
