@@ -1,7 +1,5 @@
 # MVP General Task Manager - EgoApp Development Roadmap
 
-Nothing
-
 ## 📋 Project Overview
 
 **Product**: EgoApp - AI-powered journalism style editor
