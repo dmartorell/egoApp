@@ -1,0 +1,132 @@
+{
+  "sectionHash": "a5677f616c669c590cbf6d71d8ab232d",
+  "rules": [
+    {
+      "id": "BUSINESS_WRITING_001",
+      "category": "clarity",
+      "name": "Evitar jerga y lenguaje burocrático",
+      "description": "Usar lenguaje simple y directo, evitando términos pomposos o abstractos",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "concept nouns, passive voice"
+      },
+      "examples": {
+        "incorrect": "Prioritized evaluative procedures",
+        "correct": "We will evaluate our progress",
+        "explanation": "El lenguaje debe ser comprensible para el lector común"
+      },
+      "source": {
+        "publication": "AI Extracted",
+        "section": "Part III: Forms - Business Writing: Writing in Your Job"
+      },
+      "priority": 9,
+      "autofix": false,
+      "created_at": "2025-09-24T21:38:13.887Z",
+      "updated_at": "2025-09-24T21:38:13.887Z"
+    },
+    {
+      "id": "BUSINESS_WRITING_002",
+      "category": "style",
+      "name": "Escribir en primera persona",
+      "description": "Usar 'yo' y verbos activos para humanizar el texto",
+      "severity": "suggestion",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.8,
+        "pattern": "passive voice, third-person writing"
+      },
+      "examples": {
+        "incorrect": "Evaluative procedures were established",
+        "correct": "We will evaluate our progress",
+        "explanation": "La primera persona genera conexión con el lector"
+      },
+      "source": {
+        "publication": "AI Extracted",
+        "section": "Part III: Forms - Business Writing: Writing in Your Job"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T21:38:13.887Z",
+      "updated_at": "2025-09-24T21:38:13.887Z"
+    },
+    {
+      "id": "BUSINESS_WRITING_003",
+      "category": "clarity",
+      "name": "Eliminar redundancias",
+      "description": "Evitar expresiones que repitan la misma idea de diferentes formas",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "synonymous phrases"
+      },
+      "examples": {
+        "incorrect": "Open dialogue, feedback and sharing of information",
+        "correct": "Open communication",
+        "explanation": "Cada palabra debe aportar un significado único"
+      },
+      "source": {
+        "publication": "AI Extracted",
+        "section": "Part III: Forms - Business Writing: Writing in Your Job"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T21:38:13.887Z",
+      "updated_at": "2025-09-24T21:38:13.887Z"
+    },
+    {
+      "id": "BUSINESS_WRITING_004",
+      "category": "style",
+      "name": "Usar lenguaje conversacional",
+      "description": "Escribir como si estuvieras hablando directamente al lector",
+      "severity": "suggestion",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.8,
+        "pattern": "institutional language"
+      },
+      "examples": {
+        "incorrect": "Parent communication response system",
+        "correct": "We want to make it easier for you to call",
+        "explanation": "El texto debe sonar natural y cercano"
+      },
+      "source": {
+        "publication": "AI Extracted",
+        "section": "Part III: Forms - Business Writing: Writing in Your Job"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T21:38:13.887Z",
+      "updated_at": "2025-09-24T21:38:13.887Z"
+    },
+    {
+      "id": "BUSINESS_WRITING_005",
+      "category": "clarity",
+      "name": "Definir términos técnicos",
+      "description": "Explicar conceptos especializados de manera sencilla",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "jargon, specialized vocabulary"
+      },
+      "examples": {
+        "incorrect": "Enhanced positive learning environments",
+        "correct": "Classrooms designed to help students learn better",
+        "explanation": "Traducir términos técnicos al lenguaje cotidiano"
+      },
+      "source": {
+        "publication": "AI Extracted",
+        "section": "Part III: Forms - Business Writing: Writing in Your Job"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T21:38:13.887Z",
+      "updated_at": "2025-09-24T21:38:13.887Z"
+    }
+  ],
+  "extractedAt": "2025-09-24T21:38:13.887Z",
+  "tokensUsed": 99148
+}
