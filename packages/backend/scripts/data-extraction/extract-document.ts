@@ -1,7 +1,7 @@
 #!/usr/bin/env tsx
 
 import { ToCGuidedExtractor } from '../../src/services/pdf/tocGuidedExtractor.service';
-import { getDocumentConfig, listDocumentIds } from '../../src/config/documents';
+import { listDocumentIds } from '../../src/config/documents';
 import { elPaisToCConfig } from '../../src/config/toc/el-pais-toc.config';
 import type { ToCConfiguration } from '../../src/types/tocConfig';
 
@@ -19,7 +19,7 @@ async function extractDocument(): Promise<void> {
   if (!documentId) {
     console.error('❌ Please provide a document ID');
     console.log('\n📚 Available documents:');
-    listDocumentIds().forEach(id => {
+    listDocumentIds().forEach((id: string) => {
       console.log(`   - ${id}`);
     });
     console.log('\n💡 Usage: yarn extract:document <document-id>');
@@ -28,9 +28,16 @@ async function extractDocument(): Promise<void> {
   }
 
   try {
-    // Map to ToC configurations (currently only el-pais supported)
+    // Map to ToC configurations
     const tocConfigs: Record<string, ToCConfiguration> = {
       'el-pais': elPaisToCConfig,
+    };
+
+    // Map document IDs to PDF paths
+    const pdfPaths: Record<string, string> = {
+      'el-pais': 'assets/manual-de-estilo-de-el-pais.pdf',
+      'escritura-transparente': 'assets/escritura-transparente.pdf',
+      'on-writing-well': 'assets/on-writing-well.pdf',
     };
 
     const tocConfig = tocConfigs[documentId];
@@ -43,8 +50,11 @@ async function extractDocument(): Promise<void> {
       process.exit(1);
     }
 
-    // Get legacy config for PDF path
-    const legacyConfig = getDocumentConfig(documentId);
+    const pdfPath = pdfPaths[documentId];
+    if (!pdfPath) {
+      console.error(`❌ No PDF path configured for: ${documentId}`);
+      process.exit(1);
+    }
 
     console.log('━'.repeat(60));
     console.log(`📚 ToC-Guided Extraction: ${tocConfig.name}`);
@@ -57,10 +67,7 @@ async function extractDocument(): Promise<void> {
     console.log();
 
     // Execute extraction using ToC-guided approach
-    const result = await ToCGuidedExtractor.extractWithToC(
-      tocConfig,
-      legacyConfig.pdfPath
-    );
+    const result = await ToCGuidedExtractor.extractWithToC(tocConfig, pdfPath);
 
     console.log('━'.repeat(60));
     console.log('✅ ToC-Guided Extraction Complete!');

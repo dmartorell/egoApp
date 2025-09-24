@@ -1,7 +1,6 @@
 #!/usr/bin/env tsx
 
 import { ToCGuidedExtractor } from '../../src/services/pdf/tocGuidedExtractor.service';
-import { getDocumentConfig } from '../../src/config/documents';
 import { elPaisToCConfig } from '../../src/config/toc/el-pais-toc.config';
 import type {
   ToCConfiguration,
@@ -40,11 +39,23 @@ async function extractAllDocuments(): Promise<void> {
     console.log('═'.repeat(60));
 
     try {
-      // Get PDF path from legacy config
-      const legacyConfig = getDocumentConfig(documentId);
+      // Determine PDF path based on document ID
+      const pdfPathMap: Record<string, string> = {
+        'el-pais': 'assets/manual-de-estilo-de-el-pais.pdf',
+        'escritura-transparente': 'assets/escritura-transparente.pdf',
+        'on-writing-well': 'assets/on-writing-well.pdf',
+      };
+
+      const pdfPath = pdfPathMap[documentId];
+      if (!pdfPath) {
+        throw new Error(
+          `No PDF path configured for document ID: ${documentId}`
+        );
+      }
+
       const result = await ToCGuidedExtractor.extractWithToC(
         tocConfig,
-        legacyConfig.pdfPath
+        pdfPath
       );
       results[documentId] = result;
       console.log(

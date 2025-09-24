@@ -350,8 +350,10 @@ async function mergeExtractedRules(): Promise<void> {
 
     if (!validationResult.isValid) {
       console.warn('⚠️  Validation found issues:');
-      validationResult.errors.forEach(error => console.log(`   ❌ ${error}`));
-      validationResult.warnings.forEach(warning =>
+      validationResult.errors.forEach((error: string) =>
+        console.log(`   ❌ ${error}`)
+      );
+      validationResult.warnings.forEach((warning: string) =>
         console.log(`   ⚠️  ${warning}`)
       );
     } else {
