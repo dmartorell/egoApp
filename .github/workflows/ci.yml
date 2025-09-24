@@ -33,13 +33,7 @@ jobs:
         run: yarn format:check
 
       - name: Run tests (optional for now)
-        run: |
-          if jq -e '.scripts.test' package.json >/dev/null; then
-            yarn test
-          else
-            echo "⚠️ No test script found in package.json - skipping tests"
-          fi
-        continue-on-error: true
+        run: yarn test --passWithNoTests
 
       - name: Build
         run: yarn build
