@@ -34,10 +34,10 @@ jobs:
 
       - name: Run tests (optional for now)
         run: |
-          if find . -type f \( -name '*.test.*' -o -name '*.spec.*' \) | grep -E '\.(js|ts|jsx|tsx)$' | head -1 >/dev/null 2>&1; then
+          if jq -e '.scripts.test' package.json >/dev/null; then
             yarn test
           else
-            echo "⚠️ No test files found - skipping tests"
+            echo "⚠️ No test script found in package.json - skipping tests"
           fi
         continue-on-error: true
 
