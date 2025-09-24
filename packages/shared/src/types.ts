@@ -45,7 +45,7 @@ export interface TextSection {
     pageRange?: { start: number; end?: number };
     priority?: number;
     context?: string;
-    [key: string]: any;
+    [key: string]: unknown;
   };
 }
 
