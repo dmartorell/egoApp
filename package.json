@@ -39,6 +39,15 @@
     "prettier": "^3.6.2",
     "turbo": "^1.11.2"
   },
+  "lint-staged": {
+    "*.{ts,tsx,js,jsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md}": [
+      "prettier --write"
+    ]
+  },
   "engines": {
     "node": ">=20.0.0",
     "yarn": ">=1.22.0"
