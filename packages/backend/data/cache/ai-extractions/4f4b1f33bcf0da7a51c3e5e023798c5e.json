@@ -1,0 +1,107 @@
+{
+  "sectionHash": "4f4b1f33bcf0da7a51c3e5e023798c5e",
+  "rules": [
+    {
+      "id": "UNITY_RULE_001",
+      "category": "structure",
+      "name": "Unidad de Pronombre",
+      "description": "Mantener consistencia en la perspectiva de narración (primera, segunda o tercera persona) a lo largo del texto",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "cambio de pronombre sin transición"
+      },
+      "examples": {
+        "incorrect": "Cambiando entre 'yo', 'él' y 'tú' sin justificación",
+        "correct": "Mantener un solo tipo de pronombre (por ejemplo, solo primera persona)",
+        "explanation": "Cambia de perspectiva distrae al lector y fragmenta la narrativa"
+      },
+      "source": {
+        "publication": "AI Extracted",
+        "section": "Part II: Methods - Unity"
+      },
+      "priority": 9,
+      "autofix": false,
+      "created_at": "2025-09-24T21:36:19.653Z",
+      "updated_at": "2025-09-24T21:36:19.653Z"
+    },
+    {
+      "id": "UNITY_RULE_002",
+      "category": "grammar",
+      "name": "Unidad de Tiempo Verbal",
+      "description": "Mantener coherencia en los tiempos verbales, permitiendo transiciones justificadas",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.8,
+        "pattern": "cambio arbitrario de tiempo verbal"
+      },
+      "examples": {
+        "incorrect": "Salté al centro comercial y estoy comprando zapatos",
+        "correct": "Salí al centro comercial y compré zapatos",
+        "explanation": "Mantener consistencia temporal evita confusión del lector"
+      },
+      "source": {
+        "publication": "AI Extracted",
+        "section": "Part II: Methods - Unity"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T21:36:19.653Z",
+      "updated_at": "2025-09-24T21:36:19.653Z"
+    },
+    {
+      "id": "UNITY_RULE_003",
+      "category": "style",
+      "name": "Unidad de Tono",
+      "description": "Mantener un tono consistente sin mezclar estilos radicalmente diferentes",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "variaciones bruscas de registro"
+      },
+      "examples": {
+        "incorrect": "Mezclar texto formal con lenguaje coloquial sin transición",
+        "correct": "Mantener un tono homogéneo según el tipo de texto",
+        "explanation": "El cambio de tono puede distraer y restar profesionalismo"
+      },
+      "source": {
+        "publication": "AI Extracted",
+        "section": "Part II: Methods - Unity"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T21:36:19.653Z",
+      "updated_at": "2025-09-24T21:36:19.653Z"
+    },
+    {
+      "id": "UNITY_RULE_004",
+      "category": "writing",
+      "name": "Consistencia de Enfoque",
+      "description": "Definir claramente el propósito y la perspectiva del texto antes de escribir",
+      "severity": "suggestion",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "cambios no estructurados de narrativa"
+      },
+      "examples": {
+        "incorrect": "Un artículo de viaje que cambia entre guía turística, diario personal y manual informativo",
+        "correct": "Elegir un estilo: guía personal, reportaje objetivo o información técnica",
+        "explanation": "Un enfoque claro mejora la coherencia y legibilidad"
+      },
+      "source": {
+        "publication": "AI Extracted",
+        "section": "Part II: Methods - Unity"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T21:36:19.653Z",
+      "updated_at": "2025-09-24T21:36:19.653Z"
+    }
+  ],
+  "extractedAt": "2025-09-24T21:36:19.653Z",
+  "tokensUsed": 34523
+}

@@ -1,0 +1,132 @@
+{
+  "sectionHash": "6f753722a3be51ffb91635b04f4e8591",
+  "rules": [
+    {
+      "id": "TRAVEL_WRITING_001",
+      "category": "style",
+      "name": "Evitar clichés y frases trilladas",
+      "description": "Desconfiar de frases que vengan demasiado fácilmente, buscar palabras y expresiones originales",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "palabras como 'enclavado', 'pintoresco', 'encantador'"
+      },
+      "examples": {
+        "incorrect": "El pueblo está enclavado en las colinas",
+        "correct": "Describir el lugar con detalles específicos y únicos",
+        "explanation": "Las frases hechas restan autenticidad y originalidad al texto"
+      },
+      "source": {
+        "publication": "AI Extracted",
+        "section": "Part III: Forms - Writing About Places: The Travel Article"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T21:37:31.710Z",
+      "updated_at": "2025-09-24T21:37:31.710Z"
+    },
+    {
+      "id": "TRAVEL_WRITING_002",
+      "category": "detail",
+      "name": "Selección selectiva de detalles",
+      "description": "Eliminar detalles obvios, buscar información significativa y reveladora",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.9,
+        "pattern": "descripciones genéricas o predecibles"
+      },
+      "examples": {
+        "incorrect": "La playa tenía rocas y gaviotas volando",
+        "correct": "Detallar aspectos únicos o sorprendentes del lugar",
+        "explanation": "Los detalles deben aportar información sustancial, no ser obviedades"
+      },
+      "source": {
+        "publication": "AI Extracted",
+        "section": "Part III: Forms - Writing About Places: The Travel Article"
+      },
+      "priority": 9,
+      "autofix": false,
+      "created_at": "2025-09-24T21:37:31.710Z",
+      "updated_at": "2025-09-24T21:37:31.710Z"
+    },
+    {
+      "id": "TRAVEL_WRITING_003",
+      "category": "style",
+      "name": "Evitar adjetivos almibarados",
+      "description": "Rechazar adjetivos pomposos o cursis típicos de la escritura de viajes",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.8,
+        "pattern": "adjetivos como 'maravilloso', 'dappled', 'roseate'"
+      },
+      "examples": {
+        "incorrect": "Maravilloso paisaje dappled y roseate",
+        "correct": "Descripción directa y precisa del paisaje",
+        "explanation": "Los adjetivos artificiales restan credibilidad al texto"
+      },
+      "source": {
+        "publication": "AI Extracted",
+        "section": "Part III: Forms - Writing About Places: The Travel Article"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T21:37:31.710Z",
+      "updated_at": "2025-09-24T21:37:31.710Z"
+    },
+    {
+      "id": "TRAVEL_WRITING_004",
+      "category": "structure",
+      "name": "Buscar la idea central del lugar",
+      "description": "Identificar y transmitir la esencia única de un lugar más allá de la descripción superficial",
+      "severity": "suggestion",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "descripción profunda del contexto cultural"
+      },
+      "examples": {
+        "incorrect": "Listado de características genéricas",
+        "correct": "Capturar el espíritu o carácter distintivo del lugar",
+        "explanation": "Un buen texto de viajes va más allá de la descripción física"
+      },
+      "source": {
+        "publication": "AI Extracted",
+        "section": "Part III: Forms - Writing About Places: The Travel Article"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T21:37:31.710Z",
+      "updated_at": "2025-09-24T21:37:31.710Z"
+    },
+    {
+      "id": "TRAVEL_WRITING_005",
+      "category": "perspective",
+      "name": "Control de la subjetividad",
+      "description": "Mantener un equilibrio entre la experiencia personal y la objetividad",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "uso excesivo de primera persona"
+      },
+      "examples": {
+        "incorrect": "Narración completamente egocéntrica del viaje",
+        "correct": "Descripción equilibrada que considere al lector",
+        "explanation": "El texto debe ser interesante más allá de la experiencia personal"
+      },
+      "source": {
+        "publication": "AI Extracted",
+        "section": "Part III: Forms - Writing About Places: The Travel Article"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T21:37:31.710Z",
+      "updated_at": "2025-09-24T21:37:31.710Z"
+    }
+  ],
+  "extractedAt": "2025-09-24T21:37:31.711Z",
+  "tokensUsed": 74491
+}

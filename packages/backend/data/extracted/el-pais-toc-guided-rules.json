@@ -1,0 +1,5127 @@
+{
+  "source": {
+    "name": "Manual de estilo de El País",
+    "documentId": "el-pais",
+    "extractedAt": "2025-09-24T19:35:39.718Z",
+    "totalPages": 429,
+    "sectionsProcessed": 10,
+    "subsectionsProcessed": 76
+  },
+  "rulesBySection": {
+    "TITULO_I": {
+      "sectionTitle": "PRINCIPIOS",
+      "pageRange": {
+        "start": 12,
+        "end": 16
+      },
+      "rules": [
+        {
+          "id": "RULE_1.24",
+          "category": "attribution|fairness",
+          "name": "Neutralidad en titulares con versiones contrapuestas",
+          "description": "No se debe titular priorizando una versión de los hechos cuando existen fuentes con relatos diferentes",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "versiones contrapuestas"
+          },
+          "examples": {
+            "incorrect": "Titular que presente solo una versión como verdad absoluta",
+            "correct": "Titular que equilibre o presente ambas versiones sin sesgo",
+            "explanation": "Garantiza imparcialidad periodística"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "PRINCIPIOS",
+            "sectionId": "TITULO_I"
+          },
+          "priority": 9,
+          "autofix": false,
+          "created_at": "2025-09-24T19:31:10.701Z",
+          "updated_at": "2025-09-24T19:31:10.701Z"
+        },
+        {
+          "id": "RULE_1.25",
+          "category": "attribution|integrity",
+          "name": "Precisión en la firma de noticias",
+          "description": "Prohibido firmar noticias en lugares donde no se elaboró el texto",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.9,
+            "pattern": "firma de enviados especiales"
+          },
+          "examples": {
+            "incorrect": "Firmar una noticia desde una ciudad donde no se reportó",
+            "correct": "Mencionar en la entradilla el lugar de origen de la información",
+            "explanation": "Preserva transparencia sobre el origen de la información"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "PRINCIPIOS",
+            "sectionId": "TITULO_I"
+          },
+          "priority": 8,
+          "autofix": false,
+          "created_at": "2025-09-24T19:31:10.701Z",
+          "updated_at": "2025-09-24T19:31:10.701Z"
+        },
+        {
+          "id": "RULE_1.26",
+          "category": "ethics|transparency",
+          "name": "Transparencia en cambio de nombres",
+          "description": "Advertir al lector cuando se modifica el nombre de una persona en un texto",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "omitir nombre"
+          },
+          "examples": {
+            "incorrect": "Cambiar nombres sin explicación",
+            "correct": "Indicar al inicio del texto que se ha modificado un nombre",
+            "explanation": "Mantiene la integridad ética del reportaje"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "PRINCIPIOS",
+            "sectionId": "TITULO_I"
+          },
+          "priority": 6,
+          "autofix": false,
+          "created_at": "2025-09-24T19:31:10.701Z",
+          "updated_at": "2025-09-24T19:31:10.701Z"
+        },
+        {
+          "id": "RULE_1.30",
+          "category": "design|integrity",
+          "name": "Diferenciación tipográfica de publicidad",
+          "description": "La publicidad debe distinguirse claramente del contenido periodístico",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.8,
+            "pattern": "diseño publicitario"
+          },
+          "examples": {
+            "incorrect": "Anuncios con diseño similar a columnas periodísticas",
+            "correct": "Anuncios con marca 'Publicidad' y tipografía diferente",
+            "explanation": "Previene confusión del lector"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "PRINCIPIOS",
+            "sectionId": "TITULO_I"
+          },
+          "priority": 7,
+          "autofix": false,
+          "created_at": "2025-09-24T19:31:10.701Z",
+          "updated_at": "2025-09-24T19:31:10.701Z"
+        },
+        {
+          "id": "RULE_1.32",
+          "category": "ethics|photography",
+          "name": "No manipulación fotográfica",
+          "description": "Prohibida toda manipulación fotográfica más allá de correcciones técnicas",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.9,
+            "pattern": "manipulación fotográfica"
+          },
+          "examples": {
+            "incorrect": "Invertir imagen para cambiar orientación",
+            "correct": "Solo correcciones técnicas de revelado o transmisión",
+            "explanation": "Preserva integridad visual de la información"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "PRINCIPIOS",
+            "sectionId": "TITULO_I"
+          },
+          "priority": 9,
+          "autofix": false,
+          "created_at": "2025-09-24T19:31:10.701Z",
+          "updated_at": "2025-09-24T19:31:10.701Z"
+        }
+      ]
+    },
+    "TITULO_II": {
+      "sectionTitle": "GÉNEROS PERIODÍSTICOS",
+      "pageRange": {
+        "start": 18,
+        "end": 33
+      },
+      "rules": [
+        {
+          "id": "SECTION_RULE_001",
+          "category": "structure",
+          "name": "Límite de extensión de párrafos",
+          "description": "Ningún párrafo debe tener más de 100 palabras",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "párrafo > 100 palabras"
+          },
+          "examples": {
+            "incorrect": "Párrafo extenso con más de 100 palabras sin pausas ni división",
+            "correct": "Párrafo dividido o resumido para no exceder 100 palabras",
+            "explanation": "Mantiene la legibilidad y claridad del texto periodístico"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "GÉNEROS PERIODÍSTICOS",
+            "sectionId": "TITULO_II"
+          },
+          "priority": 9,
+          "autofix": false,
+          "created_at": "2025-09-24T19:31:43.565Z",
+          "updated_at": "2025-09-24T19:31:43.565Z"
+        },
+        {
+          "id": "SECTION_RULE_002",
+          "category": "clarity",
+          "name": "Texto autosuficiente",
+          "description": "Cada noticia debe explicarse por sí misma, sin depender de textos previos",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.9,
+            "pattern": "contexto incompleto"
+          },
+          "examples": {
+            "incorrect": "Noticia que requiere leer artículos anteriores para comprenderla",
+            "correct": "Noticia que proporciona todo el contexto necesario para su comprensión",
+            "explanation": "Garantiza que cualquier lector pueda entender la información"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "GÉNEROS PERIODÍSTICOS",
+            "sectionId": "TITULO_II"
+          },
+          "priority": 10,
+          "autofix": false,
+          "created_at": "2025-09-24T19:31:43.565Z",
+          "updated_at": "2025-09-24T19:31:43.565Z"
+        },
+        {
+          "id": "SECTION_RULE_003",
+          "category": "attribution",
+          "name": "Precisión de datos",
+          "description": "Especificar números exactos en lugar de descripciones vagas",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.8,
+            "pattern": "descripciones imprecisas"
+          },
+          "examples": {
+            "incorrect": "Un grupo de agricultores tomó el Ayuntamiento",
+            "correct": "12 agricultores tomaron el Ayuntamiento de Alcalá de Henares",
+            "explanation": "Proporciona mayor credibilidad y precisión a la información"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "GÉNEROS PERIODÍSTICOS",
+            "sectionId": "TITULO_II"
+          },
+          "priority": 8,
+          "autofix": false,
+          "created_at": "2025-09-24T19:31:43.565Z",
+          "updated_at": "2025-09-24T19:31:43.565Z"
+        },
+        {
+          "id": "SECTION_RULE_004",
+          "category": "style",
+          "name": "Personalización de noticias",
+          "description": "Incluir detalles personales relevantes de los protagonistas",
+          "severity": "suggestion",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "personajes sin descripción"
+          },
+          "examples": {
+            "incorrect": "Un alcalde presentó la moción",
+            "correct": "Juan Martínez, alcalde de 45 años, presentó la moción",
+            "explanation": "Humaniza la información y genera mayor conexión con el lector"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "GÉNEROS PERIODÍSTICOS",
+            "sectionId": "TITULO_II"
+          },
+          "priority": 6,
+          "autofix": false,
+          "created_at": "2025-09-24T19:31:43.565Z",
+          "updated_at": "2025-09-24T19:31:43.565Z"
+        },
+        {
+          "id": "SECTION_RULE_005",
+          "category": "structure",
+          "name": "Reglas para breves",
+          "description": "Normas específicas para noticias cortas o cuñas",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.7,
+            "pattern": "breve sin formato estándar"
+          },
+          "examples": {
+            "incorrect": "Breve con nombre completo del autor y sin iniciales",
+            "correct": "Breve con iniciales del autor y máximo 12 líneas",
+            "explanation": "Mantiene un formato consistente para noticias breves"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "GÉNEROS PERIODÍSTICOS",
+            "sectionId": "TITULO_II"
+          },
+          "priority": 7,
+          "autofix": false,
+          "created_at": "2025-09-24T19:31:43.565Z",
+          "updated_at": "2025-09-24T19:31:43.565Z"
+        },
+        {
+          "id": "ATTRIBUTION_RULE_001",
+          "category": "attribution",
+          "name": "Atribución flexible de fuentes en reportajes",
+          "description": "No es necesario reiterar la atribución de fuentes constantemente para mantener la viveza del relato",
+          "severity": "suggestion",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "atribución de fuentes"
+          },
+          "examples": {
+            "incorrect": "Fuente A dijo X. Fuente A añadió Y. Fuente A explicó Z.",
+            "correct": "La información fluye con referencias puntuales solo cuando es necesario",
+            "explanation": "Evitar saturar el texto con referencias constantes a las fuentes"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "GÉNEROS PERIODÍSTICOS",
+            "sectionId": "TITULO_II"
+          },
+          "priority": 7,
+          "autofix": false,
+          "created_at": "2025-09-24T19:31:58.473Z",
+          "updated_at": "2025-09-24T19:31:58.473Z"
+        },
+        {
+          "id": "CHRONICLE_RULE_001",
+          "category": "style",
+          "name": "Características de la crónica periodística",
+          "description": "La crónica debe combinar información con análisis, priorizando el contenido informativo sobre la interpretación personal",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.9,
+            "pattern": "análisis + información"
+          },
+          "examples": {
+            "incorrect": "Creo que esto significa que...",
+            "correct": "Los hechos indican que... según fuentes oficiales...",
+            "explanation": "Mantener objetividad y fundamentar cualquier interpretación"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "GÉNEROS PERIODÍSTICOS",
+            "sectionId": "TITULO_II"
+          },
+          "priority": 9,
+          "autofix": false,
+          "created_at": "2025-09-24T19:31:58.473Z",
+          "updated_at": "2025-09-24T19:31:58.473Z"
+        },
+        {
+          "id": "INTERVIEW_RULE_001",
+          "category": "structure",
+          "name": "Flexibilidad en la presentación de declaraciones",
+          "description": "Las declaraciones no siempre requieren formato de entrevista pregunta-respuesta",
+          "severity": "suggestion",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "presentación de declaraciones"
+          },
+          "examples": {
+            "incorrect": "Formato rígido de Q&A para declaraciones breves",
+            "correct": "Integrar declaraciones en reportaje o noticia con entrecomillados",
+            "explanation": "Adaptar el formato al contexto y extensión de las declaraciones"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "GÉNEROS PERIODÍSTICOS",
+            "sectionId": "TITULO_II"
+          },
+          "priority": 6,
+          "autofix": false,
+          "created_at": "2025-09-24T19:31:58.473Z",
+          "updated_at": "2025-09-24T19:31:58.473Z"
+        },
+        {
+          "id": "CHRONICLE_RULE_002",
+          "category": "style",
+          "name": "Estilo narrativo de crónica",
+          "description": "Las crónicas deben ser amenas, incluyendo anécdotas y contextualizando los hechos",
+          "severity": "suggestion",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.8,
+            "pattern": "estilo ameno"
+          },
+          "examples": {
+            "incorrect": "Relato escueto y sin contexto",
+            "correct": "Describir ambiente, expresiones y sorpresas del evento",
+            "explanation": "Hacer el texto más atractivo y comprensible"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "GÉNEROS PERIODÍSTICOS",
+            "sectionId": "TITULO_II"
+          },
+          "priority": 8,
+          "autofix": false,
+          "created_at": "2025-09-24T19:31:58.473Z",
+          "updated_at": "2025-09-24T19:31:58.473Z"
+        },
+        {
+          "id": "INTERVIEW_RULE_002",
+          "category": "structure",
+          "name": "Presentación del entrevistado",
+          "description": "Toda entrevista debe incluir una introducción que sitúe al personaje y explique el contexto de la entrevista",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "presentación del entrevistado"
+          },
+          "examples": {
+            "incorrect": "Comenzar directamente con preguntas sin presentación",
+            "correct": "Párrafo introductorio que describa personalidad y relevancia del entrevistado",
+            "explanation": "Proporcionar contexto y relevancia al lector"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "GÉNEROS PERIODÍSTICOS",
+            "sectionId": "TITULO_II"
+          },
+          "priority": 9,
+          "autofix": false,
+          "created_at": "2025-09-24T19:31:58.473Z",
+          "updated_at": "2025-09-24T19:31:58.473Z"
+        },
+        {
+          "id": "INTERVIEW_RULE_001",
+          "category": "structure",
+          "name": "Formato de Entrevista-Perfil",
+          "description": "Las entrevistas-perfil pueden no seguir el formato estricto pregunta-respuesta y admiten comentarios, descripciones y datos biográficos",
+          "severity": "suggestion",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "entrevista-perfil"
+          },
+          "examples": {
+            "incorrect": "Entrevista con formato rígido pregunta-respuesta",
+            "correct": "Entrevista narrativa con contexto biográfico e interpretación",
+            "explanation": "Permite mayor flexibilidad narrativa para perfiles periodísticos"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "GÉNEROS PERIODÍSTICOS",
+            "sectionId": "TITULO_II"
+          },
+          "priority": 7,
+          "autofix": false,
+          "created_at": "2025-09-24T19:32:13.090Z",
+          "updated_at": "2025-09-24T19:32:13.090Z"
+        },
+        {
+          "id": "INTERVIEW_RULE_002",
+          "category": "punctuation",
+          "name": "Marcación de Citas Textuales",
+          "description": "Las preguntas y respuestas textuales deben marcarse con una raya",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.9,
+            "pattern": "citas textuales"
+          },
+          "examples": {
+            "incorrect": "Preguntas y respuestas sin ninguna marca especial",
+            "correct": "— Pregunta del entrevistador\n— Respuesta del entrevistado",
+            "explanation": "Diferencia clara entre voz del periodista y entrevistado"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "GÉNEROS PERIODÍSTICOS",
+            "sectionId": "TITULO_II"
+          },
+          "priority": 9,
+          "autofix": false,
+          "created_at": "2025-09-24T19:32:13.090Z",
+          "updated_at": "2025-09-24T19:32:13.090Z"
+        },
+        {
+          "id": "OPINION_RULE_001",
+          "category": "editing",
+          "name": "Edición de Artículos de Opinión",
+          "description": "Artículos de opinión solo pueden editarse por errores flagrantes, respetando el estilo del autor",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "tribuna|artículo de opinión"
+          },
+          "examples": {
+            "incorrect": "Reescribir completamente un artículo de opinión",
+            "correct": "Corregir errores ortográficos sin modificar el estilo",
+            "explanation": "Preservar la voz y intención del autor"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "GÉNEROS PERIODÍSTICOS",
+            "sectionId": "TITULO_II"
+          },
+          "priority": 6,
+          "autofix": false,
+          "created_at": "2025-09-24T19:32:13.090Z",
+          "updated_at": "2025-09-24T19:32:13.090Z"
+        },
+        {
+          "id": "ATTRIBUTION_RULE_001",
+          "category": "attribution",
+          "name": "Pie de Autor Obligatorio",
+          "description": "Todos los artículos de opinión deben incluir un pie de autor con cargo, título o información relevante",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.95,
+            "pattern": "pie de autor"
+          },
+          "examples": {
+            "incorrect": "Artículo sin información del autor",
+            "correct": "Juan Pérez, periodista especializado en economía",
+            "explanation": "Proporciona contexto y credibilidad al artículo"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "GÉNEROS PERIODÍSTICOS",
+            "sectionId": "TITULO_II"
+          },
+          "priority": 10,
+          "autofix": false,
+          "created_at": "2025-09-24T19:32:13.090Z",
+          "updated_at": "2025-09-24T19:32:13.090Z"
+        },
+        {
+          "id": "SUPPLEMENT_RULE_001",
+          "category": "style",
+          "name": "Entrevistas en Suplementos",
+          "description": "Las entrevistas en suplementos pueden incluir introducción extensa, citas significativas y descripciones",
+          "severity": "suggestion",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.8,
+            "pattern": "entrevista en suplemento"
+          },
+          "examples": {
+            "incorrect": "Entrevista estándar sin contexto ni descripción",
+            "correct": "Introducción narrativa con citas emblemáticas del entrevistado",
+            "explanation": "Mayor libertad narrativa en formatos de suplemento"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "GÉNEROS PERIODÍSTICOS",
+            "sectionId": "TITULO_II"
+          },
+          "priority": 7,
+          "autofix": false,
+          "created_at": "2025-09-24T19:32:13.090Z",
+          "updated_at": "2025-09-24T19:32:13.090Z"
+        }
+      ]
+    },
+    "TITULO_III": {
+      "sectionTitle": "ELEMENTOS DE TITULACIÓN",
+      "pageRange": {
+        "start": 35,
+        "end": 40
+      },
+      "rules": [
+        {
+          "id": "HEADLINE_RULE_001",
+          "category": "punctuation",
+          "name": "Restricción de paréntesis en titulares",
+          "description": "Solo se permiten paréntesis para resultados deportivos o ubicación de lugares desconocidos",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "\\(.*\\)"
+          },
+          "examples": {
+            "incorrect": "Nuevo proyecto (importante) para la ciudad",
+            "correct": "El Barcelona ganó al Madrid (95-92)",
+            "explanation": "Evitar paréntesis que no sean informativos o localizadores"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "ELEMENTOS DE TITULACIÓN",
+            "sectionId": "TITULO_III"
+          },
+          "priority": 8,
+          "autofix": false,
+          "created_at": "2025-09-24T19:32:30.534Z",
+          "updated_at": "2025-09-24T19:32:30.534Z"
+        },
+        {
+          "id": "HEADLINE_RULE_002",
+          "category": "style",
+          "name": "Formato de cursivas en titulares",
+          "description": "Palabras en cursiva irán entre comillas simples; comillas reservadas para citas textuales",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "cursiva"
+          },
+          "examples": {
+            "incorrect": "Titular con *palabra en cursiva*",
+            "correct": "Titular con 'palabra en cursiva'",
+            "explanation": "Mantener consistencia tipográfica"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "ELEMENTOS DE TITULACIÓN",
+            "sectionId": "TITULO_III"
+          },
+          "priority": 6,
+          "autofix": false,
+          "created_at": "2025-09-24T19:32:30.534Z",
+          "updated_at": "2025-09-24T19:32:30.534Z"
+        },
+        {
+          "id": "HEADLINE_RULE_003",
+          "category": "grammar",
+          "name": "No partir palabras en titulares",
+          "description": "Evitar dividir palabras en diferentes líneas de un titular",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.9,
+            "pattern": "-\\n"
+          },
+          "examples": {
+            "incorrect": "Nuevo proyec-\nto aprobado",
+            "correct": "Nuevo proyecto aprobado",
+            "explanation": "Mantener legibilidad y claridad"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "ELEMENTOS DE TITULACIÓN",
+            "sectionId": "TITULO_III"
+          },
+          "priority": 9,
+          "autofix": false,
+          "created_at": "2025-09-24T19:32:30.534Z",
+          "updated_at": "2025-09-24T19:32:30.534Z"
+        },
+        {
+          "id": "HEADLINE_RULE_004",
+          "category": "clarity",
+          "name": "Restricción de siglas en titulares",
+          "description": "No usar siglas poco conocidas; máximo una sigla por titular",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.8,
+            "pattern": "[A-Z]{2,}"
+          },
+          "examples": {
+            "incorrect": "SGAE y UGT firman acuerdo",
+            "correct": "Sindicatos firman importante acuerdo",
+            "explanation": "Garantizar comprensión para lectores generales"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "ELEMENTOS DE TITULACIÓN",
+            "sectionId": "TITULO_III"
+          },
+          "priority": 7,
+          "autofix": false,
+          "created_at": "2025-09-24T19:32:30.534Z",
+          "updated_at": "2025-09-24T19:32:30.534Z"
+        },
+        {
+          "id": "HEADLINE_RULE_005",
+          "category": "style",
+          "name": "Formato de números en titulares",
+          "description": "Permitido comenzar con números; porcentajes con signo %",
+          "severity": "suggestion",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "^[0-9]|%"
+          },
+          "examples": {
+            "incorrect": "Cinco por ciento de aumento",
+            "correct": "5% de aumento",
+            "explanation": "Facilitar lectura rápida"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "ELEMENTOS DE TITULACIÓN",
+            "sectionId": "TITULO_III"
+          },
+          "priority": 5,
+          "autofix": false,
+          "created_at": "2025-09-24T19:32:30.534Z",
+          "updated_at": "2025-09-24T19:32:30.534Z"
+        },
+        {
+          "id": "HEADLINE_RULE_006",
+          "category": "style",
+          "name": "Evitar repeticiones en titulares",
+          "description": "No repetir palabras o raíces de palabras en titulares de una misma página",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.7,
+            "pattern": "repetición"
+          },
+          "examples": {
+            "incorrect": "Director dirige nueva política",
+            "correct": "Líder establece nueva política",
+            "explanation": "Mantener variedad léxica"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "ELEMENTOS DE TITULACIÓN",
+            "sectionId": "TITULO_III"
+          },
+          "priority": 6,
+          "autofix": false,
+          "created_at": "2025-09-24T19:32:30.534Z",
+          "updated_at": "2025-09-24T19:32:30.534Z"
+        },
+        {
+          "id": "HEADLINE_RULE_007",
+          "category": "structure",
+          "name": "Independencia de titular respecto al texto",
+          "description": "El titular no puede ser la primera frase del texto ni prolongarse en ladillos",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "\\.\\.\\."
+          },
+          "examples": {
+            "incorrect": "Titular que se continúa... en el texto",
+            "correct": "Titular independiente y conciso",
+            "explanation": "Mantener autonomía informativa"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "ELEMENTOS DE TITULACIÓN",
+            "sectionId": "TITULO_III"
+          },
+          "priority": 8,
+          "autofix": false,
+          "created_at": "2025-09-24T19:32:30.534Z",
+          "updated_at": "2025-09-24T19:32:30.534Z"
+        },
+        {
+          "id": "LADILLO_RULE_001",
+          "category": "structure",
+          "name": "Ubicación de ladillos",
+          "description": "No colocar ladillos entre pregunta y respuesta en entrevistas",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.9,
+            "pattern": "ladillo entre pregunta/respuesta"
+          },
+          "examples": {
+            "incorrect": "[Pregunta] Ladillo [Respuesta]",
+            "correct": "[Pregunta] [Respuesta] (Sin ladillo intermedio)",
+            "explanation": "Mantiene la integridad del diálogo en entrevistas"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "ELEMENTOS DE TITULACIÓN",
+            "sectionId": "TITULO_III"
+          },
+          "priority": 9,
+          "autofix": false,
+          "created_at": "2025-09-24T19:32:49.782Z",
+          "updated_at": "2025-09-24T19:32:49.782Z"
+        },
+        {
+          "id": "LADILLO_RULE_002",
+          "category": "style",
+          "name": "Contenido de ladillos",
+          "description": "Los ladillos no pueden repetir conceptos del titular",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "repetición conceptual"
+          },
+          "examples": {
+            "incorrect": "Titular: 'Crisis económica' / Ladillo: 'Problemas financieros'",
+            "correct": "Titular: 'Crisis económica' / Ladillo: 'Nuevas estrategias'",
+            "explanation": "Evitar redundancia y aportar información adicional"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "ELEMENTOS DE TITULACIÓN",
+            "sectionId": "TITULO_III"
+          },
+          "priority": 7,
+          "autofix": false,
+          "created_at": "2025-09-24T19:32:49.782Z",
+          "updated_at": "2025-09-24T19:32:49.782Z"
+        },
+        {
+          "id": "LADILLO_RULE_003",
+          "category": "structure",
+          "name": "Continuidad de titulares",
+          "description": "No fragmentar titulares con ladillos usando puntos suspensivos",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.8,
+            "pattern": "titular fragmentado"
+          },
+          "examples": {
+            "incorrect": "Titular: 'Los efectos...' / Ladillo: '...de la crisis'",
+            "correct": "Titular completo sin fragmentación",
+            "explanation": "Mantener coherencia y legibilidad del titular"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "ELEMENTOS DE TITULACIÓN",
+            "sectionId": "TITULO_III"
+          },
+          "priority": 8,
+          "autofix": false,
+          "created_at": "2025-09-24T19:32:49.782Z",
+          "updated_at": "2025-09-24T19:32:49.782Z"
+        },
+        {
+          "id": "LADILLO_RULE_004",
+          "category": "clarity",
+          "name": "Independencia de ladillos",
+          "description": "Los ladillos deben poder eliminarse sin afectar la lectura del texto",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "ladillo indispensable"
+          },
+          "examples": {
+            "incorrect": "Ladillo esencial para comprender el texto",
+            "correct": "Texto comprensible sin ladillo",
+            "explanation": "Mantener la integridad narrativa del texto"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "ELEMENTOS DE TITULACIÓN",
+            "sectionId": "TITULO_III"
+          },
+          "priority": 6,
+          "autofix": false,
+          "created_at": "2025-09-24T19:32:49.782Z",
+          "updated_at": "2025-09-24T19:32:49.782Z"
+        },
+        {
+          "id": "LADILLO_RULE_005",
+          "category": "typography",
+          "name": "Formato de ladillos",
+          "description": "Reglas específicas de formato para ladillos",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.9,
+            "pattern": "signos ortográficos en ladillo"
+          },
+          "examples": {
+            "incorrect": "Ladillo con signos ortográficos, palabras partidas",
+            "correct": "Ladillo sin puntuación, palabras completas",
+            "explanation": "Mantener estándar tipográfico"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "ELEMENTOS DE TITULACIÓN",
+            "sectionId": "TITULO_III"
+          },
+          "priority": 9,
+          "autofix": false,
+          "created_at": "2025-09-24T19:32:49.782Z",
+          "updated_at": "2025-09-24T19:32:49.782Z"
+        },
+        {
+          "id": "LADILLO_RULE_006",
+          "category": "structure",
+          "name": "Extensión mínima para ladillos",
+          "description": "Texto menor a 600 palabras no requiere ladillos, salvo caso específico",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.8,
+            "pattern": "longitud texto < 600 palabras"
+          },
+          "examples": {
+            "incorrect": "Texto de 300 palabras con múltiples ladillos",
+            "correct": "Texto de 300 palabras sin ladillos",
+            "explanation": "Respetar extensión mínima para inclusión de ladillos"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "ELEMENTOS DE TITULACIÓN",
+            "sectionId": "TITULO_III"
+          },
+          "priority": 5,
+          "autofix": false,
+          "created_at": "2025-09-24T19:32:49.782Z",
+          "updated_at": "2025-09-24T19:32:49.782Z"
+        },
+        {
+          "id": "LADILLO_RULE_007",
+          "category": "typography",
+          "name": "Posicionamiento de ladillos",
+          "description": "No colocar ladillos al inicio o final de columna",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "ladillo en bordes columna"
+          },
+          "examples": {
+            "incorrect": "Ladillo en primera o última línea de columna",
+            "correct": "Mínimo 3 líneas antes o después del ladillo",
+            "explanation": "Mantener estética y legibilidad de la página"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "ELEMENTOS DE TITULACIÓN",
+            "sectionId": "TITULO_III"
+          },
+          "priority": 8,
+          "autofix": false,
+          "created_at": "2025-09-24T19:32:49.782Z",
+          "updated_at": "2025-09-24T19:32:49.782Z"
+        },
+        {
+          "id": "LADILLO_RULE_008",
+          "category": "typography",
+          "name": "Sangrado tras ladillo",
+          "description": "El párrafo después de un ladillo no se sangra",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "sangrado tras ladillo"
+          },
+          "examples": {
+            "incorrect": "Párrafo con sangrado tras ladillo",
+            "correct": "Párrafo sin sangrado tras ladillo",
+            "explanation": "Mantener consistencia tipográfica"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "ELEMENTOS DE TITULACIÓN",
+            "sectionId": "TITULO_III"
+          },
+          "priority": 4,
+          "autofix": false,
+          "created_at": "2025-09-24T19:32:49.782Z",
+          "updated_at": "2025-09-24T19:32:49.782Z"
+        }
+      ]
+    },
+    "TITULO_IV": {
+      "sectionTitle": "TIPOGRAFÍA",
+      "pageRange": {
+        "start": 43,
+        "end": 47
+      },
+      "rules": [
+        {
+          "id": "PHOTO_RULE_001",
+          "category": "integrity",
+          "name": "No manipulación de fotografías",
+          "description": "Prohibido manipular fotografías más allá de correcciones técnicas",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.95,
+            "pattern": "manipulación de fotografías"
+          },
+          "examples": {
+            "incorrect": "Invertir una fotografía de un paisaje o persona",
+            "correct": "Usar fotografía en su estado original, solo corrigiendo defectos técnicos",
+            "explanation": "Mantener la integridad y veracidad de la imagen periodística"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "TIPOGRAFÍA",
+            "sectionId": "TITULO_IV"
+          },
+          "priority": 10,
+          "autofix": false,
+          "created_at": "2025-09-24T19:33:04.093Z",
+          "updated_at": "2025-09-24T19:33:04.093Z"
+        },
+        {
+          "id": "PHOTO_RULE_002",
+          "category": "ethical",
+          "name": "Publicación de fotos desagradables",
+          "description": "Solo publicar imágenes desagradables si aportan información relevante",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "imágenes desagradables"
+          },
+          "examples": {
+            "incorrect": "Publicar foto impactante sin valor informativo",
+            "correct": "Publicar imagen solo si explica o documenta un hecho importante",
+            "explanation": "Respetar la sensibilidad del lector y mantener el propósito informativo"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "TIPOGRAFÍA",
+            "sectionId": "TITULO_IV"
+          },
+          "priority": 8,
+          "autofix": false,
+          "created_at": "2025-09-24T19:33:04.093Z",
+          "updated_at": "2025-09-24T19:33:04.093Z"
+        },
+        {
+          "id": "PHOTO_CAPTION_RULE_001",
+          "category": "writing",
+          "name": "Pies de foto independientes",
+          "description": "Los pies de foto deben ser informativos e independientes del texto",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.9,
+            "pattern": "pie de foto"
+          },
+          "examples": {
+            "incorrect": "Pie que repite lo obvio de la imagen",
+            "correct": "Pie que aporta contexto o detalles adicionales no visibles",
+            "explanation": "Complementar la información visual con datos relevantes"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "TIPOGRAFÍA",
+            "sectionId": "TITULO_IV"
+          },
+          "priority": 9,
+          "autofix": false,
+          "created_at": "2025-09-24T19:33:04.093Z",
+          "updated_at": "2025-09-24T19:33:04.093Z"
+        },
+        {
+          "id": "GRAPHIC_RULE_001",
+          "category": "design",
+          "name": "Claridad en gráficos informativos",
+          "description": "Priorizar claridad sobre diseño artístico en gráficos",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.8,
+            "pattern": "gráficos informativos"
+          },
+          "examples": {
+            "incorrect": "Gráfico visualmente complejo que dificulta comprensión",
+            "correct": "Gráfico simple y directo que transmite información clara",
+            "explanation": "El objetivo principal es comunicar, no impresionar estéticamente"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "TIPOGRAFÍA",
+            "sectionId": "TITULO_IV"
+          },
+          "priority": 7,
+          "autofix": false,
+          "created_at": "2025-09-24T19:33:04.093Z",
+          "updated_at": "2025-09-24T19:33:04.093Z"
+        },
+        {
+          "id": "HUMOR_ILLUSTRATION_RULE_001",
+          "category": "ethical",
+          "name": "Límites en ilustraciones humorísticas",
+          "description": "No permitir chistes que ofendan la intimidad o sean desagradables",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "ilustraciones humorísticas"
+          },
+          "examples": {
+            "incorrect": "Dibujo que atenta contra la dignidad de una persona",
+            "correct": "Humor respetuoso que no lastima la imagen de nadie",
+            "explanation": "Mantener estándares éticos incluso en contenido de opinión"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "TIPOGRAFÍA",
+            "sectionId": "TITULO_IV"
+          },
+          "priority": 8,
+          "autofix": false,
+          "created_at": "2025-09-24T19:33:04.093Z",
+          "updated_at": "2025-09-24T19:33:04.093Z"
+        }
+      ]
+    },
+    "TITULO_VII": {
+      "sectionTitle": "TRATAMIENTO Y PROTOCOLO",
+      "pageRange": {
+        "start": 55,
+        "end": 60
+      },
+      "rules": [
+        {
+          "id": "PROTOCOL_RULE_001",
+          "category": "structure",
+          "name": "Orden jerárquico en listados protocolarios",
+          "description": "Los listados de entidades oficiales deben seguir un orden jerárquico estricto de precedencia",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "Listado de entidades con guiones/numeración"
+          },
+          "examples": {
+            "incorrect": "Listar entidades sin respetar su orden oficial de importancia",
+            "correct": "Listar desde Gobierno de la nación hasta Gobierno Civil de la provincia, respetando jerarquía",
+            "explanation": "Refleja el protocolo oficial y respeto institucional"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "TRATAMIENTO Y PROTOCOLO",
+            "sectionId": "TITULO_VII"
+          },
+          "priority": 9,
+          "autofix": false,
+          "created_at": "2025-09-24T19:33:13.829Z",
+          "updated_at": "2025-09-24T19:33:13.829Z"
+        },
+        {
+          "id": "PROTOCOL_RULE_002",
+          "category": "style",
+          "name": "Mayúsculas en nombres institucionales",
+          "description": "Usar mayúscula inicial en nombres de instituciones oficiales",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "Nombres de instituciones en minúsculas"
+          },
+          "examples": {
+            "incorrect": "consejo de gobierno, tribunal superior",
+            "correct": "Consejo de Gobierno, Tribunal Superior",
+            "explanation": "Muestra respeto y formato oficial de instituciones"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "TRATAMIENTO Y PROTOCOLO",
+            "sectionId": "TITULO_VII"
+          },
+          "priority": 7,
+          "autofix": false,
+          "created_at": "2025-09-24T19:33:13.829Z",
+          "updated_at": "2025-09-24T19:33:13.829Z"
+        },
+        {
+          "id": "PROTOCOL_RULE_003",
+          "category": "structure",
+          "name": "Guión como marcador de listado oficial",
+          "description": "Usar guión (-) para listar elementos protocolarios",
+          "severity": "suggestion",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.7,
+            "pattern": "Listados con guiones"
+          },
+          "examples": {
+            "incorrect": "1. Gobierno de la nación, a) Cuerpo Diplomático",
+            "correct": "— Gobierno de la nación\n— Cuerpo Diplomático",
+            "explanation": "Formato estándar para listados jerárquicos"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "TRATAMIENTO Y PROTOCOLO",
+            "sectionId": "TITULO_VII"
+          },
+          "priority": 5,
+          "autofix": false,
+          "created_at": "2025-09-24T19:33:13.829Z",
+          "updated_at": "2025-09-24T19:33:13.829Z"
+        },
+        {
+          "id": "NAME_RULE_001",
+          "category": "attribution|clarity",
+          "name": "Identificación completa al primera mención",
+          "description": "En la primera cita de una persona, usar nombre completo, cargo u ocupación",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "primera mención de persona"
+          },
+          "examples": {
+            "incorrect": "López habló ayer",
+            "correct": "José Luis López Aranguren, ministro de Cultura, habló ayer",
+            "explanation": "Proporciona contexto completo y evita ambigüedad"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "TRATAMIENTO Y PROTOCOLO",
+            "sectionId": "TITULO_VII"
+          },
+          "priority": 8,
+          "autofix": false,
+          "created_at": "2025-09-24T19:33:27.895Z",
+          "updated_at": "2025-09-24T19:33:27.895Z"
+        },
+        {
+          "id": "NAME_RULE_002",
+          "category": "style",
+          "name": "Referencias posteriores de personas",
+          "description": "En menciones siguientes, se puede omitir nombre de pila y posiblemente segundo apellido",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "referencias subsecuentes de persona"
+          },
+          "examples": {
+            "incorrect": "José Luis López Aranguren dijo... José Luis López Aranguren añadió...",
+            "correct": "José Luis López Aranguren dijo... Aranguren añadió...",
+            "explanation": "Evita repetición innecesaria manteniendo claridad"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "TRATAMIENTO Y PROTOCOLO",
+            "sectionId": "TITULO_VII"
+          },
+          "priority": 6,
+          "autofix": false,
+          "created_at": "2025-09-24T19:33:27.895Z",
+          "updated_at": "2025-09-24T19:33:27.895Z"
+        },
+        {
+          "id": "NAME_RULE_003",
+          "category": "style",
+          "name": "Tratamiento de apellidos compuestos",
+          "description": "Escribir apellidos compuestos íntegros en titulares, sin abreviar",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.9,
+            "pattern": "apellidos compuestos en titular"
+          },
+          "examples": {
+            "incorrect": "Borbolla habla",
+            "correct": "Rodríguez de la Borbolla habla",
+            "explanation": "Mantiene integridad del nombre y precisión"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "TRATAMIENTO Y PROTOCOLO",
+            "sectionId": "TITULO_VII"
+          },
+          "priority": 9,
+          "autofix": false,
+          "created_at": "2025-09-24T19:33:27.895Z",
+          "updated_at": "2025-09-24T19:33:27.895Z"
+        },
+        {
+          "id": "NAME_RULE_004",
+          "category": "translation",
+          "name": "Transcripción de nombres extranjeros",
+          "description": "Transcribir nombres de idiomas no latinos usando alfabeto castellano, respetando fonética española",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.8,
+            "pattern": "nombres en alfabetos no latinos"
+          },
+          "examples": {
+            "incorrect": "Said Aouita",
+            "correct": "Saíd Auita",
+            "explanation": "Adapta nombres extranjeros a fonética española"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "TRATAMIENTO Y PROTOCOLO",
+            "sectionId": "TITULO_VII"
+          },
+          "priority": 7,
+          "autofix": false,
+          "created_at": "2025-09-24T19:33:27.895Z",
+          "updated_at": "2025-09-24T19:33:27.895Z"
+        },
+        {
+          "id": "NAME_RULE_005",
+          "category": "translation",
+          "name": "Traducción de nombres propios",
+          "description": "No traducir nombres de personas, salvo casos históricos o castellanizados",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "nombres propios extranjeros"
+          },
+          "examples": {
+            "incorrect": "Martin Luther",
+            "correct": "Martín Lutero",
+            "explanation": "Respetar tradición de nombres históricos"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "TRATAMIENTO Y PROTOCOLO",
+            "sectionId": "TITULO_VII"
+          },
+          "priority": 6,
+          "autofix": false,
+          "created_at": "2025-09-24T19:33:27.895Z",
+          "updated_at": "2025-09-24T19:33:27.895Z"
+        }
+      ]
+    },
+    "TITULO_VIII": {
+      "sectionTitle": "NOMBRES",
+      "pageRange": {
+        "start": 62,
+        "end": 71
+      },
+      "rules": [
+        {
+          "id": "NAMES_RULE_001",
+          "category": "grammar",
+          "name": "Acentuación en nombres de idiomas peninsulares",
+          "description": "Los nombres y apellidos se acentuarán según las normas ortográficas de su idioma original",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "nombres en idiomas peninsulares"
+          },
+          "examples": {
+            "incorrect": "Jon Etxebarria (con acentuación castellana)",
+            "correct": "Jon Etxebarria (con acentuación vasca)",
+            "explanation": "Respetar la ortografía original del nombre"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NOMBRES",
+            "sectionId": "TITULO_VIII"
+          },
+          "priority": 8,
+          "autofix": false,
+          "created_at": "2025-09-24T19:33:43.959Z",
+          "updated_at": "2025-09-24T19:33:43.959Z"
+        },
+        {
+          "id": "NAMES_RULE_002",
+          "category": "geography",
+          "name": "Topónimos en idioma castellano",
+          "description": "Usar topónimos castellanos para lugares franceses",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "topónimos no castellanos"
+          },
+          "examples": {
+            "incorrect": "Perpinyá, Perpignan",
+            "correct": "Perpiñán",
+            "explanation": "Preferir la versión castellana de topónimos"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NOMBRES",
+            "sectionId": "TITULO_VIII"
+          },
+          "priority": 7,
+          "autofix": false,
+          "created_at": "2025-09-24T19:33:43.959Z",
+          "updated_at": "2025-09-24T19:33:43.959Z"
+        },
+        {
+          "id": "NAMES_RULE_003",
+          "category": "style",
+          "name": "Nombres de instituciones",
+          "description": "Escribir nombres de instituciones en versión castellana, con algunas excepciones",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.8,
+            "pattern": "nombres de instituciones"
+          },
+          "examples": {
+            "incorrect": "Bizkai Buru Batzar",
+            "correct": "Consejo Ejecutivo de Vizcaya",
+            "explanation": "Preferir denominaciones castellanas oficiales"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NOMBRES",
+            "sectionId": "TITULO_VIII"
+          },
+          "priority": 6,
+          "autofix": false,
+          "created_at": "2025-09-24T19:33:43.959Z",
+          "updated_at": "2025-09-24T19:33:43.959Z"
+        },
+        {
+          "id": "NAMES_RULE_004",
+          "category": "grammar",
+          "name": "Tratamiento de nombres latinos",
+          "description": "Evitar locuciones latinas en textos noticiosos, acentuar según fonética castellana",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.7,
+            "pattern": "palabras latinas"
+          },
+          "examples": {
+            "incorrect": "corpore insepulto, Papáver somníferum",
+            "correct": "córpore insepulto, Papaver somniferum",
+            "explanation": "Adaptar palabras latinas a normas castellanas"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NOMBRES",
+            "sectionId": "TITULO_VIII"
+          },
+          "priority": 5,
+          "autofix": false,
+          "created_at": "2025-09-24T19:33:43.959Z",
+          "updated_at": "2025-09-24T19:33:43.959Z"
+        },
+        {
+          "id": "NAMES_RULE_005",
+          "category": "grammar",
+          "name": "Nombres alemanes",
+          "description": "Reglas para escribir nombres alemanes: sustituir eszet por doble 's', preferir umlaut",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "nombres alemanes"
+          },
+          "examples": {
+            "incorrect": "Helmut Köhl, Frankfürter Allgemeine Zeitung",
+            "correct": "Helmut Kohl, Frankfurter Allgemeine Zeitung",
+            "explanation": "Seguir normas específicas para nombres alemanes"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NOMBRES",
+            "sectionId": "TITULO_VIII"
+          },
+          "priority": 6,
+          "autofix": false,
+          "created_at": "2025-09-24T19:33:43.959Z",
+          "updated_at": "2025-09-24T19:33:43.959Z"
+        },
+        {
+          "id": "NAMES_RULE_006",
+          "category": "grammar",
+          "name": "Nombres árabes",
+          "description": "Estructura de nombres árabes: tercer nombre como apellido, referencias simplificadas",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.8,
+            "pattern": "nombres árabes"
+          },
+          "examples": {
+            "incorrect": "Jaled Ben Abdelasís Ben Abderramán al Saúd",
+            "correct": "el rey Jaled",
+            "explanation": "Usar la forma de referencia preferida por el individuo"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NOMBRES",
+            "sectionId": "TITULO_VIII"
+          },
+          "priority": 7,
+          "autofix": false,
+          "created_at": "2025-09-24T19:33:43.959Z",
+          "updated_at": "2025-09-24T19:33:43.959Z"
+        },
+        {
+          "id": "NAME_RULE_001",
+          "category": "spelling",
+          "name": "Transcripción de nombres con g y gh",
+          "description": "En nombres con g y gh, la gh equivale a gu en la transcripción",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "g[h]?"
+          },
+          "examples": {
+            "incorrect": "Nagib",
+            "correct": "Naguib",
+            "explanation": "Mantener la equivalencia fonética en la transcripción"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NOMBRES",
+            "sectionId": "TITULO_VIII"
+          },
+          "priority": 7,
+          "autofix": false,
+          "created_at": "2025-09-24T19:33:58.898Z",
+          "updated_at": "2025-09-24T19:33:58.898Z"
+        },
+        {
+          "id": "NAME_RULE_002",
+          "category": "spelling",
+          "name": "Simplificación de consonantes duplicadas",
+          "description": "Simplificar consonantes duplicadas ll, nn, ss, excepto en casos específicos de nombres conocidos",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "(ll|nn|ss)"
+          },
+          "examples": {
+            "incorrect": "Hassan",
+            "correct": "Hassan (mantener en casos específicos)",
+            "explanation": "Conservar doble consonante en nombres propios reconocidos o con origen árabe"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NOMBRES",
+            "sectionId": "TITULO_VIII"
+          },
+          "priority": 6,
+          "autofix": false,
+          "created_at": "2025-09-24T19:33:58.898Z",
+          "updated_at": "2025-09-24T19:33:58.898Z"
+        },
+        {
+          "id": "NAME_RULE_003",
+          "category": "spelling",
+          "name": "Terminación de adjetivos de origen francés",
+          "description": "Usar terminación í en lugar de ita/ite para adjetivos de origen francés",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.9,
+            "pattern": "(ita|ite)$"
+          },
+          "examples": {
+            "incorrect": ["saudita", "hachemita", "sunita", "shiita"],
+            "correct": ["saudí", "hachemí", "suní", "shii"],
+            "explanation": "Adaptar la terminación según reglas de transcripción española"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NOMBRES",
+            "sectionId": "TITULO_VIII"
+          },
+          "priority": 8,
+          "autofix": false,
+          "created_at": "2025-09-24T19:33:58.898Z",
+          "updated_at": "2025-09-24T19:33:58.898Z"
+        },
+        {
+          "id": "NAME_RULE_004",
+          "category": "spelling",
+          "name": "Sistema de transcripción pinyin para nombres chinos",
+          "description": "Usar sistema pinyin para transcribir nombres chinos, sin añadir o eliminar signos",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "nombres chinos"
+          },
+          "examples": {
+            "incorrect": ["Suchou", "Soochow", "Soutcheou"],
+            "correct": "Suzhou",
+            "explanation": "Unificar transcripción según sistema pinyin oficial"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NOMBRES",
+            "sectionId": "TITULO_VIII"
+          },
+          "priority": 9,
+          "autofix": false,
+          "created_at": "2025-09-24T19:33:58.898Z",
+          "updated_at": "2025-09-24T19:33:58.898Z"
+        },
+        {
+          "id": "NAME_RULE_005",
+          "category": "spelling",
+          "name": "Excepciones en transcripción de nombres chinos",
+          "description": "Conservar ortografía tradicional para nombres históricos y geográficos conocidos",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.8,
+            "pattern": "nombres históricos|lugares conocidos"
+          },
+          "examples": {
+            "incorrect": ["Taibei", "Jiang Jieshi"],
+            "correct": ["Taipei", "Chiang Kai-chek"],
+            "explanation": "Mantener nombres reconocidos en su forma tradicional"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NOMBRES",
+            "sectionId": "TITULO_VIII"
+          },
+          "priority": 7,
+          "autofix": false,
+          "created_at": "2025-09-24T19:33:58.898Z",
+          "updated_at": "2025-09-24T19:33:58.898Z"
+        },
+        {
+          "id": "SECTION_RULE_001",
+          "category": "style",
+          "name": "Formato de cabeceras de periódicos",
+          "description": "Las cabeceras de publicaciones se escriben en cursiva, con mayúscula inicial en todas las palabras (excepto preposiciones/artículos)",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.9,
+            "pattern": "cabeceras de publicaciones"
+          },
+          "examples": {
+            "incorrect": "interviú, abc color",
+            "correct": "Interviú, Abc",
+            "explanation": "Respetar la grafía correcta independientemente de la tipografía original"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NOMBRES",
+            "sectionId": "TITULO_VIII"
+          },
+          "priority": 8,
+          "autofix": false,
+          "created_at": "2025-09-24T19:34:10.822Z",
+          "updated_at": "2025-09-24T19:34:10.822Z"
+        },
+        {
+          "id": "SECTION_RULE_002",
+          "category": "style",
+          "name": "Artículos en nombres de publicaciones",
+          "description": "Los artículos nunca deben omitirse ni contraerse en nombres de publicaciones",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "artículos en nombres"
+          },
+          "examples": {
+            "incorrect": "ha declarado al PAÍS",
+            "correct": "ha declarado a EL PAÍS",
+            "explanation": "Mantener el artículo completo sin contracciones"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NOMBRES",
+            "sectionId": "TITULO_VIII"
+          },
+          "priority": 7,
+          "autofix": false,
+          "created_at": "2025-09-24T19:34:10.822Z",
+          "updated_at": "2025-09-24T19:34:10.822Z"
+        },
+        {
+          "id": "SECTION_RULE_003",
+          "category": "style",
+          "name": "Contexto de publicaciones extranjeras",
+          "description": "Incluir ciudad/país de origen cuando no sea evidente",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "publicaciones extranjeras"
+          },
+          "examples": {
+            "incorrect": "el Jyomo Shimbun",
+            "correct": "el Jyomo Shimbun, periódico de Maebashi (Japón)",
+            "explanation": "Proporcionar contexto geográfico para publicaciones poco conocidas"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NOMBRES",
+            "sectionId": "TITULO_VIII"
+          },
+          "priority": 5,
+          "autofix": false,
+          "created_at": "2025-09-24T19:34:10.822Z",
+          "updated_at": "2025-09-24T19:34:10.822Z"
+        },
+        {
+          "id": "SECTION_RULE_004",
+          "category": "style",
+          "name": "Traducción de cabeceras",
+          "description": "No traducir nombres de publicaciones extranjeras",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "traducción de nombres"
+          },
+          "examples": {
+            "incorrect": "Diario de Pekín",
+            "correct": "Beijing Ribao",
+            "explanation": "Mantener el nombre original de la publicación"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NOMBRES",
+            "sectionId": "TITULO_VIII"
+          },
+          "priority": 6,
+          "autofix": false,
+          "created_at": "2025-09-24T19:34:10.822Z",
+          "updated_at": "2025-09-24T19:34:10.822Z"
+        },
+        {
+          "id": "SECTION_RULE_005",
+          "category": "style",
+          "name": "Tratamiento específico de EL PAÍS",
+          "description": "La cabecera de EL PAÍS va siempre en versales y sin entrecomillar",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.95,
+            "pattern": "EL PAÍS"
+          },
+          "examples": {
+            "incorrect": "'El País'",
+            "correct": "EL PAÍS",
+            "explanation": "Respetar el formato específico de esta publicación"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NOMBRES",
+            "sectionId": "TITULO_VIII"
+          },
+          "priority": 9,
+          "autofix": false,
+          "created_at": "2025-09-24T19:34:10.822Z",
+          "updated_at": "2025-09-24T19:34:10.822Z"
+        }
+      ]
+    },
+    "TITULO_IX": {
+      "sectionTitle": "ABREVIACIONES",
+      "pageRange": {
+        "start": 73,
+        "end": 77
+      },
+      "rules": [
+        {
+          "id": "RULE_001",
+          "category": "style",
+          "name": "Números en nombres propios",
+          "description": "Usar números en nombres de barcos, aviones, misiles o naves espaciales sin numeración romana",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "Nombres con números"
+          },
+          "examples": {
+            "incorrect": "Queen Elizabeth II",
+            "correct": "Queen Elizabeth 2",
+            "explanation": "Mantener la denominación original con números arábigos"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "ABREVIACIONES",
+            "sectionId": "TITULO_IX"
+          },
+          "priority": 7,
+          "autofix": false,
+          "created_at": "2025-09-24T19:34:25.732Z",
+          "updated_at": "2025-09-24T19:34:25.732Z"
+        },
+        {
+          "id": "RULE_002",
+          "category": "grammar",
+          "name": "Formato de grados y temperaturas",
+          "description": "Usar signo de grado volado sin punto entre el número y el símbolo",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.9,
+            "pattern": "grados/temperatura"
+          },
+          "examples": {
+            "incorrect": "5.º",
+            "correct": "5º",
+            "explanation": "El símbolo de grado se escribe pegado al número sin punto"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "ABREVIACIONES",
+            "sectionId": "TITULO_IX"
+          },
+          "priority": 8,
+          "autofix": false,
+          "created_at": "2025-09-24T19:34:25.732Z",
+          "updated_at": "2025-09-24T19:34:25.732Z"
+        },
+        {
+          "id": "RULE_003",
+          "category": "style",
+          "name": "Uso de números ordinales",
+          "description": "Números ordinales menores a 21 pueden escribirse con letras, números romanos o con voladita. Mayores a 21 siempre con número y letra voladita",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.8,
+            "pattern": "números ordinales"
+          },
+          "examples": {
+            "incorrect": "22 congreso",
+            "correct": "22º congreso",
+            "explanation": "Formato consistente para números ordinales superiores a 21"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "ABREVIACIONES",
+            "sectionId": "TITULO_IX"
+          },
+          "priority": 6,
+          "autofix": false,
+          "created_at": "2025-09-24T19:34:25.732Z",
+          "updated_at": "2025-09-24T19:34:25.732Z"
+        },
+        {
+          "id": "RULE_004",
+          "category": "grammar",
+          "name": "Caracteres volados",
+          "description": "Caracteres volados se escriben pegados a la palabra y delante de signos ortográficos",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "caracteres volados"
+          },
+          "examples": {
+            "incorrect": "H2O2 . fórmula",
+            "correct": "H2O2, fórmula del peróxido de hidrógeno",
+            "explanation": "Los caracteres volados van pegados sin espacios"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "ABREVIACIONES",
+            "sectionId": "TITULO_IX"
+          },
+          "priority": 5,
+          "autofix": false,
+          "created_at": "2025-09-24T19:34:25.732Z",
+          "updated_at": "2025-09-24T19:34:25.732Z"
+        },
+        {
+          "id": "RULE_005",
+          "category": "grammar",
+          "name": "Inicio de frases con números",
+          "description": "No iniciar frases con números, excepto en titulares y ladillos",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.7,
+            "pattern": "número al inicio de frase"
+          },
+          "examples": {
+            "incorrect": "40 personas asistieron al evento",
+            "correct": "Un total de 40 personas asistieron al evento",
+            "explanation": "Evitar comenzar frases con números para mejorar legibilidad"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "ABREVIACIONES",
+            "sectionId": "TITULO_IX"
+          },
+          "priority": 4,
+          "autofix": false,
+          "created_at": "2025-09-24T19:34:25.732Z",
+          "updated_at": "2025-09-24T19:34:25.732Z"
+        },
+        {
+          "id": "RULE_006",
+          "category": "grammar",
+          "name": "Números ordinales específicos",
+          "description": "Usar 'undécimo' y 'duodécimo', no 'decimoprimero' ni 'decimosegundo'",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "ordinales 11 y 12"
+          },
+          "examples": {
+            "incorrect": "decimoprimero",
+            "correct": "undécimo",
+            "explanation": "Formas correctas para los ordinales 11 y 12"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "ABREVIACIONES",
+            "sectionId": "TITULO_IX"
+          },
+          "priority": 7,
+          "autofix": false,
+          "created_at": "2025-09-24T19:34:25.732Z",
+          "updated_at": "2025-09-24T19:34:25.732Z"
+        }
+      ]
+    },
+    "TITULO_X": {
+      "sectionTitle": "NÚMEROS",
+      "pageRange": {
+        "start": 79,
+        "end": 83
+      },
+      "rules": [
+        {
+          "id": "PUNCTUATION_001",
+          "category": "punctuation",
+          "name": "Comas en incisos explicativos",
+          "description": "Las oraciones que interrumpen momentáneamente el relato principal deben ir entre comas",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "inciso entre comas"
+          },
+          "examples": {
+            "incorrect": "la verdad escribe un político se ha de sustentar con razones",
+            "correct": "la verdad, escribe un político, se ha de sustentar con razones y autoridades",
+            "explanation": "Permite clarificar o añadir información sin romper el flujo de la oración"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NÚMEROS",
+            "sectionId": "TITULO_X"
+          },
+          "priority": 8,
+          "autofix": false,
+          "created_at": "2025-09-24T19:34:40.634Z",
+          "updated_at": "2025-09-24T19:34:40.634Z"
+        },
+        {
+          "id": "PUNCTUATION_002",
+          "category": "punctuation",
+          "name": "Uso de coma en vocativos",
+          "description": "El nombre en vocativo requiere coma según su posición en la oración",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.9,
+            "pattern": "nombre + verbo"
+          },
+          "examples": {
+            "incorrect": "Juan óyeme",
+            "correct": "Juan, óyeme / óyeme, Juan / repito, Juan, que oigas lo que te digo",
+            "explanation": "Marca claramente la interpelación directa"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NÚMEROS",
+            "sectionId": "TITULO_X"
+          },
+          "priority": 9,
+          "autofix": false,
+          "created_at": "2025-09-24T19:34:40.634Z",
+          "updated_at": "2025-09-24T19:34:40.634Z"
+        },
+        {
+          "id": "PUNCTUATION_003",
+          "category": "punctuation",
+          "name": "Coma en transposiciones sintácticas",
+          "description": "Al invertir el orden regular de una oración, se debe usar coma al final de la parte anticipada",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "inversión orden oracional"
+          },
+          "examples": {
+            "incorrect": "cuando el cuadrillero tal oyó túvole por hombre falto de seso",
+            "correct": "cuando el cuadrillero tal oyó, túvole por hombre falto de seso",
+            "explanation": "Ayuda a mantener la claridad sintáctica"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NÚMEROS",
+            "sectionId": "TITULO_X"
+          },
+          "priority": 6,
+          "autofix": false,
+          "created_at": "2025-09-24T19:34:40.634Z",
+          "updated_at": "2025-09-24T19:34:40.634Z"
+        },
+        {
+          "id": "PUNCTUATION_004",
+          "category": "punctuation",
+          "name": "Coma en elipsis verbal",
+          "description": "La omisión de verbos se indica con coma",
+          "severity": "suggestion",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.7,
+            "pattern": "series con verbos elididos"
+          },
+          "examples": {
+            "incorrect": "usar de venganza con el superior es locura con el igual peligro con el inferior vileza",
+            "correct": "usar de venganza con el superior es locura; con el igual, peligro; con el inferior, vileza",
+            "explanation": "Facilita la lectura en series con verbos omitidos"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NÚMEROS",
+            "sectionId": "TITULO_X"
+          },
+          "priority": 5,
+          "autofix": false,
+          "created_at": "2025-09-24T19:34:40.634Z",
+          "updated_at": "2025-09-24T19:34:40.634Z"
+        },
+        {
+          "id": "PUNCTUATION_005",
+          "category": "style",
+          "name": "Coma antes de 'como'",
+          "description": "La presencia/ausencia de coma antes de 'como' cambia completamente el significado",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "como + frase"
+          },
+          "examples": {
+            "incorrect": "no lo hice como me dijiste",
+            "correct": "no lo hice, como me dijiste",
+            "explanation": "La coma modifica sustancialmente el sentido de la frase"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NÚMEROS",
+            "sectionId": "TITULO_X"
+          },
+          "priority": 9,
+          "autofix": false,
+          "created_at": "2025-09-24T19:34:40.634Z",
+          "updated_at": "2025-09-24T19:34:40.634Z"
+        }
+      ]
+    },
+    "TITULO_XI": {
+      "sectionTitle": "SIGNOS ORTOGRÁFICOS",
+      "pageRange": {
+        "start": 84,
+        "end": 99
+      },
+      "rules": [
+        {
+          "id": "MAYUS_001",
+          "category": "grammar",
+          "name": "Mayúsculas en nombres propios específicos",
+          "description": "Usar mayúscula inicial en nombres de organismos públicos, partidos políticos, fiestas, regiones geográficas específicas",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.9,
+            "pattern": "Nombres de entidades o eventos específicos"
+          },
+          "examples": {
+            "incorrect": "instituto nacional de industria, partido radical",
+            "correct": "Instituto Nacional de Industria, Unión Cívica Radical",
+            "explanation": "Distinguir nombres propios de referencias genéricas"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "SIGNOS ORTOGRÁFICOS",
+            "sectionId": "TITULO_XI"
+          },
+          "priority": 9,
+          "autofix": false,
+          "created_at": "2025-09-24T19:34:55.838Z",
+          "updated_at": "2025-09-24T19:34:55.838Z"
+        },
+        {
+          "id": "MAYUS_002",
+          "category": "style",
+          "name": "Títulos de obras con mayúscula restringida",
+          "description": "En títulos de libros, películas, obras solo la primera letra con mayúscula, excepto nombres propios",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "Títulos de obras con múltiples mayúsculas"
+          },
+          "examples": {
+            "incorrect": "Newspapers: The Power and the Money",
+            "correct": "Newspapers: the power and the money",
+            "explanation": "Mantener un estilo consistente en títulos"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "SIGNOS ORTOGRÁFICOS",
+            "sectionId": "TITULO_XI"
+          },
+          "priority": 7,
+          "autofix": false,
+          "created_at": "2025-09-24T19:34:55.838Z",
+          "updated_at": "2025-09-24T19:34:55.838Z"
+        },
+        {
+          "id": "PUNTUACION_001",
+          "category": "punctuation",
+          "name": "Mayúscula tras dos puntos en citas o enumeraciones",
+          "description": "Usar mayúscula inicial (en negrita) después de dos puntos en citas o enumeraciones multipárrafo",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "Enumeraciones tras dos puntos"
+          },
+          "examples": {
+            "incorrect": "razones: primera razón. segunda razón.",
+            "correct": "Razones: **Primera razón**. **Segunda razón**.",
+            "explanation": "Mejorar legibilidad y estructura de citas"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "SIGNOS ORTOGRÁFICOS",
+            "sectionId": "TITULO_XI"
+          },
+          "priority": 6,
+          "autofix": false,
+          "created_at": "2025-09-24T19:34:55.838Z",
+          "updated_at": "2025-09-24T19:34:55.838Z"
+        },
+        {
+          "id": "SILABEO_001",
+          "category": "grammar",
+          "name": "Reglas de división de palabras a fin de línea",
+          "description": "Normas específicas para dividir palabras entre líneas según grupos consonánticos",
+          "severity": "suggestion",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.8,
+            "pattern": "División de palabras con consonantes"
+          },
+          "examples": {
+            "incorrect": "des-truyo, cons-treñir",
+            "correct": "des-tru-yo, cons-tre-ñir",
+            "explanation": "Mantener coherencia en separación silábica"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "SIGNOS ORTOGRÁFICOS",
+            "sectionId": "TITULO_XI"
+          },
+          "priority": 5,
+          "autofix": false,
+          "created_at": "2025-09-24T19:34:55.838Z",
+          "updated_at": "2025-09-24T19:34:55.838Z"
+        },
+        {
+          "id": "MAYUS_003",
+          "category": "style",
+          "name": "Minúsculas en cargos y expresiones extranjeras",
+          "description": "Usar minúsculas en denominaciones de cargos y expresiones en idiomas extranjeros",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "Cargos o expresiones en otros idiomas"
+          },
+          "examples": {
+            "incorrect": "Primer Ministro, Ancien Régime",
+            "correct": "primer ministro, ancien régime",
+            "explanation": "Mantener estilo neutro en referencias internacionales"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "SIGNOS ORTOGRÁFICOS",
+            "sectionId": "TITULO_XI"
+          },
+          "priority": 6,
+          "autofix": false,
+          "created_at": "2025-09-24T19:34:55.838Z",
+          "updated_at": "2025-09-24T19:34:55.838Z"
+        },
+        {
+          "id": "SECTION_RULE_001",
+          "category": "structure",
+          "name": "No iniciar información con adverbios",
+          "description": "La primera palabra de una información no puede ser un adverbio (excepto 'sólo' o 'solamente' con impacto en significado)",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "^(Actualmente|Recientemente|Normalmente)"
+          },
+          "examples": {
+            "incorrect": "Recientemente el gobierno aprobó...",
+            "correct": "El gobierno aprobó recientemente...",
+            "explanation": "Los adverbios no deben comenzar una noticia para mantener claridad y captar la atención del lector"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "SIGNOS ORTOGRÁFICOS",
+            "sectionId": "TITULO_XI"
+          },
+          "priority": 9,
+          "autofix": false,
+          "created_at": "2025-09-24T19:35:11.401Z",
+          "updated_at": "2025-09-24T19:35:11.401Z"
+        },
+        {
+          "id": "SECTION_RULE_002",
+          "category": "style",
+          "name": "Preferir día concreto sobre adverbios temporales",
+          "description": "Al referirse a un día de la misma semana, usar nombre específico en lugar de adverbio",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "anteayer|ayer"
+          },
+          "examples": {
+            "incorrect": "Anteayer se aprobó la ley",
+            "correct": "El martes pasado se aprobó la ley",
+            "explanation": "Mejora precisión y claridad temporal"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "SIGNOS ORTOGRÁFICOS",
+            "sectionId": "TITULO_XI"
+          },
+          "priority": 6,
+          "autofix": false,
+          "created_at": "2025-09-24T19:35:11.401Z",
+          "updated_at": "2025-09-24T19:35:11.401Z"
+        },
+        {
+          "id": "SECTION_RULE_003",
+          "category": "grammar",
+          "name": "Usar tiempo verbal indefinido con referencias temporales precisas",
+          "description": "Con referencias a día específico, usar pretérito indefinido, no pretérito perfecto",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.8,
+            "pattern": "ha (aprobado|realizado|ocurrido) (ayer|hoy)"
+          },
+          "examples": {
+            "incorrect": "Ha aprobado ayer la ley",
+            "correct": "Aprobó ayer la ley",
+            "explanation": "Mantiene precisión gramatical con referencias temporales concretas"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "SIGNOS ORTOGRÁFICOS",
+            "sectionId": "TITULO_XI"
+          },
+          "priority": 8,
+          "autofix": false,
+          "created_at": "2025-09-24T19:35:11.401Z",
+          "updated_at": "2025-09-24T19:35:11.401Z"
+        },
+        {
+          "id": "SECTION_RULE_004",
+          "category": "style",
+          "name": "Limitar uso de adjetivos en géneros informativos",
+          "description": "Restringir adjetivos calificativos en textos informativos, preferir datos concretos",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "muy|joven|nuevo"
+          },
+          "examples": {
+            "incorrect": "El nuevo director general es muy joven",
+            "correct": "El nuevo director general tiene 29 años",
+            "explanation": "Prioriza objetividad sobre descripciones subjetivas"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "SIGNOS ORTOGRÁFICOS",
+            "sectionId": "TITULO_XI"
+          },
+          "priority": 7,
+          "autofix": false,
+          "created_at": "2025-09-24T19:35:11.401Z",
+          "updated_at": "2025-09-24T19:35:11.401Z"
+        },
+        {
+          "id": "SECTION_RULE_005",
+          "category": "grammar",
+          "name": "No usar preposición 'a' con complementos de sustantivos",
+          "description": "Sustituir preposición 'a' por 'de' en complementos de sustantivos",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "(a reacción|a presión|a gas)"
+          },
+          "examples": {
+            "incorrect": "avión a reacción, olla a presión",
+            "correct": "avión de reacción, olla de presión",
+            "explanation": "Evita galicismos gramaticales"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "SIGNOS ORTOGRÁFICOS",
+            "sectionId": "TITULO_XI"
+          },
+          "priority": 9,
+          "autofix": false,
+          "created_at": "2025-09-24T19:35:11.401Z",
+          "updated_at": "2025-09-24T19:35:11.401Z"
+        }
+      ]
+    },
+    "TITULO_XII": {
+      "sectionTitle": "NORMAS GRAMATICALES",
+      "pageRange": {
+        "start": 101,
+        "end": 108
+      },
+      "rules": [
+        {
+          "id": "GRAMMAR_RULE_001",
+          "category": "grammar",
+          "name": "Uso correcto de leísmo",
+          "description": "Usar 'le' solo como complemento indirecto femenino, no para objetos o animales",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "le + verbo + objeto"
+          },
+          "examples": {
+            "incorrect": "le entregué el gato",
+            "correct": "lo entregué el gato",
+            "explanation": "Evitar usar 'le' como complemento directo para objetos"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NORMAS GRAMATICALES",
+            "sectionId": "TITULO_XII"
+          },
+          "priority": 8,
+          "autofix": false,
+          "created_at": "2025-09-24T19:35:26.146Z",
+          "updated_at": "2025-09-24T19:35:26.146Z"
+        },
+        {
+          "id": "GRAMMAR_RULE_002",
+          "category": "style",
+          "name": "Coherencia en estilo directo e indirecto",
+          "description": "No mezclar estilo directo e indirecto en la misma frase",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.8,
+            "pattern": "cita directa + verbo declarativo + discurso indirecto"
+          },
+          "examples": {
+            "incorrect": "su esposa comentó anoche que \"mi marido no está\"",
+            "correct": [
+              "su esposa comentó anoche que su marido no estaba",
+              "su esposa comentó anoche: \"Mi marido no está\""
+            ],
+            "explanation": "Mantener coherencia sintáctica en las citas"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NORMAS GRAMATICALES",
+            "sectionId": "TITULO_XII"
+          },
+          "priority": 7,
+          "autofix": false,
+          "created_at": "2025-09-24T19:35:26.146Z",
+          "updated_at": "2025-09-24T19:35:26.146Z"
+        },
+        {
+          "id": "GRAMMAR_RULE_003",
+          "category": "grammar",
+          "name": "Concordancia verbal en citas",
+          "description": "Mantener coherencia gramatical al usar citas entre comillas",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "cita + discordancia verbal"
+          },
+          "examples": {
+            "incorrect": "la doncella aseguró que no podía contestar \"porque estoy sola con las niñas\"",
+            "correct": "la doncella aseguró que no podía contestar \"porque está sola con las niñas\"",
+            "explanation": "Mantener la concordancia de tiempo y persona verbal"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NORMAS GRAMATICALES",
+            "sectionId": "TITULO_XII"
+          },
+          "priority": 6,
+          "autofix": false,
+          "created_at": "2025-09-24T19:35:26.146Z",
+          "updated_at": "2025-09-24T19:35:26.146Z"
+        },
+        {
+          "id": "GRAMMAR_RULE_004",
+          "category": "style",
+          "name": "Posición de adverbios",
+          "description": "Colocar adverbios junto al verbo o después del grupo verbal",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.7,
+            "pattern": "adverbio + verbo"
+          },
+          "examples": {
+            "incorrect": [
+              "hoy, el Rey ha inaugurado...",
+              "el presidente está claramente dispuesto a dimitir"
+            ],
+            "correct": [
+              "el Rey ha inaugurado hoy...",
+              "el presidente está dispuesto claramente a dimitir"
+            ],
+            "explanation": "Mejorar la claridad y precisión de la construcción"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NORMAS GRAMATICALES",
+            "sectionId": "TITULO_XII"
+          },
+          "priority": 5,
+          "autofix": false,
+          "created_at": "2025-09-24T19:35:26.146Z",
+          "updated_at": "2025-09-24T19:35:26.146Z"
+        },
+        {
+          "id": "GRAMMAR_RULE_005",
+          "category": "style",
+          "name": "No iniciar información con adverbios",
+          "description": "Evitar comenzar una noticia con adverbios (salvo excepciones)",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "adverbio + inicio de párrafo"
+          },
+          "examples": {
+            "incorrect": "Recientemente el gobierno anunció...",
+            "correct": "El gobierno anunció recientemente...",
+            "explanation": "El primer párrafo debe ser directo y captar la atención"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NORMAS GRAMATICALES",
+            "sectionId": "TITULO_XII"
+          },
+          "priority": 7,
+          "autofix": false,
+          "created_at": "2025-09-24T19:35:26.146Z",
+          "updated_at": "2025-09-24T19:35:26.146Z"
+        },
+        {
+          "id": "GRAMMAR_RULE_001",
+          "category": "vocabulary",
+          "name": "Uso correcto del verbo 'detectar'",
+          "description": "Usar 'detectar' solo para métodos técnicos de identificación, no para acciones directas",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "detectar + presencia/actuación"
+          },
+          "examples": {
+            "incorrect": "La policía detectó la presencia del homicida",
+            "correct": "La policía localizó/observó al homicida",
+            "explanation": "Detectar implica uso de métodos técnicos como radar o sensores"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NORMAS GRAMATICALES",
+            "sectionId": "TITULO_XII"
+          },
+          "priority": 7,
+          "autofix": false,
+          "created_at": "2025-09-24T19:35:39.514Z",
+          "updated_at": "2025-09-24T19:35:39.514Z"
+        },
+        {
+          "id": "GRAMMAR_RULE_002",
+          "category": "vocabulary",
+          "name": "Precisión en el uso de 'encuentro'",
+          "description": "No confundir encuentro con reunión o duración de un evento",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.8,
+            "pattern": "encuentro + duración"
+          },
+          "examples": {
+            "incorrect": "El encuentro entre presidentes duró dos horas",
+            "correct": "La reunión entre presidentes duró dos horas",
+            "explanation": "Un encuentro es un momento breve de coincidencia, no la duración del evento"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NORMAS GRAMATICALES",
+            "sectionId": "TITULO_XII"
+          },
+          "priority": 6,
+          "autofix": false,
+          "created_at": "2025-09-24T19:35:39.514Z",
+          "updated_at": "2025-09-24T19:35:39.514Z"
+        },
+        {
+          "id": "GRAMMAR_RULE_003",
+          "category": "vocabulary",
+          "name": "Uso correcto de 'entrenar'",
+          "description": "Entrenar siempre requiere complemento directo o forma pronominal",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "entrenar sin complemento"
+          },
+          "examples": {
+            "incorrect": "La selección entrenó en el estadio",
+            "correct": "La selección se entrenó en el estadio",
+            "explanation": "El verbo entrenar necesita reflexivo o complemento directo"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NORMAS GRAMATICALES",
+            "sectionId": "TITULO_XII"
+          },
+          "priority": 5,
+          "autofix": false,
+          "created_at": "2025-09-24T19:35:39.514Z",
+          "updated_at": "2025-09-24T19:35:39.514Z"
+        },
+        {
+          "id": "GRAMMAR_RULE_004",
+          "category": "vocabulary",
+          "name": "Evitar expresiones incorrectas",
+          "description": "Sustituir expresiones como 'en base a' por alternativas más correctas",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.7,
+            "pattern": "en base a"
+          },
+          "examples": {
+            "incorrect": "En base a los resultados",
+            "correct": "A partir de los resultados",
+            "explanation": "Eliminar barbarismos y anglicismos innecesarios"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NORMAS GRAMATICALES",
+            "sectionId": "TITULO_XII"
+          },
+          "priority": 4,
+          "autofix": false,
+          "created_at": "2025-09-24T19:35:39.514Z",
+          "updated_at": "2025-09-24T19:35:39.514Z"
+        },
+        {
+          "id": "GRAMMAR_RULE_005",
+          "category": "grammar",
+          "name": "Uso preciso de verbos auxiliares",
+          "description": "No usar 'habría' o potencial para expresar rumores o inseguridad",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "estaría/habría + verbo"
+          },
+          "examples": {
+            "incorrect": "Fuentes señalan que el ministro estaría preparando la ley",
+            "correct": "Fuentes señalan que el ministro prepara la ley",
+            "explanation": "El potencial en pasado indica una acción que no ocurrió"
+          },
+          "source": {
+            "publication": "Manual de estilo de El País",
+            "section": "NORMAS GRAMATICALES",
+            "sectionId": "TITULO_XII"
+          },
+          "priority": 8,
+          "autofix": false,
+          "created_at": "2025-09-24T19:35:39.514Z",
+          "updated_at": "2025-09-24T19:35:39.514Z"
+        }
+      ]
+    }
+  },
+  "allRules": [
+    {
+      "id": "RULE_1.24",
+      "category": "attribution|fairness",
+      "name": "Neutralidad en titulares con versiones contrapuestas",
+      "description": "No se debe titular priorizando una versión de los hechos cuando existen fuentes con relatos diferentes",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "versiones contrapuestas"
+      },
+      "examples": {
+        "incorrect": "Titular que presente solo una versión como verdad absoluta",
+        "correct": "Titular que equilibre o presente ambas versiones sin sesgo",
+        "explanation": "Garantiza imparcialidad periodística"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "PRINCIPIOS",
+        "sectionId": "TITULO_I"
+      },
+      "priority": 9,
+      "autofix": false,
+      "created_at": "2025-09-24T19:31:10.701Z",
+      "updated_at": "2025-09-24T19:31:10.701Z"
+    },
+    {
+      "id": "RULE_1.25",
+      "category": "attribution|integrity",
+      "name": "Precisión en la firma de noticias",
+      "description": "Prohibido firmar noticias en lugares donde no se elaboró el texto",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.9,
+        "pattern": "firma de enviados especiales"
+      },
+      "examples": {
+        "incorrect": "Firmar una noticia desde una ciudad donde no se reportó",
+        "correct": "Mencionar en la entradilla el lugar de origen de la información",
+        "explanation": "Preserva transparencia sobre el origen de la información"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "PRINCIPIOS",
+        "sectionId": "TITULO_I"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T19:31:10.701Z",
+      "updated_at": "2025-09-24T19:31:10.701Z"
+    },
+    {
+      "id": "RULE_1.26",
+      "category": "ethics|transparency",
+      "name": "Transparencia en cambio de nombres",
+      "description": "Advertir al lector cuando se modifica el nombre de una persona en un texto",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "omitir nombre"
+      },
+      "examples": {
+        "incorrect": "Cambiar nombres sin explicación",
+        "correct": "Indicar al inicio del texto que se ha modificado un nombre",
+        "explanation": "Mantiene la integridad ética del reportaje"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "PRINCIPIOS",
+        "sectionId": "TITULO_I"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T19:31:10.701Z",
+      "updated_at": "2025-09-24T19:31:10.701Z"
+    },
+    {
+      "id": "RULE_1.30",
+      "category": "design|integrity",
+      "name": "Diferenciación tipográfica de publicidad",
+      "description": "La publicidad debe distinguirse claramente del contenido periodístico",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.8,
+        "pattern": "diseño publicitario"
+      },
+      "examples": {
+        "incorrect": "Anuncios con diseño similar a columnas periodísticas",
+        "correct": "Anuncios con marca 'Publicidad' y tipografía diferente",
+        "explanation": "Previene confusión del lector"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "PRINCIPIOS",
+        "sectionId": "TITULO_I"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T19:31:10.701Z",
+      "updated_at": "2025-09-24T19:31:10.701Z"
+    },
+    {
+      "id": "RULE_1.32",
+      "category": "ethics|photography",
+      "name": "No manipulación fotográfica",
+      "description": "Prohibida toda manipulación fotográfica más allá de correcciones técnicas",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.9,
+        "pattern": "manipulación fotográfica"
+      },
+      "examples": {
+        "incorrect": "Invertir imagen para cambiar orientación",
+        "correct": "Solo correcciones técnicas de revelado o transmisión",
+        "explanation": "Preserva integridad visual de la información"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "PRINCIPIOS",
+        "sectionId": "TITULO_I"
+      },
+      "priority": 9,
+      "autofix": false,
+      "created_at": "2025-09-24T19:31:10.701Z",
+      "updated_at": "2025-09-24T19:31:10.701Z"
+    },
+    {
+      "id": "SECTION_RULE_001",
+      "category": "structure",
+      "name": "Límite de extensión de párrafos",
+      "description": "Ningún párrafo debe tener más de 100 palabras",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "párrafo > 100 palabras"
+      },
+      "examples": {
+        "incorrect": "Párrafo extenso con más de 100 palabras sin pausas ni división",
+        "correct": "Párrafo dividido o resumido para no exceder 100 palabras",
+        "explanation": "Mantiene la legibilidad y claridad del texto periodístico"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "GÉNEROS PERIODÍSTICOS",
+        "sectionId": "TITULO_II"
+      },
+      "priority": 9,
+      "autofix": false,
+      "created_at": "2025-09-24T19:31:43.565Z",
+      "updated_at": "2025-09-24T19:31:43.565Z"
+    },
+    {
+      "id": "SECTION_RULE_002",
+      "category": "clarity",
+      "name": "Texto autosuficiente",
+      "description": "Cada noticia debe explicarse por sí misma, sin depender de textos previos",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.9,
+        "pattern": "contexto incompleto"
+      },
+      "examples": {
+        "incorrect": "Noticia que requiere leer artículos anteriores para comprenderla",
+        "correct": "Noticia que proporciona todo el contexto necesario para su comprensión",
+        "explanation": "Garantiza que cualquier lector pueda entender la información"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "GÉNEROS PERIODÍSTICOS",
+        "sectionId": "TITULO_II"
+      },
+      "priority": 10,
+      "autofix": false,
+      "created_at": "2025-09-24T19:31:43.565Z",
+      "updated_at": "2025-09-24T19:31:43.565Z"
+    },
+    {
+      "id": "SECTION_RULE_003",
+      "category": "attribution",
+      "name": "Precisión de datos",
+      "description": "Especificar números exactos en lugar de descripciones vagas",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.8,
+        "pattern": "descripciones imprecisas"
+      },
+      "examples": {
+        "incorrect": "Un grupo de agricultores tomó el Ayuntamiento",
+        "correct": "12 agricultores tomaron el Ayuntamiento de Alcalá de Henares",
+        "explanation": "Proporciona mayor credibilidad y precisión a la información"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "GÉNEROS PERIODÍSTICOS",
+        "sectionId": "TITULO_II"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T19:31:43.565Z",
+      "updated_at": "2025-09-24T19:31:43.565Z"
+    },
+    {
+      "id": "SECTION_RULE_004",
+      "category": "style",
+      "name": "Personalización de noticias",
+      "description": "Incluir detalles personales relevantes de los protagonistas",
+      "severity": "suggestion",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "personajes sin descripción"
+      },
+      "examples": {
+        "incorrect": "Un alcalde presentó la moción",
+        "correct": "Juan Martínez, alcalde de 45 años, presentó la moción",
+        "explanation": "Humaniza la información y genera mayor conexión con el lector"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "GÉNEROS PERIODÍSTICOS",
+        "sectionId": "TITULO_II"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T19:31:43.565Z",
+      "updated_at": "2025-09-24T19:31:43.565Z"
+    },
+    {
+      "id": "SECTION_RULE_005",
+      "category": "structure",
+      "name": "Reglas para breves",
+      "description": "Normas específicas para noticias cortas o cuñas",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.7,
+        "pattern": "breve sin formato estándar"
+      },
+      "examples": {
+        "incorrect": "Breve con nombre completo del autor y sin iniciales",
+        "correct": "Breve con iniciales del autor y máximo 12 líneas",
+        "explanation": "Mantiene un formato consistente para noticias breves"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "GÉNEROS PERIODÍSTICOS",
+        "sectionId": "TITULO_II"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T19:31:43.565Z",
+      "updated_at": "2025-09-24T19:31:43.565Z"
+    },
+    {
+      "id": "ATTRIBUTION_RULE_001",
+      "category": "attribution",
+      "name": "Atribución flexible de fuentes en reportajes",
+      "description": "No es necesario reiterar la atribución de fuentes constantemente para mantener la viveza del relato",
+      "severity": "suggestion",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "atribución de fuentes"
+      },
+      "examples": {
+        "incorrect": "Fuente A dijo X. Fuente A añadió Y. Fuente A explicó Z.",
+        "correct": "La información fluye con referencias puntuales solo cuando es necesario",
+        "explanation": "Evitar saturar el texto con referencias constantes a las fuentes"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "GÉNEROS PERIODÍSTICOS",
+        "sectionId": "TITULO_II"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T19:31:58.473Z",
+      "updated_at": "2025-09-24T19:31:58.473Z"
+    },
+    {
+      "id": "CHRONICLE_RULE_001",
+      "category": "style",
+      "name": "Características de la crónica periodística",
+      "description": "La crónica debe combinar información con análisis, priorizando el contenido informativo sobre la interpretación personal",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.9,
+        "pattern": "análisis + información"
+      },
+      "examples": {
+        "incorrect": "Creo que esto significa que...",
+        "correct": "Los hechos indican que... según fuentes oficiales...",
+        "explanation": "Mantener objetividad y fundamentar cualquier interpretación"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "GÉNEROS PERIODÍSTICOS",
+        "sectionId": "TITULO_II"
+      },
+      "priority": 9,
+      "autofix": false,
+      "created_at": "2025-09-24T19:31:58.473Z",
+      "updated_at": "2025-09-24T19:31:58.473Z"
+    },
+    {
+      "id": "INTERVIEW_RULE_001",
+      "category": "structure",
+      "name": "Flexibilidad en la presentación de declaraciones",
+      "description": "Las declaraciones no siempre requieren formato de entrevista pregunta-respuesta",
+      "severity": "suggestion",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "presentación de declaraciones"
+      },
+      "examples": {
+        "incorrect": "Formato rígido de Q&A para declaraciones breves",
+        "correct": "Integrar declaraciones en reportaje o noticia con entrecomillados",
+        "explanation": "Adaptar el formato al contexto y extensión de las declaraciones"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "GÉNEROS PERIODÍSTICOS",
+        "sectionId": "TITULO_II"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T19:31:58.473Z",
+      "updated_at": "2025-09-24T19:31:58.473Z"
+    },
+    {
+      "id": "CHRONICLE_RULE_002",
+      "category": "style",
+      "name": "Estilo narrativo de crónica",
+      "description": "Las crónicas deben ser amenas, incluyendo anécdotas y contextualizando los hechos",
+      "severity": "suggestion",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.8,
+        "pattern": "estilo ameno"
+      },
+      "examples": {
+        "incorrect": "Relato escueto y sin contexto",
+        "correct": "Describir ambiente, expresiones y sorpresas del evento",
+        "explanation": "Hacer el texto más atractivo y comprensible"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "GÉNEROS PERIODÍSTICOS",
+        "sectionId": "TITULO_II"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T19:31:58.473Z",
+      "updated_at": "2025-09-24T19:31:58.473Z"
+    },
+    {
+      "id": "INTERVIEW_RULE_002",
+      "category": "structure",
+      "name": "Presentación del entrevistado",
+      "description": "Toda entrevista debe incluir una introducción que sitúe al personaje y explique el contexto de la entrevista",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "presentación del entrevistado"
+      },
+      "examples": {
+        "incorrect": "Comenzar directamente con preguntas sin presentación",
+        "correct": "Párrafo introductorio que describa personalidad y relevancia del entrevistado",
+        "explanation": "Proporcionar contexto y relevancia al lector"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "GÉNEROS PERIODÍSTICOS",
+        "sectionId": "TITULO_II"
+      },
+      "priority": 9,
+      "autofix": false,
+      "created_at": "2025-09-24T19:31:58.473Z",
+      "updated_at": "2025-09-24T19:31:58.473Z"
+    },
+    {
+      "id": "INTERVIEW_RULE_001",
+      "category": "structure",
+      "name": "Formato de Entrevista-Perfil",
+      "description": "Las entrevistas-perfil pueden no seguir el formato estricto pregunta-respuesta y admiten comentarios, descripciones y datos biográficos",
+      "severity": "suggestion",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "entrevista-perfil"
+      },
+      "examples": {
+        "incorrect": "Entrevista con formato rígido pregunta-respuesta",
+        "correct": "Entrevista narrativa con contexto biográfico e interpretación",
+        "explanation": "Permite mayor flexibilidad narrativa para perfiles periodísticos"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "GÉNEROS PERIODÍSTICOS",
+        "sectionId": "TITULO_II"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T19:32:13.090Z",
+      "updated_at": "2025-09-24T19:32:13.090Z"
+    },
+    {
+      "id": "INTERVIEW_RULE_002",
+      "category": "punctuation",
+      "name": "Marcación de Citas Textuales",
+      "description": "Las preguntas y respuestas textuales deben marcarse con una raya",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.9,
+        "pattern": "citas textuales"
+      },
+      "examples": {
+        "incorrect": "Preguntas y respuestas sin ninguna marca especial",
+        "correct": "— Pregunta del entrevistador\n— Respuesta del entrevistado",
+        "explanation": "Diferencia clara entre voz del periodista y entrevistado"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "GÉNEROS PERIODÍSTICOS",
+        "sectionId": "TITULO_II"
+      },
+      "priority": 9,
+      "autofix": false,
+      "created_at": "2025-09-24T19:32:13.090Z",
+      "updated_at": "2025-09-24T19:32:13.090Z"
+    },
+    {
+      "id": "OPINION_RULE_001",
+      "category": "editing",
+      "name": "Edición de Artículos de Opinión",
+      "description": "Artículos de opinión solo pueden editarse por errores flagrantes, respetando el estilo del autor",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "tribuna|artículo de opinión"
+      },
+      "examples": {
+        "incorrect": "Reescribir completamente un artículo de opinión",
+        "correct": "Corregir errores ortográficos sin modificar el estilo",
+        "explanation": "Preservar la voz y intención del autor"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "GÉNEROS PERIODÍSTICOS",
+        "sectionId": "TITULO_II"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T19:32:13.090Z",
+      "updated_at": "2025-09-24T19:32:13.090Z"
+    },
+    {
+      "id": "ATTRIBUTION_RULE_001",
+      "category": "attribution",
+      "name": "Pie de Autor Obligatorio",
+      "description": "Todos los artículos de opinión deben incluir un pie de autor con cargo, título o información relevante",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.95,
+        "pattern": "pie de autor"
+      },
+      "examples": {
+        "incorrect": "Artículo sin información del autor",
+        "correct": "Juan Pérez, periodista especializado en economía",
+        "explanation": "Proporciona contexto y credibilidad al artículo"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "GÉNEROS PERIODÍSTICOS",
+        "sectionId": "TITULO_II"
+      },
+      "priority": 10,
+      "autofix": false,
+      "created_at": "2025-09-24T19:32:13.090Z",
+      "updated_at": "2025-09-24T19:32:13.090Z"
+    },
+    {
+      "id": "SUPPLEMENT_RULE_001",
+      "category": "style",
+      "name": "Entrevistas en Suplementos",
+      "description": "Las entrevistas en suplementos pueden incluir introducción extensa, citas significativas y descripciones",
+      "severity": "suggestion",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.8,
+        "pattern": "entrevista en suplemento"
+      },
+      "examples": {
+        "incorrect": "Entrevista estándar sin contexto ni descripción",
+        "correct": "Introducción narrativa con citas emblemáticas del entrevistado",
+        "explanation": "Mayor libertad narrativa en formatos de suplemento"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "GÉNEROS PERIODÍSTICOS",
+        "sectionId": "TITULO_II"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T19:32:13.090Z",
+      "updated_at": "2025-09-24T19:32:13.090Z"
+    },
+    {
+      "id": "HEADLINE_RULE_001",
+      "category": "punctuation",
+      "name": "Restricción de paréntesis en titulares",
+      "description": "Solo se permiten paréntesis para resultados deportivos o ubicación de lugares desconocidos",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "\\(.*\\)"
+      },
+      "examples": {
+        "incorrect": "Nuevo proyecto (importante) para la ciudad",
+        "correct": "El Barcelona ganó al Madrid (95-92)",
+        "explanation": "Evitar paréntesis que no sean informativos o localizadores"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "ELEMENTOS DE TITULACIÓN",
+        "sectionId": "TITULO_III"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T19:32:30.534Z",
+      "updated_at": "2025-09-24T19:32:30.534Z"
+    },
+    {
+      "id": "HEADLINE_RULE_002",
+      "category": "style",
+      "name": "Formato de cursivas en titulares",
+      "description": "Palabras en cursiva irán entre comillas simples; comillas reservadas para citas textuales",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "cursiva"
+      },
+      "examples": {
+        "incorrect": "Titular con *palabra en cursiva*",
+        "correct": "Titular con 'palabra en cursiva'",
+        "explanation": "Mantener consistencia tipográfica"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "ELEMENTOS DE TITULACIÓN",
+        "sectionId": "TITULO_III"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T19:32:30.534Z",
+      "updated_at": "2025-09-24T19:32:30.534Z"
+    },
+    {
+      "id": "HEADLINE_RULE_003",
+      "category": "grammar",
+      "name": "No partir palabras en titulares",
+      "description": "Evitar dividir palabras en diferentes líneas de un titular",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.9,
+        "pattern": "-\\n"
+      },
+      "examples": {
+        "incorrect": "Nuevo proyec-\nto aprobado",
+        "correct": "Nuevo proyecto aprobado",
+        "explanation": "Mantener legibilidad y claridad"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "ELEMENTOS DE TITULACIÓN",
+        "sectionId": "TITULO_III"
+      },
+      "priority": 9,
+      "autofix": false,
+      "created_at": "2025-09-24T19:32:30.534Z",
+      "updated_at": "2025-09-24T19:32:30.534Z"
+    },
+    {
+      "id": "HEADLINE_RULE_004",
+      "category": "clarity",
+      "name": "Restricción de siglas en titulares",
+      "description": "No usar siglas poco conocidas; máximo una sigla por titular",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.8,
+        "pattern": "[A-Z]{2,}"
+      },
+      "examples": {
+        "incorrect": "SGAE y UGT firman acuerdo",
+        "correct": "Sindicatos firman importante acuerdo",
+        "explanation": "Garantizar comprensión para lectores generales"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "ELEMENTOS DE TITULACIÓN",
+        "sectionId": "TITULO_III"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T19:32:30.534Z",
+      "updated_at": "2025-09-24T19:32:30.534Z"
+    },
+    {
+      "id": "HEADLINE_RULE_005",
+      "category": "style",
+      "name": "Formato de números en titulares",
+      "description": "Permitido comenzar con números; porcentajes con signo %",
+      "severity": "suggestion",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "^[0-9]|%"
+      },
+      "examples": {
+        "incorrect": "Cinco por ciento de aumento",
+        "correct": "5% de aumento",
+        "explanation": "Facilitar lectura rápida"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "ELEMENTOS DE TITULACIÓN",
+        "sectionId": "TITULO_III"
+      },
+      "priority": 5,
+      "autofix": false,
+      "created_at": "2025-09-24T19:32:30.534Z",
+      "updated_at": "2025-09-24T19:32:30.534Z"
+    },
+    {
+      "id": "HEADLINE_RULE_006",
+      "category": "style",
+      "name": "Evitar repeticiones en titulares",
+      "description": "No repetir palabras o raíces de palabras en titulares de una misma página",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.7,
+        "pattern": "repetición"
+      },
+      "examples": {
+        "incorrect": "Director dirige nueva política",
+        "correct": "Líder establece nueva política",
+        "explanation": "Mantener variedad léxica"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "ELEMENTOS DE TITULACIÓN",
+        "sectionId": "TITULO_III"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T19:32:30.534Z",
+      "updated_at": "2025-09-24T19:32:30.534Z"
+    },
+    {
+      "id": "HEADLINE_RULE_007",
+      "category": "structure",
+      "name": "Independencia de titular respecto al texto",
+      "description": "El titular no puede ser la primera frase del texto ni prolongarse en ladillos",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "\\.\\.\\."
+      },
+      "examples": {
+        "incorrect": "Titular que se continúa... en el texto",
+        "correct": "Titular independiente y conciso",
+        "explanation": "Mantener autonomía informativa"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "ELEMENTOS DE TITULACIÓN",
+        "sectionId": "TITULO_III"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T19:32:30.534Z",
+      "updated_at": "2025-09-24T19:32:30.534Z"
+    },
+    {
+      "id": "LADILLO_RULE_001",
+      "category": "structure",
+      "name": "Ubicación de ladillos",
+      "description": "No colocar ladillos entre pregunta y respuesta en entrevistas",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.9,
+        "pattern": "ladillo entre pregunta/respuesta"
+      },
+      "examples": {
+        "incorrect": "[Pregunta] Ladillo [Respuesta]",
+        "correct": "[Pregunta] [Respuesta] (Sin ladillo intermedio)",
+        "explanation": "Mantiene la integridad del diálogo en entrevistas"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "ELEMENTOS DE TITULACIÓN",
+        "sectionId": "TITULO_III"
+      },
+      "priority": 9,
+      "autofix": false,
+      "created_at": "2025-09-24T19:32:49.782Z",
+      "updated_at": "2025-09-24T19:32:49.782Z"
+    },
+    {
+      "id": "LADILLO_RULE_002",
+      "category": "style",
+      "name": "Contenido de ladillos",
+      "description": "Los ladillos no pueden repetir conceptos del titular",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "repetición conceptual"
+      },
+      "examples": {
+        "incorrect": "Titular: 'Crisis económica' / Ladillo: 'Problemas financieros'",
+        "correct": "Titular: 'Crisis económica' / Ladillo: 'Nuevas estrategias'",
+        "explanation": "Evitar redundancia y aportar información adicional"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "ELEMENTOS DE TITULACIÓN",
+        "sectionId": "TITULO_III"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T19:32:49.782Z",
+      "updated_at": "2025-09-24T19:32:49.782Z"
+    },
+    {
+      "id": "LADILLO_RULE_003",
+      "category": "structure",
+      "name": "Continuidad de titulares",
+      "description": "No fragmentar titulares con ladillos usando puntos suspensivos",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.8,
+        "pattern": "titular fragmentado"
+      },
+      "examples": {
+        "incorrect": "Titular: 'Los efectos...' / Ladillo: '...de la crisis'",
+        "correct": "Titular completo sin fragmentación",
+        "explanation": "Mantener coherencia y legibilidad del titular"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "ELEMENTOS DE TITULACIÓN",
+        "sectionId": "TITULO_III"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T19:32:49.782Z",
+      "updated_at": "2025-09-24T19:32:49.782Z"
+    },
+    {
+      "id": "LADILLO_RULE_004",
+      "category": "clarity",
+      "name": "Independencia de ladillos",
+      "description": "Los ladillos deben poder eliminarse sin afectar la lectura del texto",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "ladillo indispensable"
+      },
+      "examples": {
+        "incorrect": "Ladillo esencial para comprender el texto",
+        "correct": "Texto comprensible sin ladillo",
+        "explanation": "Mantener la integridad narrativa del texto"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "ELEMENTOS DE TITULACIÓN",
+        "sectionId": "TITULO_III"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T19:32:49.782Z",
+      "updated_at": "2025-09-24T19:32:49.782Z"
+    },
+    {
+      "id": "LADILLO_RULE_005",
+      "category": "typography",
+      "name": "Formato de ladillos",
+      "description": "Reglas específicas de formato para ladillos",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.9,
+        "pattern": "signos ortográficos en ladillo"
+      },
+      "examples": {
+        "incorrect": "Ladillo con signos ortográficos, palabras partidas",
+        "correct": "Ladillo sin puntuación, palabras completas",
+        "explanation": "Mantener estándar tipográfico"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "ELEMENTOS DE TITULACIÓN",
+        "sectionId": "TITULO_III"
+      },
+      "priority": 9,
+      "autofix": false,
+      "created_at": "2025-09-24T19:32:49.782Z",
+      "updated_at": "2025-09-24T19:32:49.782Z"
+    },
+    {
+      "id": "LADILLO_RULE_006",
+      "category": "structure",
+      "name": "Extensión mínima para ladillos",
+      "description": "Texto menor a 600 palabras no requiere ladillos, salvo caso específico",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.8,
+        "pattern": "longitud texto < 600 palabras"
+      },
+      "examples": {
+        "incorrect": "Texto de 300 palabras con múltiples ladillos",
+        "correct": "Texto de 300 palabras sin ladillos",
+        "explanation": "Respetar extensión mínima para inclusión de ladillos"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "ELEMENTOS DE TITULACIÓN",
+        "sectionId": "TITULO_III"
+      },
+      "priority": 5,
+      "autofix": false,
+      "created_at": "2025-09-24T19:32:49.782Z",
+      "updated_at": "2025-09-24T19:32:49.782Z"
+    },
+    {
+      "id": "LADILLO_RULE_007",
+      "category": "typography",
+      "name": "Posicionamiento de ladillos",
+      "description": "No colocar ladillos al inicio o final de columna",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "ladillo en bordes columna"
+      },
+      "examples": {
+        "incorrect": "Ladillo en primera o última línea de columna",
+        "correct": "Mínimo 3 líneas antes o después del ladillo",
+        "explanation": "Mantener estética y legibilidad de la página"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "ELEMENTOS DE TITULACIÓN",
+        "sectionId": "TITULO_III"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T19:32:49.782Z",
+      "updated_at": "2025-09-24T19:32:49.782Z"
+    },
+    {
+      "id": "LADILLO_RULE_008",
+      "category": "typography",
+      "name": "Sangrado tras ladillo",
+      "description": "El párrafo después de un ladillo no se sangra",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "sangrado tras ladillo"
+      },
+      "examples": {
+        "incorrect": "Párrafo con sangrado tras ladillo",
+        "correct": "Párrafo sin sangrado tras ladillo",
+        "explanation": "Mantener consistencia tipográfica"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "ELEMENTOS DE TITULACIÓN",
+        "sectionId": "TITULO_III"
+      },
+      "priority": 4,
+      "autofix": false,
+      "created_at": "2025-09-24T19:32:49.782Z",
+      "updated_at": "2025-09-24T19:32:49.782Z"
+    },
+    {
+      "id": "PHOTO_RULE_001",
+      "category": "integrity",
+      "name": "No manipulación de fotografías",
+      "description": "Prohibido manipular fotografías más allá de correcciones técnicas",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.95,
+        "pattern": "manipulación de fotografías"
+      },
+      "examples": {
+        "incorrect": "Invertir una fotografía de un paisaje o persona",
+        "correct": "Usar fotografía en su estado original, solo corrigiendo defectos técnicos",
+        "explanation": "Mantener la integridad y veracidad de la imagen periodística"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "TIPOGRAFÍA",
+        "sectionId": "TITULO_IV"
+      },
+      "priority": 10,
+      "autofix": false,
+      "created_at": "2025-09-24T19:33:04.093Z",
+      "updated_at": "2025-09-24T19:33:04.093Z"
+    },
+    {
+      "id": "PHOTO_RULE_002",
+      "category": "ethical",
+      "name": "Publicación de fotos desagradables",
+      "description": "Solo publicar imágenes desagradables si aportan información relevante",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "imágenes desagradables"
+      },
+      "examples": {
+        "incorrect": "Publicar foto impactante sin valor informativo",
+        "correct": "Publicar imagen solo si explica o documenta un hecho importante",
+        "explanation": "Respetar la sensibilidad del lector y mantener el propósito informativo"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "TIPOGRAFÍA",
+        "sectionId": "TITULO_IV"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T19:33:04.093Z",
+      "updated_at": "2025-09-24T19:33:04.093Z"
+    },
+    {
+      "id": "PHOTO_CAPTION_RULE_001",
+      "category": "writing",
+      "name": "Pies de foto independientes",
+      "description": "Los pies de foto deben ser informativos e independientes del texto",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.9,
+        "pattern": "pie de foto"
+      },
+      "examples": {
+        "incorrect": "Pie que repite lo obvio de la imagen",
+        "correct": "Pie que aporta contexto o detalles adicionales no visibles",
+        "explanation": "Complementar la información visual con datos relevantes"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "TIPOGRAFÍA",
+        "sectionId": "TITULO_IV"
+      },
+      "priority": 9,
+      "autofix": false,
+      "created_at": "2025-09-24T19:33:04.093Z",
+      "updated_at": "2025-09-24T19:33:04.093Z"
+    },
+    {
+      "id": "GRAPHIC_RULE_001",
+      "category": "design",
+      "name": "Claridad en gráficos informativos",
+      "description": "Priorizar claridad sobre diseño artístico en gráficos",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.8,
+        "pattern": "gráficos informativos"
+      },
+      "examples": {
+        "incorrect": "Gráfico visualmente complejo que dificulta comprensión",
+        "correct": "Gráfico simple y directo que transmite información clara",
+        "explanation": "El objetivo principal es comunicar, no impresionar estéticamente"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "TIPOGRAFÍA",
+        "sectionId": "TITULO_IV"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T19:33:04.093Z",
+      "updated_at": "2025-09-24T19:33:04.093Z"
+    },
+    {
+      "id": "HUMOR_ILLUSTRATION_RULE_001",
+      "category": "ethical",
+      "name": "Límites en ilustraciones humorísticas",
+      "description": "No permitir chistes que ofendan la intimidad o sean desagradables",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "ilustraciones humorísticas"
+      },
+      "examples": {
+        "incorrect": "Dibujo que atenta contra la dignidad de una persona",
+        "correct": "Humor respetuoso que no lastima la imagen de nadie",
+        "explanation": "Mantener estándares éticos incluso en contenido de opinión"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "TIPOGRAFÍA",
+        "sectionId": "TITULO_IV"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T19:33:04.093Z",
+      "updated_at": "2025-09-24T19:33:04.093Z"
+    },
+    {
+      "id": "PROTOCOL_RULE_001",
+      "category": "structure",
+      "name": "Orden jerárquico en listados protocolarios",
+      "description": "Los listados de entidades oficiales deben seguir un orden jerárquico estricto de precedencia",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "Listado de entidades con guiones/numeración"
+      },
+      "examples": {
+        "incorrect": "Listar entidades sin respetar su orden oficial de importancia",
+        "correct": "Listar desde Gobierno de la nación hasta Gobierno Civil de la provincia, respetando jerarquía",
+        "explanation": "Refleja el protocolo oficial y respeto institucional"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "TRATAMIENTO Y PROTOCOLO",
+        "sectionId": "TITULO_VII"
+      },
+      "priority": 9,
+      "autofix": false,
+      "created_at": "2025-09-24T19:33:13.829Z",
+      "updated_at": "2025-09-24T19:33:13.829Z"
+    },
+    {
+      "id": "PROTOCOL_RULE_002",
+      "category": "style",
+      "name": "Mayúsculas en nombres institucionales",
+      "description": "Usar mayúscula inicial en nombres de instituciones oficiales",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "Nombres de instituciones en minúsculas"
+      },
+      "examples": {
+        "incorrect": "consejo de gobierno, tribunal superior",
+        "correct": "Consejo de Gobierno, Tribunal Superior",
+        "explanation": "Muestra respeto y formato oficial de instituciones"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "TRATAMIENTO Y PROTOCOLO",
+        "sectionId": "TITULO_VII"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T19:33:13.829Z",
+      "updated_at": "2025-09-24T19:33:13.829Z"
+    },
+    {
+      "id": "PROTOCOL_RULE_003",
+      "category": "structure",
+      "name": "Guión como marcador de listado oficial",
+      "description": "Usar guión (-) para listar elementos protocolarios",
+      "severity": "suggestion",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.7,
+        "pattern": "Listados con guiones"
+      },
+      "examples": {
+        "incorrect": "1. Gobierno de la nación, a) Cuerpo Diplomático",
+        "correct": "— Gobierno de la nación\n— Cuerpo Diplomático",
+        "explanation": "Formato estándar para listados jerárquicos"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "TRATAMIENTO Y PROTOCOLO",
+        "sectionId": "TITULO_VII"
+      },
+      "priority": 5,
+      "autofix": false,
+      "created_at": "2025-09-24T19:33:13.829Z",
+      "updated_at": "2025-09-24T19:33:13.829Z"
+    },
+    {
+      "id": "NAME_RULE_001",
+      "category": "attribution|clarity",
+      "name": "Identificación completa al primera mención",
+      "description": "En la primera cita de una persona, usar nombre completo, cargo u ocupación",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "primera mención de persona"
+      },
+      "examples": {
+        "incorrect": "López habló ayer",
+        "correct": "José Luis López Aranguren, ministro de Cultura, habló ayer",
+        "explanation": "Proporciona contexto completo y evita ambigüedad"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "TRATAMIENTO Y PROTOCOLO",
+        "sectionId": "TITULO_VII"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T19:33:27.895Z",
+      "updated_at": "2025-09-24T19:33:27.895Z"
+    },
+    {
+      "id": "NAME_RULE_002",
+      "category": "style",
+      "name": "Referencias posteriores de personas",
+      "description": "En menciones siguientes, se puede omitir nombre de pila y posiblemente segundo apellido",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "referencias subsecuentes de persona"
+      },
+      "examples": {
+        "incorrect": "José Luis López Aranguren dijo... José Luis López Aranguren añadió...",
+        "correct": "José Luis López Aranguren dijo... Aranguren añadió...",
+        "explanation": "Evita repetición innecesaria manteniendo claridad"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "TRATAMIENTO Y PROTOCOLO",
+        "sectionId": "TITULO_VII"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T19:33:27.895Z",
+      "updated_at": "2025-09-24T19:33:27.895Z"
+    },
+    {
+      "id": "NAME_RULE_003",
+      "category": "style",
+      "name": "Tratamiento de apellidos compuestos",
+      "description": "Escribir apellidos compuestos íntegros en titulares, sin abreviar",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.9,
+        "pattern": "apellidos compuestos en titular"
+      },
+      "examples": {
+        "incorrect": "Borbolla habla",
+        "correct": "Rodríguez de la Borbolla habla",
+        "explanation": "Mantiene integridad del nombre y precisión"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "TRATAMIENTO Y PROTOCOLO",
+        "sectionId": "TITULO_VII"
+      },
+      "priority": 9,
+      "autofix": false,
+      "created_at": "2025-09-24T19:33:27.895Z",
+      "updated_at": "2025-09-24T19:33:27.895Z"
+    },
+    {
+      "id": "NAME_RULE_004",
+      "category": "translation",
+      "name": "Transcripción de nombres extranjeros",
+      "description": "Transcribir nombres de idiomas no latinos usando alfabeto castellano, respetando fonética española",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.8,
+        "pattern": "nombres en alfabetos no latinos"
+      },
+      "examples": {
+        "incorrect": "Said Aouita",
+        "correct": "Saíd Auita",
+        "explanation": "Adapta nombres extranjeros a fonética española"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "TRATAMIENTO Y PROTOCOLO",
+        "sectionId": "TITULO_VII"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T19:33:27.895Z",
+      "updated_at": "2025-09-24T19:33:27.895Z"
+    },
+    {
+      "id": "NAME_RULE_005",
+      "category": "translation",
+      "name": "Traducción de nombres propios",
+      "description": "No traducir nombres de personas, salvo casos históricos o castellanizados",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "nombres propios extranjeros"
+      },
+      "examples": {
+        "incorrect": "Martin Luther",
+        "correct": "Martín Lutero",
+        "explanation": "Respetar tradición de nombres históricos"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "TRATAMIENTO Y PROTOCOLO",
+        "sectionId": "TITULO_VII"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T19:33:27.895Z",
+      "updated_at": "2025-09-24T19:33:27.895Z"
+    },
+    {
+      "id": "NAMES_RULE_001",
+      "category": "grammar",
+      "name": "Acentuación en nombres de idiomas peninsulares",
+      "description": "Los nombres y apellidos se acentuarán según las normas ortográficas de su idioma original",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "nombres en idiomas peninsulares"
+      },
+      "examples": {
+        "incorrect": "Jon Etxebarria (con acentuación castellana)",
+        "correct": "Jon Etxebarria (con acentuación vasca)",
+        "explanation": "Respetar la ortografía original del nombre"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NOMBRES",
+        "sectionId": "TITULO_VIII"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T19:33:43.959Z",
+      "updated_at": "2025-09-24T19:33:43.959Z"
+    },
+    {
+      "id": "NAMES_RULE_002",
+      "category": "geography",
+      "name": "Topónimos en idioma castellano",
+      "description": "Usar topónimos castellanos para lugares franceses",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "topónimos no castellanos"
+      },
+      "examples": {
+        "incorrect": "Perpinyá, Perpignan",
+        "correct": "Perpiñán",
+        "explanation": "Preferir la versión castellana de topónimos"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NOMBRES",
+        "sectionId": "TITULO_VIII"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T19:33:43.959Z",
+      "updated_at": "2025-09-24T19:33:43.959Z"
+    },
+    {
+      "id": "NAMES_RULE_003",
+      "category": "style",
+      "name": "Nombres de instituciones",
+      "description": "Escribir nombres de instituciones en versión castellana, con algunas excepciones",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.8,
+        "pattern": "nombres de instituciones"
+      },
+      "examples": {
+        "incorrect": "Bizkai Buru Batzar",
+        "correct": "Consejo Ejecutivo de Vizcaya",
+        "explanation": "Preferir denominaciones castellanas oficiales"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NOMBRES",
+        "sectionId": "TITULO_VIII"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T19:33:43.959Z",
+      "updated_at": "2025-09-24T19:33:43.959Z"
+    },
+    {
+      "id": "NAMES_RULE_004",
+      "category": "grammar",
+      "name": "Tratamiento de nombres latinos",
+      "description": "Evitar locuciones latinas en textos noticiosos, acentuar según fonética castellana",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.7,
+        "pattern": "palabras latinas"
+      },
+      "examples": {
+        "incorrect": "corpore insepulto, Papáver somníferum",
+        "correct": "córpore insepulto, Papaver somniferum",
+        "explanation": "Adaptar palabras latinas a normas castellanas"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NOMBRES",
+        "sectionId": "TITULO_VIII"
+      },
+      "priority": 5,
+      "autofix": false,
+      "created_at": "2025-09-24T19:33:43.959Z",
+      "updated_at": "2025-09-24T19:33:43.959Z"
+    },
+    {
+      "id": "NAMES_RULE_005",
+      "category": "grammar",
+      "name": "Nombres alemanes",
+      "description": "Reglas para escribir nombres alemanes: sustituir eszet por doble 's', preferir umlaut",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "nombres alemanes"
+      },
+      "examples": {
+        "incorrect": "Helmut Köhl, Frankfürter Allgemeine Zeitung",
+        "correct": "Helmut Kohl, Frankfurter Allgemeine Zeitung",
+        "explanation": "Seguir normas específicas para nombres alemanes"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NOMBRES",
+        "sectionId": "TITULO_VIII"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T19:33:43.959Z",
+      "updated_at": "2025-09-24T19:33:43.959Z"
+    },
+    {
+      "id": "NAMES_RULE_006",
+      "category": "grammar",
+      "name": "Nombres árabes",
+      "description": "Estructura de nombres árabes: tercer nombre como apellido, referencias simplificadas",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.8,
+        "pattern": "nombres árabes"
+      },
+      "examples": {
+        "incorrect": "Jaled Ben Abdelasís Ben Abderramán al Saúd",
+        "correct": "el rey Jaled",
+        "explanation": "Usar la forma de referencia preferida por el individuo"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NOMBRES",
+        "sectionId": "TITULO_VIII"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T19:33:43.959Z",
+      "updated_at": "2025-09-24T19:33:43.959Z"
+    },
+    {
+      "id": "NAME_RULE_001",
+      "category": "spelling",
+      "name": "Transcripción de nombres con g y gh",
+      "description": "En nombres con g y gh, la gh equivale a gu en la transcripción",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "g[h]?"
+      },
+      "examples": {
+        "incorrect": "Nagib",
+        "correct": "Naguib",
+        "explanation": "Mantener la equivalencia fonética en la transcripción"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NOMBRES",
+        "sectionId": "TITULO_VIII"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T19:33:58.898Z",
+      "updated_at": "2025-09-24T19:33:58.898Z"
+    },
+    {
+      "id": "NAME_RULE_002",
+      "category": "spelling",
+      "name": "Simplificación de consonantes duplicadas",
+      "description": "Simplificar consonantes duplicadas ll, nn, ss, excepto en casos específicos de nombres conocidos",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "(ll|nn|ss)"
+      },
+      "examples": {
+        "incorrect": "Hassan",
+        "correct": "Hassan (mantener en casos específicos)",
+        "explanation": "Conservar doble consonante en nombres propios reconocidos o con origen árabe"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NOMBRES",
+        "sectionId": "TITULO_VIII"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T19:33:58.898Z",
+      "updated_at": "2025-09-24T19:33:58.898Z"
+    },
+    {
+      "id": "NAME_RULE_003",
+      "category": "spelling",
+      "name": "Terminación de adjetivos de origen francés",
+      "description": "Usar terminación í en lugar de ita/ite para adjetivos de origen francés",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.9,
+        "pattern": "(ita|ite)$"
+      },
+      "examples": {
+        "incorrect": ["saudita", "hachemita", "sunita", "shiita"],
+        "correct": ["saudí", "hachemí", "suní", "shii"],
+        "explanation": "Adaptar la terminación según reglas de transcripción española"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NOMBRES",
+        "sectionId": "TITULO_VIII"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T19:33:58.898Z",
+      "updated_at": "2025-09-24T19:33:58.898Z"
+    },
+    {
+      "id": "NAME_RULE_004",
+      "category": "spelling",
+      "name": "Sistema de transcripción pinyin para nombres chinos",
+      "description": "Usar sistema pinyin para transcribir nombres chinos, sin añadir o eliminar signos",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "nombres chinos"
+      },
+      "examples": {
+        "incorrect": ["Suchou", "Soochow", "Soutcheou"],
+        "correct": "Suzhou",
+        "explanation": "Unificar transcripción según sistema pinyin oficial"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NOMBRES",
+        "sectionId": "TITULO_VIII"
+      },
+      "priority": 9,
+      "autofix": false,
+      "created_at": "2025-09-24T19:33:58.898Z",
+      "updated_at": "2025-09-24T19:33:58.898Z"
+    },
+    {
+      "id": "NAME_RULE_005",
+      "category": "spelling",
+      "name": "Excepciones en transcripción de nombres chinos",
+      "description": "Conservar ortografía tradicional para nombres históricos y geográficos conocidos",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.8,
+        "pattern": "nombres históricos|lugares conocidos"
+      },
+      "examples": {
+        "incorrect": ["Taibei", "Jiang Jieshi"],
+        "correct": ["Taipei", "Chiang Kai-chek"],
+        "explanation": "Mantener nombres reconocidos en su forma tradicional"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NOMBRES",
+        "sectionId": "TITULO_VIII"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T19:33:58.898Z",
+      "updated_at": "2025-09-24T19:33:58.898Z"
+    },
+    {
+      "id": "SECTION_RULE_001",
+      "category": "style",
+      "name": "Formato de cabeceras de periódicos",
+      "description": "Las cabeceras de publicaciones se escriben en cursiva, con mayúscula inicial en todas las palabras (excepto preposiciones/artículos)",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.9,
+        "pattern": "cabeceras de publicaciones"
+      },
+      "examples": {
+        "incorrect": "interviú, abc color",
+        "correct": "Interviú, Abc",
+        "explanation": "Respetar la grafía correcta independientemente de la tipografía original"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NOMBRES",
+        "sectionId": "TITULO_VIII"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T19:34:10.822Z",
+      "updated_at": "2025-09-24T19:34:10.822Z"
+    },
+    {
+      "id": "SECTION_RULE_002",
+      "category": "style",
+      "name": "Artículos en nombres de publicaciones",
+      "description": "Los artículos nunca deben omitirse ni contraerse en nombres de publicaciones",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "artículos en nombres"
+      },
+      "examples": {
+        "incorrect": "ha declarado al PAÍS",
+        "correct": "ha declarado a EL PAÍS",
+        "explanation": "Mantener el artículo completo sin contracciones"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NOMBRES",
+        "sectionId": "TITULO_VIII"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T19:34:10.822Z",
+      "updated_at": "2025-09-24T19:34:10.822Z"
+    },
+    {
+      "id": "SECTION_RULE_003",
+      "category": "style",
+      "name": "Contexto de publicaciones extranjeras",
+      "description": "Incluir ciudad/país de origen cuando no sea evidente",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "publicaciones extranjeras"
+      },
+      "examples": {
+        "incorrect": "el Jyomo Shimbun",
+        "correct": "el Jyomo Shimbun, periódico de Maebashi (Japón)",
+        "explanation": "Proporcionar contexto geográfico para publicaciones poco conocidas"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NOMBRES",
+        "sectionId": "TITULO_VIII"
+      },
+      "priority": 5,
+      "autofix": false,
+      "created_at": "2025-09-24T19:34:10.822Z",
+      "updated_at": "2025-09-24T19:34:10.822Z"
+    },
+    {
+      "id": "SECTION_RULE_004",
+      "category": "style",
+      "name": "Traducción de cabeceras",
+      "description": "No traducir nombres de publicaciones extranjeras",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "traducción de nombres"
+      },
+      "examples": {
+        "incorrect": "Diario de Pekín",
+        "correct": "Beijing Ribao",
+        "explanation": "Mantener el nombre original de la publicación"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NOMBRES",
+        "sectionId": "TITULO_VIII"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T19:34:10.822Z",
+      "updated_at": "2025-09-24T19:34:10.822Z"
+    },
+    {
+      "id": "SECTION_RULE_005",
+      "category": "style",
+      "name": "Tratamiento específico de EL PAÍS",
+      "description": "La cabecera de EL PAÍS va siempre en versales y sin entrecomillar",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.95,
+        "pattern": "EL PAÍS"
+      },
+      "examples": {
+        "incorrect": "'El País'",
+        "correct": "EL PAÍS",
+        "explanation": "Respetar el formato específico de esta publicación"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NOMBRES",
+        "sectionId": "TITULO_VIII"
+      },
+      "priority": 9,
+      "autofix": false,
+      "created_at": "2025-09-24T19:34:10.822Z",
+      "updated_at": "2025-09-24T19:34:10.822Z"
+    },
+    {
+      "id": "RULE_001",
+      "category": "style",
+      "name": "Números en nombres propios",
+      "description": "Usar números en nombres de barcos, aviones, misiles o naves espaciales sin numeración romana",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "Nombres con números"
+      },
+      "examples": {
+        "incorrect": "Queen Elizabeth II",
+        "correct": "Queen Elizabeth 2",
+        "explanation": "Mantener la denominación original con números arábigos"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "ABREVIACIONES",
+        "sectionId": "TITULO_IX"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T19:34:25.732Z",
+      "updated_at": "2025-09-24T19:34:25.732Z"
+    },
+    {
+      "id": "RULE_002",
+      "category": "grammar",
+      "name": "Formato de grados y temperaturas",
+      "description": "Usar signo de grado volado sin punto entre el número y el símbolo",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.9,
+        "pattern": "grados/temperatura"
+      },
+      "examples": {
+        "incorrect": "5.º",
+        "correct": "5º",
+        "explanation": "El símbolo de grado se escribe pegado al número sin punto"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "ABREVIACIONES",
+        "sectionId": "TITULO_IX"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T19:34:25.732Z",
+      "updated_at": "2025-09-24T19:34:25.732Z"
+    },
+    {
+      "id": "RULE_003",
+      "category": "style",
+      "name": "Uso de números ordinales",
+      "description": "Números ordinales menores a 21 pueden escribirse con letras, números romanos o con voladita. Mayores a 21 siempre con número y letra voladita",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.8,
+        "pattern": "números ordinales"
+      },
+      "examples": {
+        "incorrect": "22 congreso",
+        "correct": "22º congreso",
+        "explanation": "Formato consistente para números ordinales superiores a 21"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "ABREVIACIONES",
+        "sectionId": "TITULO_IX"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T19:34:25.732Z",
+      "updated_at": "2025-09-24T19:34:25.732Z"
+    },
+    {
+      "id": "RULE_004",
+      "category": "grammar",
+      "name": "Caracteres volados",
+      "description": "Caracteres volados se escriben pegados a la palabra y delante de signos ortográficos",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "caracteres volados"
+      },
+      "examples": {
+        "incorrect": "H2O2 . fórmula",
+        "correct": "H2O2, fórmula del peróxido de hidrógeno",
+        "explanation": "Los caracteres volados van pegados sin espacios"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "ABREVIACIONES",
+        "sectionId": "TITULO_IX"
+      },
+      "priority": 5,
+      "autofix": false,
+      "created_at": "2025-09-24T19:34:25.732Z",
+      "updated_at": "2025-09-24T19:34:25.732Z"
+    },
+    {
+      "id": "RULE_005",
+      "category": "grammar",
+      "name": "Inicio de frases con números",
+      "description": "No iniciar frases con números, excepto en titulares y ladillos",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.7,
+        "pattern": "número al inicio de frase"
+      },
+      "examples": {
+        "incorrect": "40 personas asistieron al evento",
+        "correct": "Un total de 40 personas asistieron al evento",
+        "explanation": "Evitar comenzar frases con números para mejorar legibilidad"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "ABREVIACIONES",
+        "sectionId": "TITULO_IX"
+      },
+      "priority": 4,
+      "autofix": false,
+      "created_at": "2025-09-24T19:34:25.732Z",
+      "updated_at": "2025-09-24T19:34:25.732Z"
+    },
+    {
+      "id": "RULE_006",
+      "category": "grammar",
+      "name": "Números ordinales específicos",
+      "description": "Usar 'undécimo' y 'duodécimo', no 'decimoprimero' ni 'decimosegundo'",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "ordinales 11 y 12"
+      },
+      "examples": {
+        "incorrect": "decimoprimero",
+        "correct": "undécimo",
+        "explanation": "Formas correctas para los ordinales 11 y 12"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "ABREVIACIONES",
+        "sectionId": "TITULO_IX"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T19:34:25.732Z",
+      "updated_at": "2025-09-24T19:34:25.732Z"
+    },
+    {
+      "id": "PUNCTUATION_001",
+      "category": "punctuation",
+      "name": "Comas en incisos explicativos",
+      "description": "Las oraciones que interrumpen momentáneamente el relato principal deben ir entre comas",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "inciso entre comas"
+      },
+      "examples": {
+        "incorrect": "la verdad escribe un político se ha de sustentar con razones",
+        "correct": "la verdad, escribe un político, se ha de sustentar con razones y autoridades",
+        "explanation": "Permite clarificar o añadir información sin romper el flujo de la oración"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NÚMEROS",
+        "sectionId": "TITULO_X"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T19:34:40.634Z",
+      "updated_at": "2025-09-24T19:34:40.634Z"
+    },
+    {
+      "id": "PUNCTUATION_002",
+      "category": "punctuation",
+      "name": "Uso de coma en vocativos",
+      "description": "El nombre en vocativo requiere coma según su posición en la oración",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.9,
+        "pattern": "nombre + verbo"
+      },
+      "examples": {
+        "incorrect": "Juan óyeme",
+        "correct": "Juan, óyeme / óyeme, Juan / repito, Juan, que oigas lo que te digo",
+        "explanation": "Marca claramente la interpelación directa"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NÚMEROS",
+        "sectionId": "TITULO_X"
+      },
+      "priority": 9,
+      "autofix": false,
+      "created_at": "2025-09-24T19:34:40.634Z",
+      "updated_at": "2025-09-24T19:34:40.634Z"
+    },
+    {
+      "id": "PUNCTUATION_003",
+      "category": "punctuation",
+      "name": "Coma en transposiciones sintácticas",
+      "description": "Al invertir el orden regular de una oración, se debe usar coma al final de la parte anticipada",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "inversión orden oracional"
+      },
+      "examples": {
+        "incorrect": "cuando el cuadrillero tal oyó túvole por hombre falto de seso",
+        "correct": "cuando el cuadrillero tal oyó, túvole por hombre falto de seso",
+        "explanation": "Ayuda a mantener la claridad sintáctica"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NÚMEROS",
+        "sectionId": "TITULO_X"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T19:34:40.634Z",
+      "updated_at": "2025-09-24T19:34:40.634Z"
+    },
+    {
+      "id": "PUNCTUATION_004",
+      "category": "punctuation",
+      "name": "Coma en elipsis verbal",
+      "description": "La omisión de verbos se indica con coma",
+      "severity": "suggestion",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.7,
+        "pattern": "series con verbos elididos"
+      },
+      "examples": {
+        "incorrect": "usar de venganza con el superior es locura con el igual peligro con el inferior vileza",
+        "correct": "usar de venganza con el superior es locura; con el igual, peligro; con el inferior, vileza",
+        "explanation": "Facilita la lectura en series con verbos omitidos"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NÚMEROS",
+        "sectionId": "TITULO_X"
+      },
+      "priority": 5,
+      "autofix": false,
+      "created_at": "2025-09-24T19:34:40.634Z",
+      "updated_at": "2025-09-24T19:34:40.634Z"
+    },
+    {
+      "id": "PUNCTUATION_005",
+      "category": "style",
+      "name": "Coma antes de 'como'",
+      "description": "La presencia/ausencia de coma antes de 'como' cambia completamente el significado",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "como + frase"
+      },
+      "examples": {
+        "incorrect": "no lo hice como me dijiste",
+        "correct": "no lo hice, como me dijiste",
+        "explanation": "La coma modifica sustancialmente el sentido de la frase"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NÚMEROS",
+        "sectionId": "TITULO_X"
+      },
+      "priority": 9,
+      "autofix": false,
+      "created_at": "2025-09-24T19:34:40.634Z",
+      "updated_at": "2025-09-24T19:34:40.634Z"
+    },
+    {
+      "id": "MAYUS_001",
+      "category": "grammar",
+      "name": "Mayúsculas en nombres propios específicos",
+      "description": "Usar mayúscula inicial en nombres de organismos públicos, partidos políticos, fiestas, regiones geográficas específicas",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.9,
+        "pattern": "Nombres de entidades o eventos específicos"
+      },
+      "examples": {
+        "incorrect": "instituto nacional de industria, partido radical",
+        "correct": "Instituto Nacional de Industria, Unión Cívica Radical",
+        "explanation": "Distinguir nombres propios de referencias genéricas"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "SIGNOS ORTOGRÁFICOS",
+        "sectionId": "TITULO_XI"
+      },
+      "priority": 9,
+      "autofix": false,
+      "created_at": "2025-09-24T19:34:55.838Z",
+      "updated_at": "2025-09-24T19:34:55.838Z"
+    },
+    {
+      "id": "MAYUS_002",
+      "category": "style",
+      "name": "Títulos de obras con mayúscula restringida",
+      "description": "En títulos de libros, películas, obras solo la primera letra con mayúscula, excepto nombres propios",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "Títulos de obras con múltiples mayúsculas"
+      },
+      "examples": {
+        "incorrect": "Newspapers: The Power and the Money",
+        "correct": "Newspapers: the power and the money",
+        "explanation": "Mantener un estilo consistente en títulos"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "SIGNOS ORTOGRÁFICOS",
+        "sectionId": "TITULO_XI"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T19:34:55.838Z",
+      "updated_at": "2025-09-24T19:34:55.838Z"
+    },
+    {
+      "id": "PUNTUACION_001",
+      "category": "punctuation",
+      "name": "Mayúscula tras dos puntos en citas o enumeraciones",
+      "description": "Usar mayúscula inicial (en negrita) después de dos puntos en citas o enumeraciones multipárrafo",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "Enumeraciones tras dos puntos"
+      },
+      "examples": {
+        "incorrect": "razones: primera razón. segunda razón.",
+        "correct": "Razones: **Primera razón**. **Segunda razón**.",
+        "explanation": "Mejorar legibilidad y estructura de citas"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "SIGNOS ORTOGRÁFICOS",
+        "sectionId": "TITULO_XI"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T19:34:55.838Z",
+      "updated_at": "2025-09-24T19:34:55.838Z"
+    },
+    {
+      "id": "SILABEO_001",
+      "category": "grammar",
+      "name": "Reglas de división de palabras a fin de línea",
+      "description": "Normas específicas para dividir palabras entre líneas según grupos consonánticos",
+      "severity": "suggestion",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.8,
+        "pattern": "División de palabras con consonantes"
+      },
+      "examples": {
+        "incorrect": "des-truyo, cons-treñir",
+        "correct": "des-tru-yo, cons-tre-ñir",
+        "explanation": "Mantener coherencia en separación silábica"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "SIGNOS ORTOGRÁFICOS",
+        "sectionId": "TITULO_XI"
+      },
+      "priority": 5,
+      "autofix": false,
+      "created_at": "2025-09-24T19:34:55.838Z",
+      "updated_at": "2025-09-24T19:34:55.838Z"
+    },
+    {
+      "id": "MAYUS_003",
+      "category": "style",
+      "name": "Minúsculas en cargos y expresiones extranjeras",
+      "description": "Usar minúsculas en denominaciones de cargos y expresiones en idiomas extranjeros",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "Cargos o expresiones en otros idiomas"
+      },
+      "examples": {
+        "incorrect": "Primer Ministro, Ancien Régime",
+        "correct": "primer ministro, ancien régime",
+        "explanation": "Mantener estilo neutro en referencias internacionales"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "SIGNOS ORTOGRÁFICOS",
+        "sectionId": "TITULO_XI"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T19:34:55.838Z",
+      "updated_at": "2025-09-24T19:34:55.838Z"
+    },
+    {
+      "id": "SECTION_RULE_001",
+      "category": "structure",
+      "name": "No iniciar información con adverbios",
+      "description": "La primera palabra de una información no puede ser un adverbio (excepto 'sólo' o 'solamente' con impacto en significado)",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "^(Actualmente|Recientemente|Normalmente)"
+      },
+      "examples": {
+        "incorrect": "Recientemente el gobierno aprobó...",
+        "correct": "El gobierno aprobó recientemente...",
+        "explanation": "Los adverbios no deben comenzar una noticia para mantener claridad y captar la atención del lector"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "SIGNOS ORTOGRÁFICOS",
+        "sectionId": "TITULO_XI"
+      },
+      "priority": 9,
+      "autofix": false,
+      "created_at": "2025-09-24T19:35:11.401Z",
+      "updated_at": "2025-09-24T19:35:11.401Z"
+    },
+    {
+      "id": "SECTION_RULE_002",
+      "category": "style",
+      "name": "Preferir día concreto sobre adverbios temporales",
+      "description": "Al referirse a un día de la misma semana, usar nombre específico en lugar de adverbio",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "anteayer|ayer"
+      },
+      "examples": {
+        "incorrect": "Anteayer se aprobó la ley",
+        "correct": "El martes pasado se aprobó la ley",
+        "explanation": "Mejora precisión y claridad temporal"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "SIGNOS ORTOGRÁFICOS",
+        "sectionId": "TITULO_XI"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T19:35:11.401Z",
+      "updated_at": "2025-09-24T19:35:11.401Z"
+    },
+    {
+      "id": "SECTION_RULE_003",
+      "category": "grammar",
+      "name": "Usar tiempo verbal indefinido con referencias temporales precisas",
+      "description": "Con referencias a día específico, usar pretérito indefinido, no pretérito perfecto",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.8,
+        "pattern": "ha (aprobado|realizado|ocurrido) (ayer|hoy)"
+      },
+      "examples": {
+        "incorrect": "Ha aprobado ayer la ley",
+        "correct": "Aprobó ayer la ley",
+        "explanation": "Mantiene precisión gramatical con referencias temporales concretas"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "SIGNOS ORTOGRÁFICOS",
+        "sectionId": "TITULO_XI"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T19:35:11.401Z",
+      "updated_at": "2025-09-24T19:35:11.401Z"
+    },
+    {
+      "id": "SECTION_RULE_004",
+      "category": "style",
+      "name": "Limitar uso de adjetivos en géneros informativos",
+      "description": "Restringir adjetivos calificativos en textos informativos, preferir datos concretos",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "muy|joven|nuevo"
+      },
+      "examples": {
+        "incorrect": "El nuevo director general es muy joven",
+        "correct": "El nuevo director general tiene 29 años",
+        "explanation": "Prioriza objetividad sobre descripciones subjetivas"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "SIGNOS ORTOGRÁFICOS",
+        "sectionId": "TITULO_XI"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T19:35:11.401Z",
+      "updated_at": "2025-09-24T19:35:11.401Z"
+    },
+    {
+      "id": "SECTION_RULE_005",
+      "category": "grammar",
+      "name": "No usar preposición 'a' con complementos de sustantivos",
+      "description": "Sustituir preposición 'a' por 'de' en complementos de sustantivos",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "(a reacción|a presión|a gas)"
+      },
+      "examples": {
+        "incorrect": "avión a reacción, olla a presión",
+        "correct": "avión de reacción, olla de presión",
+        "explanation": "Evita galicismos gramaticales"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "SIGNOS ORTOGRÁFICOS",
+        "sectionId": "TITULO_XI"
+      },
+      "priority": 9,
+      "autofix": false,
+      "created_at": "2025-09-24T19:35:11.401Z",
+      "updated_at": "2025-09-24T19:35:11.401Z"
+    },
+    {
+      "id": "GRAMMAR_RULE_001",
+      "category": "grammar",
+      "name": "Uso correcto de leísmo",
+      "description": "Usar 'le' solo como complemento indirecto femenino, no para objetos o animales",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "le + verbo + objeto"
+      },
+      "examples": {
+        "incorrect": "le entregué el gato",
+        "correct": "lo entregué el gato",
+        "explanation": "Evitar usar 'le' como complemento directo para objetos"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NORMAS GRAMATICALES",
+        "sectionId": "TITULO_XII"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T19:35:26.146Z",
+      "updated_at": "2025-09-24T19:35:26.146Z"
+    },
+    {
+      "id": "GRAMMAR_RULE_002",
+      "category": "style",
+      "name": "Coherencia en estilo directo e indirecto",
+      "description": "No mezclar estilo directo e indirecto en la misma frase",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.8,
+        "pattern": "cita directa + verbo declarativo + discurso indirecto"
+      },
+      "examples": {
+        "incorrect": "su esposa comentó anoche que \"mi marido no está\"",
+        "correct": [
+          "su esposa comentó anoche que su marido no estaba",
+          "su esposa comentó anoche: \"Mi marido no está\""
+        ],
+        "explanation": "Mantener coherencia sintáctica en las citas"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NORMAS GRAMATICALES",
+        "sectionId": "TITULO_XII"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T19:35:26.146Z",
+      "updated_at": "2025-09-24T19:35:26.146Z"
+    },
+    {
+      "id": "GRAMMAR_RULE_003",
+      "category": "grammar",
+      "name": "Concordancia verbal en citas",
+      "description": "Mantener coherencia gramatical al usar citas entre comillas",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "cita + discordancia verbal"
+      },
+      "examples": {
+        "incorrect": "la doncella aseguró que no podía contestar \"porque estoy sola con las niñas\"",
+        "correct": "la doncella aseguró que no podía contestar \"porque está sola con las niñas\"",
+        "explanation": "Mantener la concordancia de tiempo y persona verbal"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NORMAS GRAMATICALES",
+        "sectionId": "TITULO_XII"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T19:35:26.146Z",
+      "updated_at": "2025-09-24T19:35:26.146Z"
+    },
+    {
+      "id": "GRAMMAR_RULE_004",
+      "category": "style",
+      "name": "Posición de adverbios",
+      "description": "Colocar adverbios junto al verbo o después del grupo verbal",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.7,
+        "pattern": "adverbio + verbo"
+      },
+      "examples": {
+        "incorrect": [
+          "hoy, el Rey ha inaugurado...",
+          "el presidente está claramente dispuesto a dimitir"
+        ],
+        "correct": [
+          "el Rey ha inaugurado hoy...",
+          "el presidente está dispuesto claramente a dimitir"
+        ],
+        "explanation": "Mejorar la claridad y precisión de la construcción"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NORMAS GRAMATICALES",
+        "sectionId": "TITULO_XII"
+      },
+      "priority": 5,
+      "autofix": false,
+      "created_at": "2025-09-24T19:35:26.146Z",
+      "updated_at": "2025-09-24T19:35:26.146Z"
+    },
+    {
+      "id": "GRAMMAR_RULE_005",
+      "category": "style",
+      "name": "No iniciar información con adverbios",
+      "description": "Evitar comenzar una noticia con adverbios (salvo excepciones)",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "adverbio + inicio de párrafo"
+      },
+      "examples": {
+        "incorrect": "Recientemente el gobierno anunció...",
+        "correct": "El gobierno anunció recientemente...",
+        "explanation": "El primer párrafo debe ser directo y captar la atención"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NORMAS GRAMATICALES",
+        "sectionId": "TITULO_XII"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T19:35:26.146Z",
+      "updated_at": "2025-09-24T19:35:26.146Z"
+    },
+    {
+      "id": "GRAMMAR_RULE_001",
+      "category": "vocabulary",
+      "name": "Uso correcto del verbo 'detectar'",
+      "description": "Usar 'detectar' solo para métodos técnicos de identificación, no para acciones directas",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "detectar + presencia/actuación"
+      },
+      "examples": {
+        "incorrect": "La policía detectó la presencia del homicida",
+        "correct": "La policía localizó/observó al homicida",
+        "explanation": "Detectar implica uso de métodos técnicos como radar o sensores"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NORMAS GRAMATICALES",
+        "sectionId": "TITULO_XII"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T19:35:39.514Z",
+      "updated_at": "2025-09-24T19:35:39.514Z"
+    },
+    {
+      "id": "GRAMMAR_RULE_002",
+      "category": "vocabulary",
+      "name": "Precisión en el uso de 'encuentro'",
+      "description": "No confundir encuentro con reunión o duración de un evento",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.8,
+        "pattern": "encuentro + duración"
+      },
+      "examples": {
+        "incorrect": "El encuentro entre presidentes duró dos horas",
+        "correct": "La reunión entre presidentes duró dos horas",
+        "explanation": "Un encuentro es un momento breve de coincidencia, no la duración del evento"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NORMAS GRAMATICALES",
+        "sectionId": "TITULO_XII"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T19:35:39.514Z",
+      "updated_at": "2025-09-24T19:35:39.514Z"
+    },
+    {
+      "id": "GRAMMAR_RULE_003",
+      "category": "vocabulary",
+      "name": "Uso correcto de 'entrenar'",
+      "description": "Entrenar siempre requiere complemento directo o forma pronominal",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "entrenar sin complemento"
+      },
+      "examples": {
+        "incorrect": "La selección entrenó en el estadio",
+        "correct": "La selección se entrenó en el estadio",
+        "explanation": "El verbo entrenar necesita reflexivo o complemento directo"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NORMAS GRAMATICALES",
+        "sectionId": "TITULO_XII"
+      },
+      "priority": 5,
+      "autofix": false,
+      "created_at": "2025-09-24T19:35:39.514Z",
+      "updated_at": "2025-09-24T19:35:39.514Z"
+    },
+    {
+      "id": "GRAMMAR_RULE_004",
+      "category": "vocabulary",
+      "name": "Evitar expresiones incorrectas",
+      "description": "Sustituir expresiones como 'en base a' por alternativas más correctas",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.7,
+        "pattern": "en base a"
+      },
+      "examples": {
+        "incorrect": "En base a los resultados",
+        "correct": "A partir de los resultados",
+        "explanation": "Eliminar barbarismos y anglicismos innecesarios"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NORMAS GRAMATICALES",
+        "sectionId": "TITULO_XII"
+      },
+      "priority": 4,
+      "autofix": false,
+      "created_at": "2025-09-24T19:35:39.514Z",
+      "updated_at": "2025-09-24T19:35:39.514Z"
+    },
+    {
+      "id": "GRAMMAR_RULE_005",
+      "category": "grammar",
+      "name": "Uso preciso de verbos auxiliares",
+      "description": "No usar 'habría' o potencial para expresar rumores o inseguridad",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "estaría/habría + verbo"
+      },
+      "examples": {
+        "incorrect": "Fuentes señalan que el ministro estaría preparando la ley",
+        "correct": "Fuentes señalan que el ministro prepara la ley",
+        "explanation": "El potencial en pasado indica una acción que no ocurrió"
+      },
+      "source": {
+        "publication": "Manual de estilo de El País",
+        "section": "NORMAS GRAMATICALES",
+        "sectionId": "TITULO_XII"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T19:35:39.514Z",
+      "updated_at": "2025-09-24T19:35:39.514Z"
+    }
+  ],
+  "statistics": {
+    "totalRulesExtracted": 95,
+    "sectionStats": [
+      {
+        "sectionId": "TITULO_I",
+        "title": "PRINCIPIOS",
+        "rulesCount": 5,
+        "processingTime": 0
+      },
+      {
+        "sectionId": "TITULO_II",
+        "title": "GÉNEROS PERIODÍSTICOS",
+        "rulesCount": 15,
+        "processingTime": 0
+      },
+      {
+        "sectionId": "TITULO_III",
+        "title": "ELEMENTOS DE TITULACIÓN",
+        "rulesCount": 15,
+        "processingTime": 0
+      },
+      {
+        "sectionId": "TITULO_IV",
+        "title": "TIPOGRAFÍA",
+        "rulesCount": 5,
+        "processingTime": 0
+      },
+      {
+        "sectionId": "TITULO_VII",
+        "title": "TRATAMIENTO Y PROTOCOLO",
+        "rulesCount": 8,
+        "processingTime": 0
+      },
+      {
+        "sectionId": "TITULO_VIII",
+        "title": "NOMBRES",
+        "rulesCount": 16,
+        "processingTime": 0
+      },
+      {
+        "sectionId": "TITULO_IX",
+        "title": "ABREVIACIONES",
+        "rulesCount": 6,
+        "processingTime": 0
+      },
+      {
+        "sectionId": "TITULO_X",
+        "title": "NÚMEROS",
+        "rulesCount": 5,
+        "processingTime": 0
+      },
+      {
+        "sectionId": "TITULO_XI",
+        "title": "SIGNOS ORTOGRÁFICOS",
+        "rulesCount": 10,
+        "processingTime": 0
+      },
+      {
+        "sectionId": "TITULO_XII",
+        "title": "NORMAS GRAMATICALES",
+        "rulesCount": 10,
+        "processingTime": 0
+      }
+    ]
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "sectionHash": "e1cdc77baff61807fe9586c2aaea0adf",
+  "rules": [
+    {
+      "id": "WRITING_RULE_001",
+      "category": "clarity",
+      "name": "No sobreexplicar al lector",
+      "description": "Evitar explicar hechos obvios que el lector puede inferir por sí mismo",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "evitar palabras como \"sorprendentemente\", \"predeciblemente\", \"por supuesto\""
+      },
+      "examples": {
+        "incorrect": "Un jugador que llega a primera base en menos de 4.3 segundos es impresionante, lo cual es increíblemente rápido...",
+        "correct": "Un jugador que llega a primera base en menos de 4.3 segundos.",
+        "explanation": "Confía en la capacidad del lector para interpretar la información"
+      },
+      "source": {
+        "publication": "AI Extracted",
+        "section": "Part III: Forms - Nonfiction as Literature"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T21:37:00.580Z",
+      "updated_at": "2025-09-24T21:37:00.580Z"
+    },
+    {
+      "id": "WRITING_RULE_002",
+      "category": "style",
+      "name": "Escribir sobre intereses personales",
+      "description": "No descartar temas personales como triviales o poco serios",
+      "severity": "suggestion",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "seguir las propias aficiones"
+      },
+      "examples": {
+        "incorrect": "No escribiré sobre skateboarding porque parece un tema poco académico",
+        "correct": "Escribiré apasionadamente sobre skateboarding desde mi experiencia personal",
+        "explanation": "Cualquier tema es válido si se aborda con autenticidad"
+      },
+      "source": {
+        "publication": "AI Extracted",
+        "section": "Part III: Forms - Nonfiction as Literature"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T21:37:00.580Z",
+      "updated_at": "2025-09-24T21:37:00.580Z"
+    },
+    {
+      "id": "WRITING_RULE_003",
+      "category": "attribution",
+      "name": "Evitar jerga literaria",
+      "description": "Eliminar términos pretenciosos como 'literatura' o 'literati'",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.8,
+        "pattern": "palabras como 'literatura', 'literati'"
+      },
+      "examples": {
+        "incorrect": "Hablemos de la experiencia literaria americana",
+        "correct": "Hablemos del oficio de escribir",
+        "explanation": "Enfocarse en la práctica de escribir, no en etiquetas pomposas"
+      },
+      "source": {
+        "publication": "AI Extracted",
+        "section": "Part III: Forms - Nonfiction as Literature"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T21:37:00.580Z",
+      "updated_at": "2025-09-24T21:37:00.580Z"
+    }
+  ],
+  "extractedAt": "2025-09-24T21:37:00.580Z",
+  "tokensUsed": 56288
+}

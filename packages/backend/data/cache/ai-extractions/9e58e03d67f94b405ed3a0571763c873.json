@@ -1,0 +1,132 @@
+{
+  "sectionHash": "9e58e03d67f94b405ed3a0571763c873",
+  "rules": [
+    {
+      "id": "WRITING_RULE_001",
+      "category": "clarity",
+      "name": "Una idea por oración",
+      "description": "Cada oración debe contener solo un pensamiento para facilitar la comprensión del lector",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "oraciones largas con múltiples ideas"
+      },
+      "examples": {
+        "incorrect": "Oraciones complejas con múltiples ideas y conceptos mezclados",
+        "correct": "Cada oración transmite un pensamiento único y claro",
+        "explanation": "Los lectores pueden procesar información más fácilmente cuando cada oración es simple y directa"
+      },
+      "source": {
+        "publication": "AI Extracted",
+        "section": "Part IV: Attitudes - A Writer's Decisions"
+      },
+      "priority": 9,
+      "autofix": false,
+      "created_at": "2025-09-24T21:40:01.109Z",
+      "updated_at": "2025-09-24T21:40:01.109Z"
+    },
+    {
+      "id": "WRITING_RULE_002",
+      "category": "style",
+      "name": "Evitar la banalidad",
+      "description": "Buscar formas creativas de expresar información para evitar frases genéricas o aburridas",
+      "severity": "suggestion",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.8,
+        "pattern": "frases genéricas o sin personalidad"
+      },
+      "examples": {
+        "incorrect": "Escribir de manera estándar y predecible",
+        "correct": "Usar metáforas, nombres propios o giros creativos para dar vida a la información",
+        "explanation": "La originalidad mantiene el interés del lector y diferencia el texto"
+      },
+      "source": {
+        "publication": "AI Extracted",
+        "section": "Part IV: Attitudes - A Writer's Decisions"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T21:40:01.109Z",
+      "updated_at": "2025-09-24T21:40:01.109Z"
+    },
+    {
+      "id": "WRITING_RULE_003",
+      "category": "structure",
+      "name": "Construcción de párrafos con proposito",
+      "description": "Cada párrafo debe tener un objetivo claro y contribuir al avance de la narrativa",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.9,
+        "pattern": "párrafos sin conexión lógica"
+      },
+      "examples": {
+        "incorrect": "Párrafos sin conexión o propósito definido",
+        "correct": "Párrafos que mantienen la tensión narrativa y avanzan la historia",
+        "explanation": "La lógica y la secuencia son fundamentales para mantener el interés del lector"
+      },
+      "source": {
+        "publication": "AI Extracted",
+        "section": "Part IV: Attitudes - A Writer's Decisions"
+      },
+      "priority": 10,
+      "autofix": false,
+      "created_at": "2025-09-24T21:40:01.109Z",
+      "updated_at": "2025-09-24T21:40:01.109Z"
+    },
+    {
+      "id": "WRITING_RULE_004",
+      "category": "style",
+      "name": "Uso de referencias culturales",
+      "description": "Incluir referencias que generen resonancia emocional con el lector",
+      "severity": "suggestion",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "alusiones a obras culturales conocidas"
+      },
+      "examples": {
+        "incorrect": "Texto plano sin contexto cultural",
+        "correct": "Mencionar películas, libros o eventos que evoquen emociones familiares",
+        "explanation": "Las referencias ayudan a crear conexión emocional con el lector"
+      },
+      "source": {
+        "publication": "AI Extracted",
+        "section": "Part IV: Attitudes - A Writer's Decisions"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T21:40:01.109Z",
+      "updated_at": "2025-09-24T21:40:01.109Z"
+    },
+    {
+      "id": "WRITING_RULE_005",
+      "category": "clarity",
+      "name": "Confianza en el material",
+      "description": "Dejar que los hechos hablen por sí mismos sin comentarios sobreexplicativos",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.8,
+        "pattern": "explicaciones redundantes o excesivas"
+      },
+      "examples": {
+        "incorrect": "Añadir exclamaciones o comentarios que resten impacto a la información",
+        "correct": "Presentar información crucial sin dramatismo adicional",
+        "explanation": "Permitir que el lector descubra la importancia por sí mismo"
+      },
+      "source": {
+        "publication": "AI Extracted",
+        "section": "Part IV: Attitudes - A Writer's Decisions"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T21:40:01.109Z",
+      "updated_at": "2025-09-24T21:40:01.109Z"
+    }
+  ],
+  "extractedAt": "2025-09-24T21:40:01.110Z",
+  "tokensUsed": 156459
+}

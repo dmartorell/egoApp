@@ -1,0 +1,1735 @@
+{
+  "source": {
+    "name": "Escritura Transparente - Chapters 4-10",
+    "documentId": "escritura-transparente",
+    "extractedAt": "2025-09-24T21:08:39.078Z",
+    "totalPages": 69,
+    "sectionsProcessed": 7,
+    "subsectionsProcessed": 0
+  },
+  "rulesBySection": {
+    "CHAPTER_4": {
+      "sectionTitle": "Las fuerzas de choque",
+      "pageRange": {
+        "start": 37,
+        "end": 46
+      },
+      "rules": [
+        {
+          "id": "BRIEF_RULE_001",
+          "category": "structure",
+          "name": "Longitud de breves periodísticos",
+          "description": "Los breves deben tener entre 60 y 65 palabras para no sacrificar datos esenciales",
+          "severity": "recommendation",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "breve.*palabras"
+          },
+          "examples": {
+            "incorrect": "Breve con menos de 60 palabras que deja dudas al lector",
+            "correct": "Breve de 62 palabras que incluye los datos principales de la noticia",
+            "explanation": "Permite proporcionar información completa sin cansar al lector"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "Las fuerzas de choque",
+            "sectionId": "CHAPTER_4"
+          },
+          "priority": 8,
+          "autofix": false,
+          "created_at": "2025-09-24T21:06:57.687Z",
+          "updated_at": "2025-09-24T21:06:57.687Z"
+        },
+        {
+          "id": "BRIEF_RULE_002",
+          "category": "structure",
+          "name": "Estructura de breves periodísticos",
+          "description": "Un breve debe comenzar con un epígrafe seguido de un titular corto, sin repeticiones",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.9,
+            "pattern": "epígrafe.*titular"
+          },
+          "examples": {
+            "incorrect": "Titular que repite información del epígrafe",
+            "correct": "Epígrafe 'Política' + Titular 'Nuevas elecciones anunciadas'",
+            "explanation": "Evita redundancia y maximiza información en poco espacio"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "Las fuerzas de choque",
+            "sectionId": "CHAPTER_4"
+          },
+          "priority": 9,
+          "autofix": false,
+          "created_at": "2025-09-24T21:06:57.687Z",
+          "updated_at": "2025-09-24T21:06:57.687Z"
+        },
+        {
+          "id": "REPORTING_RULE_001",
+          "category": "style",
+          "name": "Entradilla de reportajes",
+          "description": "Usar soft lead o entradilla indirecta para captar la atención del lector de manera interesante",
+          "severity": "recommendation",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "soft lead|entradilla.*indirecta"
+          },
+          "examples": {
+            "incorrect": "Entrada directa con datos estadísticos",
+            "correct": "Entrada con escena descriptiva o anécdota personal",
+            "explanation": "Genera interés y compromete al lector desde el principio"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "Las fuerzas de choque",
+            "sectionId": "CHAPTER_4"
+          },
+          "priority": 7,
+          "autofix": false,
+          "created_at": "2025-09-24T21:06:57.687Z",
+          "updated_at": "2025-09-24T21:06:57.687Z"
+        },
+        {
+          "id": "REPORTING_RULE_002",
+          "category": "clarity",
+          "name": "Enfoque narrativo de reportajes",
+          "description": "Un reportaje debe transmitir una única idea principal, simplificando temas complejos",
+          "severity": "recommendation",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.8,
+            "pattern": "una.*idea|hilo.*conductor"
+          },
+          "examples": {
+            "incorrect": "Reportaje con múltiples ideas desconectadas",
+            "correct": "Reportaje que desarrolla un solo concepto central",
+            "explanation": "Facilita la comprensión del lector y mantiene el enfoque"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "Las fuerzas de choque",
+            "sectionId": "CHAPTER_4"
+          },
+          "priority": 8,
+          "autofix": false,
+          "created_at": "2025-09-24T21:06:57.687Z",
+          "updated_at": "2025-09-24T21:06:57.687Z"
+        },
+        {
+          "id": "REPORTING_RULE_003",
+          "category": "attribution",
+          "name": "Imparcialidad en reportajes",
+          "description": "Incluir perspectivas de diferentes partes, incluso de quienes disienten",
+          "severity": "recommendation",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "opiniones.*diferentes|perspectivas.*contrastadas"
+          },
+          "examples": {
+            "incorrect": "Reportaje con una sola perspectiva",
+            "correct": "Reportaje que incluye opiniones de partes involucradas",
+            "explanation": "Demuestra exhaustividad y profesionalismo periodístico"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "Las fuerzas de choque",
+            "sectionId": "CHAPTER_4"
+          },
+          "priority": 6,
+          "autofix": false,
+          "created_at": "2025-09-24T21:06:57.687Z",
+          "updated_at": "2025-09-24T21:06:57.687Z"
+        }
+      ]
+    },
+    "CHAPTER_5": {
+      "sectionTitle": "El amigo americano",
+      "pageRange": {
+        "start": 47,
+        "end": 68
+      },
+      "rules": [
+        {
+          "id": "RULE_001",
+          "category": "content",
+          "name": "Una noticia, una idea central",
+          "description": "Un reportaje solo debe comunicar una idea principal",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "múltiples espaguetis narrativos"
+          },
+          "examples": {
+            "incorrect": "Mezclar múltiples temas sin un hilo conductor claro",
+            "correct": "Enfocar el reportaje como un hilo narrativo único",
+            "explanation": "Evitar dispersar la atención del lector"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "El amigo americano",
+            "sectionId": "CHAPTER_5"
+          },
+          "priority": 9,
+          "autofix": false,
+          "created_at": "2025-09-24T21:07:15.117Z",
+          "updated_at": "2025-09-24T21:07:15.117Z"
+        },
+        {
+          "id": "RULE_002",
+          "category": "style",
+          "name": "Entradilla impactante",
+          "description": "La primera parte del artículo debe provocar interés y sorpresa",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.9,
+            "pattern": "primer párrafo provocador"
+          },
+          "examples": {
+            "incorrect": "Entradillas planas y burocráticas",
+            "correct": "Comenzar con un detalle sorprendente o emotivo",
+            "explanation": "Enganchar al lector desde el primer párrafo"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "El amigo americano",
+            "sectionId": "CHAPTER_5"
+          },
+          "priority": 10,
+          "autofix": false,
+          "created_at": "2025-09-24T21:07:15.117Z",
+          "updated_at": "2025-09-24T21:07:15.117Z"
+        },
+        {
+          "id": "RULE_003",
+          "category": "structure",
+          "name": "Teoría Unificada de Comienzos (TUCAP)",
+          "description": "Estructura de tres bloques en la entrada del artículo",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "tres bloques narrativos"
+          },
+          "examples": {
+            "incorrect": "Entradas sin estructura narrativa clara",
+            "correct": "1) Dato interesante, 2) Ampliación, 3) Voz experta",
+            "explanation": "Mantener el interés del lector progresivamente"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "El amigo americano",
+            "sectionId": "CHAPTER_5"
+          },
+          "priority": 8,
+          "autofix": false,
+          "created_at": "2025-09-24T21:07:15.117Z",
+          "updated_at": "2025-09-24T21:07:15.117Z"
+        },
+        {
+          "id": "RULE_004",
+          "category": "content",
+          "name": "Información completa",
+          "description": "Responder siempre a las 5W (quién, qué, cuándo, dónde, por qué)",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "preguntas sin responder"
+          },
+          "examples": {
+            "incorrect": "Reportajes con información incompleta",
+            "correct": "Cubrir todos los aspectos fundamentales de la noticia",
+            "explanation": "Proporcionar contexto y detalles esenciales"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "El amigo americano",
+            "sectionId": "CHAPTER_5"
+          },
+          "priority": 10,
+          "autofix": false,
+          "created_at": "2025-09-24T21:07:15.117Z",
+          "updated_at": "2025-09-24T21:07:15.117Z"
+        },
+        {
+          "id": "RULE_005",
+          "category": "style",
+          "name": "Evitar citas directas como entrada",
+          "description": "No comenzar artículos con citas textuales",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.7,
+            "pattern": "primera frase entrecomillada"
+          },
+          "examples": {
+            "incorrect": "Abrir noticia con comillas sin contexto",
+            "correct": "Introducir contexto antes de cualquier cita",
+            "explanation": "Las citas pueden desorientar al lector"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "El amigo americano",
+            "sectionId": "CHAPTER_5"
+          },
+          "priority": 6,
+          "autofix": false,
+          "created_at": "2025-09-24T21:07:15.117Z",
+          "updated_at": "2025-09-24T21:07:15.117Z"
+        },
+        {
+          "id": "RULE_006",
+          "category": "style",
+          "name": "Final memorable",
+          "description": "Concluir el artículo con una frase brillante o significativa",
+          "severity": "suggestion",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.65,
+            "pattern": "última frase impactante"
+          },
+          "examples": {
+            "incorrect": "Terminar sin punto culminante",
+            "correct": "Cerrar con un detalle revelador o irónico",
+            "explanation": "Dejar una impresión duradera en el lector"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "El amigo americano",
+            "sectionId": "CHAPTER_5"
+          },
+          "priority": 7,
+          "autofix": false,
+          "created_at": "2025-09-24T21:07:15.117Z",
+          "updated_at": "2025-09-24T21:07:15.117Z"
+        }
+      ]
+    },
+    "CHAPTER_6": {
+      "sectionTitle": "Pensando en el lector",
+      "pageRange": {
+        "start": 69,
+        "end": 80
+      },
+      "rules": [
+        {
+          "id": "RULE_001",
+          "category": "clarity",
+          "name": "Preferir palabras cortas",
+          "description": "Usar palabras cortas y simples en lugar de términos complejos o extensos",
+          "severity": "suggestion",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "palabras largas/complejas"
+          },
+          "examples": {
+            "incorrect": "utilización, considerable, esquema",
+            "correct": "uso, grande, mapa",
+            "explanation": "Las palabras cortas facilitan la comprensión y llegan a más lectores"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "Pensando en el lector",
+            "sectionId": "CHAPTER_6"
+          },
+          "priority": 8,
+          "autofix": false,
+          "created_at": "2025-09-24T21:07:30.375Z",
+          "updated_at": "2025-09-24T21:07:30.375Z"
+        },
+        {
+          "id": "RULE_002",
+          "category": "structure",
+          "name": "Estructura de párrafos: de lo general a lo específico",
+          "description": "Desarrollar ideas en párrafos comenzando con una afirmación general y avanzando hacia detalles específicos",
+          "severity": "suggestion",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.8,
+            "pattern": "párrafos con estructura general-específico"
+          },
+          "examples": {
+            "incorrect": "Comenzar directamente con un detalle sin contexto",
+            "correct": "Iniciar con afirmación general, luego aportar ejemplos, estadísticas o declaraciones de expertos",
+            "explanation": "Facilita la comprensión gradual del tema"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "Pensando en el lector",
+            "sectionId": "CHAPTER_6"
+          },
+          "priority": 7,
+          "autofix": false,
+          "created_at": "2025-09-24T21:07:30.375Z",
+          "updated_at": "2025-09-24T21:07:30.375Z"
+        },
+        {
+          "id": "RULE_003",
+          "category": "style",
+          "name": "Uso estratégico de citas directas",
+          "description": "No abusar de citas textuales, usar solo declaraciones más llamativas y elocuentes",
+          "severity": "suggestion",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "citas directas extensas"
+          },
+          "examples": {
+            "incorrect": "Citar largos fragmentos literales de entrevistados",
+            "correct": "Parafrasear información básica y usar comillas solo para frases reveladoras",
+            "explanation": "Mantiene la inmediatez y fuerza de la información"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "Pensando en el lector",
+            "sectionId": "CHAPTER_6"
+          },
+          "priority": 6,
+          "autofix": false,
+          "created_at": "2025-09-24T21:07:30.375Z",
+          "updated_at": "2025-09-24T21:07:30.375Z"
+        },
+        {
+          "id": "RULE_004",
+          "category": "clarity",
+          "name": "Explicar términos técnicos",
+          "description": "Aclarar términos especializados con descripciones breves comprensibles para lectores generales",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.9,
+            "pattern": "términos técnicos sin contexto"
+          },
+          "examples": {
+            "incorrect": "Mencionar 'tasa Tobin' sin explicación",
+            "correct": "Tasa Tobin: un impuesto minúsculo a transacciones financieras",
+            "explanation": "Evita que lectores se pierdan por jerga técnica"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "Pensando en el lector",
+            "sectionId": "CHAPTER_6"
+          },
+          "priority": 9,
+          "autofix": false,
+          "created_at": "2025-09-24T21:07:30.375Z",
+          "updated_at": "2025-09-24T21:07:30.375Z"
+        },
+        {
+          "id": "RULE_005",
+          "category": "structure",
+          "name": "Transiciones entre párrafos",
+          "description": "Usar palabras de transición y mantener conexión lógica entre ideas",
+          "severity": "suggestion",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.7,
+            "pattern": "conectores entre párrafos"
+          },
+          "examples": {
+            "incorrect": "Cambios abruptos entre párrafos sin conexión",
+            "correct": "Usar palabras como 'sin embargo', 'por otra parte', 'además'",
+            "explanation": "Ayuda al lector a seguir el hilo narrativo"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "Pensando en el lector",
+            "sectionId": "CHAPTER_6"
+          },
+          "priority": 5,
+          "autofix": false,
+          "created_at": "2025-09-24T21:07:30.375Z",
+          "updated_at": "2025-09-24T21:07:30.375Z"
+        }
+      ]
+    },
+    "CHAPTER_7": {
+      "sectionTitle": "El estilo del periodista",
+      "pageRange": {
+        "start": 81,
+        "end": 98
+      },
+      "rules": []
+    },
+    "CHAPTER_8": {
+      "sectionTitle": "La vieja dama y el nuevo editor",
+      "pageRange": {
+        "start": 99,
+        "end": 116
+      },
+      "rules": [
+        {
+          "id": "EDIT_RULE_001",
+          "category": "clarity",
+          "name": "Evitar frases largas y complejas",
+          "description": "Reducir extensión de oraciones para mejorar legibilidad",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "oraciones > 30 palabras"
+          },
+          "examples": {
+            "incorrect": "Una frase de 62 palabras con múltiples incisos y construcciones rebuscadas",
+            "correct": "Frase concisa y directa que transmite la información esencial",
+            "explanation": "Frases más cortas facilitan la comprensión del lector"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "La vieja dama y el nuevo editor",
+            "sectionId": "CHAPTER_8"
+          },
+          "priority": 8,
+          "autofix": false,
+          "created_at": "2025-09-24T21:08:07.858Z",
+          "updated_at": "2025-09-24T21:08:07.858Z"
+        },
+        {
+          "id": "EDIT_RULE_002",
+          "category": "style",
+          "name": "Priorizar verbos sobre sustantivos",
+          "description": "Usar verbos en lugar de nominalización para dar dinamismo",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "sustantivos abstractos innecesarios"
+          },
+          "examples": {
+            "incorrect": "Hacer una comunicación de la suspensión",
+            "correct": "Comunicar la suspensión",
+            "explanation": "Los verbos dan más dinamismo y claridad al texto"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "La vieja dama y el nuevo editor",
+            "sectionId": "CHAPTER_8"
+          },
+          "priority": 7,
+          "autofix": false,
+          "created_at": "2025-09-24T21:08:07.858Z",
+          "updated_at": "2025-09-24T21:08:07.858Z"
+        },
+        {
+          "id": "EDIT_RULE_003",
+          "category": "editing",
+          "name": "Leer el texto en voz alta",
+          "description": "Revisar el texto leyéndolo en voz alta para detectar errores",
+          "severity": "suggestion",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.8,
+            "pattern": "lectura en voz alta"
+          },
+          "examples": {
+            "incorrect": "Texto no revisado con frases artificiosas",
+            "correct": "Texto fluido y natural tras lectura en voz alta",
+            "explanation": "Ayuda a detectar repeticiones, frases poco naturales y errores"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "La vieja dama y el nuevo editor",
+            "sectionId": "CHAPTER_8"
+          },
+          "priority": 6,
+          "autofix": false,
+          "created_at": "2025-09-24T21:08:07.858Z",
+          "updated_at": "2025-09-24T21:08:07.858Z"
+        },
+        {
+          "id": "EDIT_RULE_004",
+          "category": "structure",
+          "name": "Información más importante al inicio",
+          "description": "Colocar los datos más relevantes en los primeros párrafos",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.82,
+            "pattern": "información principal no está al inicio"
+          },
+          "examples": {
+            "incorrect": "Información clave oculta en párrafos posteriores",
+            "correct": "Primer párrafo con datos principales de la noticia",
+            "explanation": "Captura la atención del lector y transmite lo esencial rápidamente"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "La vieja dama y el nuevo editor",
+            "sectionId": "CHAPTER_8"
+          },
+          "priority": 9,
+          "autofix": false,
+          "created_at": "2025-09-24T21:08:07.858Z",
+          "updated_at": "2025-09-24T21:08:07.858Z"
+        },
+        {
+          "id": "EDIT_RULE_005",
+          "category": "editing",
+          "name": "Eliminación de redundancias",
+          "description": "Suprimir información repetitiva o innecesaria",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "frases o palabras repetidas"
+          },
+          "examples": {
+            "incorrect": "Las ventas han respondido aun cuando la revista ha sido vendida",
+            "correct": "La revista vendió más de 10.000 ejemplares en papel",
+            "explanation": "Cada palabra debe aportar información única"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "La vieja dama y el nuevo editor",
+            "sectionId": "CHAPTER_8"
+          },
+          "priority": 7,
+          "autofix": false,
+          "created_at": "2025-09-24T21:08:07.858Z",
+          "updated_at": "2025-09-24T21:08:07.858Z"
+        }
+      ]
+    },
+    "CHAPTER_9": {
+      "sectionTitle": "Algo más ambicioso",
+      "pageRange": {
+        "start": 117,
+        "end": 124
+      },
+      "rules": [
+        {
+          "id": "SECTION_RULE_001",
+          "category": "style",
+          "name": "Longitud de frases",
+          "description": "Evitar frases excesivamente largas, preferiblemente menos de 50 palabras",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "frases con más de 50 palabras"
+          },
+          "examples": {
+            "incorrect": "Frase de 62 palabras que hace difícil la comprensión del texto",
+            "correct": "Frases concisas y directas que no superen las 30-40 palabras",
+            "explanation": "Frases largas dificultan la lectura y comprensión del texto periodístico"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "Algo más ambicioso",
+            "sectionId": "CHAPTER_9"
+          },
+          "priority": 9,
+          "autofix": false,
+          "created_at": "2025-09-24T21:08:22.457Z",
+          "updated_at": "2025-09-24T21:08:22.457Z"
+        },
+        {
+          "id": "SECTION_RULE_002",
+          "category": "style",
+          "name": "Priorizar verbos sobre sustantivos",
+          "description": "Usar verbos en lugar de sustantivos para dar dinamismo al texto",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.8,
+            "pattern": "sustantivos abstractos"
+          },
+          "examples": {
+            "incorrect": "Uso de sustantivos como 'suspensión de militancia'",
+            "correct": "Usar verbos directos como 'suspender' o 'expulsar'",
+            "explanation": "Los verbos dan más dinamismo y claridad al texto periodístico"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "Algo más ambicioso",
+            "sectionId": "CHAPTER_9"
+          },
+          "priority": 8,
+          "autofix": false,
+          "created_at": "2025-09-24T21:08:22.457Z",
+          "updated_at": "2025-09-24T21:08:22.457Z"
+        },
+        {
+          "id": "SECTION_RULE_003",
+          "category": "clarity",
+          "name": "Evitar redundancias",
+          "description": "Eliminar información repetitiva o innecesaria en el texto",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "frases o conceptos repetidos"
+          },
+          "examples": {
+            "incorrect": "Repetir frases como 'hechos que motivaron el expediente'",
+            "correct": "Mencionar la información una sola vez de manera concisa",
+            "explanation": "Las redundancias cansan al lector y restan claridad"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "Algo más ambicioso",
+            "sectionId": "CHAPTER_9"
+          },
+          "priority": 7,
+          "autofix": false,
+          "created_at": "2025-09-24T21:08:22.457Z",
+          "updated_at": "2025-09-24T21:08:22.457Z"
+        },
+        {
+          "id": "SECTION_RULE_004",
+          "category": "structure",
+          "name": "Uso de transiciones",
+          "description": "Utilizar transiciones efectivas entre párrafos para mejorar el flujo",
+          "severity": "suggestion",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.7,
+            "pattern": "conectores y frases de transición"
+          },
+          "examples": {
+            "incorrect": "Cambios abruptos entre párrafos sin conexión",
+            "correct": "Usar transiciones como 'En ese documento', 'Además'",
+            "explanation": "Las buenas transiciones facilitan la lectura y comprensión"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "Algo más ambicioso",
+            "sectionId": "CHAPTER_9"
+          },
+          "priority": 6,
+          "autofix": false,
+          "created_at": "2025-09-24T21:08:22.457Z",
+          "updated_at": "2025-09-24T21:08:22.457Z"
+        },
+        {
+          "id": "SECTION_RULE_005",
+          "category": "attribution",
+          "name": "Citas textuales",
+          "description": "Comprimir citas usando corchetes y puntos suspensivos sin alterar el sentido",
+          "severity": "suggestion",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "citas directas largas"
+          },
+          "examples": {
+            "incorrect": "Citas textuales extensas que saturan el texto",
+            "correct": "Citas comprimidas con [...] entre corchetes",
+            "explanation": "Permite mantener la esencia de la cita sin cansar al lector"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "Algo más ambicioso",
+            "sectionId": "CHAPTER_9"
+          },
+          "priority": 5,
+          "autofix": false,
+          "created_at": "2025-09-24T21:08:22.457Z",
+          "updated_at": "2025-09-24T21:08:22.457Z"
+        }
+      ]
+    },
+    "CHAPTER_10": {
+      "sectionTitle": "En busca del editor ausente",
+      "pageRange": {
+        "start": 125,
+        "end": 132
+      },
+      "rules": [
+        {
+          "id": "WRITING_RULE_001",
+          "category": "writing_process",
+          "name": "Planificación previa a la escritura",
+          "description": "Antes de escribir, definir claramente la motivación y objetivo del proyecto",
+          "severity": "recommendation",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "planificación|motivación"
+          },
+          "examples": {
+            "incorrect": "Comenzar a escribir sin rumbo ni propósito claro",
+            "correct": "Anotar qué atrae del proyecto para mantener motivación",
+            "explanation": "Ayuda a mantener el enfoque y superar momentos de desmotivación"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "En busca del editor ausente",
+            "sectionId": "CHAPTER_10"
+          },
+          "priority": 7,
+          "autofix": false,
+          "created_at": "2025-09-24T21:08:38.876Z",
+          "updated_at": "2025-09-24T21:08:38.876Z"
+        },
+        {
+          "id": "EDITING_RULE_002",
+          "category": "editing",
+          "name": "Eliminación de contenido poco relevante",
+          "description": "Estar dispuesto a eliminar frases o secciones brillantes que no contribuyan al texto global",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.8,
+            "pattern": "matar a tus bebés|eliminar"
+          },
+          "examples": {
+            "incorrect": "Mantener párrafos atractivos pero innecesarios",
+            "correct": "Eliminar secciones que no añaden valor, aunque sean interesantes",
+            "explanation": "Priorizar la claridad y coherencia del texto sobre brillantez individual"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "En busca del editor ausente",
+            "sectionId": "CHAPTER_10"
+          },
+          "priority": 8,
+          "autofix": false,
+          "created_at": "2025-09-24T21:08:38.876Z",
+          "updated_at": "2025-09-24T21:08:38.876Z"
+        },
+        {
+          "id": "WRITING_RULE_003",
+          "category": "writing_technique",
+          "name": "Escritura diaria y consistencia",
+          "description": "Escribir todos los días para mantener el ritmo, sin agotarse completamente",
+          "severity": "recommendation",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.75,
+            "pattern": "escribir todos los días|ritmo"
+          },
+          "examples": {
+            "incorrect": "Escribir hasta el agotamiento total",
+            "correct": "Parar antes de estar completamente exhausto, dejando clara la próxima tarea",
+            "explanation": "Facilita el inicio de la escritura al día siguiente"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "En busca del editor ausente",
+            "sectionId": "CHAPTER_10"
+          },
+          "priority": 6,
+          "autofix": false,
+          "created_at": "2025-09-24T21:08:38.876Z",
+          "updated_at": "2025-09-24T21:08:38.876Z"
+        },
+        {
+          "id": "EDITING_RULE_004",
+          "category": "feedback",
+          "name": "Selección cuidadosa de lectores de prueba",
+          "description": "Elegir lectores de prueba con criterio, evitando opiniones no cualificadas o excesivamente críticas",
+          "severity": "warning",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.85,
+            "pattern": "lectores antes de entregar|reacciones"
+          },
+          "examples": {
+            "incorrect": "Mostrar el texto a cualquier persona sin discernimiento",
+            "correct": "Seleccionar lectores con capacidad crítica constructiva y real interés",
+            "explanation": "Obtener retroalimentación útil sin dañar la confianza del escritor"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "En busca del editor ausente",
+            "sectionId": "CHAPTER_10"
+          },
+          "priority": 7,
+          "autofix": false,
+          "created_at": "2025-09-24T21:08:38.876Z",
+          "updated_at": "2025-09-24T21:08:38.876Z"
+        },
+        {
+          "id": "JOURNALISM_RULE_005",
+          "category": "editing",
+          "name": "Supervisión y edición profesional",
+          "description": "Implementar revisión formal de textos por un editor independiente",
+          "severity": "error",
+          "detection": {
+            "type": "ai",
+            "confidence": 0.9,
+            "pattern": "editor independiente|supervisión formal"
+          },
+          "examples": {
+            "incorrect": "Publicar textos sin revisión profesional externa",
+            "correct": "Usar un editor imparcial que detecte inconsistencias y mejore el texto",
+            "explanation": "Garantizar calidad, coherencia y rigor periodístico"
+          },
+          "source": {
+            "publication": "Escritura Transparente - Chapters 4-10",
+            "section": "En busca del editor ausente",
+            "sectionId": "CHAPTER_10"
+          },
+          "priority": 9,
+          "autofix": false,
+          "created_at": "2025-09-24T21:08:38.876Z",
+          "updated_at": "2025-09-24T21:08:38.876Z"
+        }
+      ]
+    }
+  },
+  "allRules": [
+    {
+      "id": "BRIEF_RULE_001",
+      "category": "structure",
+      "name": "Longitud de breves periodísticos",
+      "description": "Los breves deben tener entre 60 y 65 palabras para no sacrificar datos esenciales",
+      "severity": "recommendation",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "breve.*palabras"
+      },
+      "examples": {
+        "incorrect": "Breve con menos de 60 palabras que deja dudas al lector",
+        "correct": "Breve de 62 palabras que incluye los datos principales de la noticia",
+        "explanation": "Permite proporcionar información completa sin cansar al lector"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "Las fuerzas de choque",
+        "sectionId": "CHAPTER_4"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T21:06:57.687Z",
+      "updated_at": "2025-09-24T21:06:57.687Z"
+    },
+    {
+      "id": "BRIEF_RULE_002",
+      "category": "structure",
+      "name": "Estructura de breves periodísticos",
+      "description": "Un breve debe comenzar con un epígrafe seguido de un titular corto, sin repeticiones",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.9,
+        "pattern": "epígrafe.*titular"
+      },
+      "examples": {
+        "incorrect": "Titular que repite información del epígrafe",
+        "correct": "Epígrafe 'Política' + Titular 'Nuevas elecciones anunciadas'",
+        "explanation": "Evita redundancia y maximiza información en poco espacio"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "Las fuerzas de choque",
+        "sectionId": "CHAPTER_4"
+      },
+      "priority": 9,
+      "autofix": false,
+      "created_at": "2025-09-24T21:06:57.687Z",
+      "updated_at": "2025-09-24T21:06:57.687Z"
+    },
+    {
+      "id": "REPORTING_RULE_001",
+      "category": "style",
+      "name": "Entradilla de reportajes",
+      "description": "Usar soft lead o entradilla indirecta para captar la atención del lector de manera interesante",
+      "severity": "recommendation",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "soft lead|entradilla.*indirecta"
+      },
+      "examples": {
+        "incorrect": "Entrada directa con datos estadísticos",
+        "correct": "Entrada con escena descriptiva o anécdota personal",
+        "explanation": "Genera interés y compromete al lector desde el principio"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "Las fuerzas de choque",
+        "sectionId": "CHAPTER_4"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T21:06:57.687Z",
+      "updated_at": "2025-09-24T21:06:57.687Z"
+    },
+    {
+      "id": "REPORTING_RULE_002",
+      "category": "clarity",
+      "name": "Enfoque narrativo de reportajes",
+      "description": "Un reportaje debe transmitir una única idea principal, simplificando temas complejos",
+      "severity": "recommendation",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.8,
+        "pattern": "una.*idea|hilo.*conductor"
+      },
+      "examples": {
+        "incorrect": "Reportaje con múltiples ideas desconectadas",
+        "correct": "Reportaje que desarrolla un solo concepto central",
+        "explanation": "Facilita la comprensión del lector y mantiene el enfoque"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "Las fuerzas de choque",
+        "sectionId": "CHAPTER_4"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T21:06:57.687Z",
+      "updated_at": "2025-09-24T21:06:57.687Z"
+    },
+    {
+      "id": "REPORTING_RULE_003",
+      "category": "attribution",
+      "name": "Imparcialidad en reportajes",
+      "description": "Incluir perspectivas de diferentes partes, incluso de quienes disienten",
+      "severity": "recommendation",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "opiniones.*diferentes|perspectivas.*contrastadas"
+      },
+      "examples": {
+        "incorrect": "Reportaje con una sola perspectiva",
+        "correct": "Reportaje que incluye opiniones de partes involucradas",
+        "explanation": "Demuestra exhaustividad y profesionalismo periodístico"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "Las fuerzas de choque",
+        "sectionId": "CHAPTER_4"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T21:06:57.687Z",
+      "updated_at": "2025-09-24T21:06:57.687Z"
+    },
+    {
+      "id": "RULE_001",
+      "category": "content",
+      "name": "Una noticia, una idea central",
+      "description": "Un reportaje solo debe comunicar una idea principal",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "múltiples espaguetis narrativos"
+      },
+      "examples": {
+        "incorrect": "Mezclar múltiples temas sin un hilo conductor claro",
+        "correct": "Enfocar el reportaje como un hilo narrativo único",
+        "explanation": "Evitar dispersar la atención del lector"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "El amigo americano",
+        "sectionId": "CHAPTER_5"
+      },
+      "priority": 9,
+      "autofix": false,
+      "created_at": "2025-09-24T21:07:15.117Z",
+      "updated_at": "2025-09-24T21:07:15.117Z"
+    },
+    {
+      "id": "RULE_002",
+      "category": "style",
+      "name": "Entradilla impactante",
+      "description": "La primera parte del artículo debe provocar interés y sorpresa",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.9,
+        "pattern": "primer párrafo provocador"
+      },
+      "examples": {
+        "incorrect": "Entradillas planas y burocráticas",
+        "correct": "Comenzar con un detalle sorprendente o emotivo",
+        "explanation": "Enganchar al lector desde el primer párrafo"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "El amigo americano",
+        "sectionId": "CHAPTER_5"
+      },
+      "priority": 10,
+      "autofix": false,
+      "created_at": "2025-09-24T21:07:15.117Z",
+      "updated_at": "2025-09-24T21:07:15.117Z"
+    },
+    {
+      "id": "RULE_003",
+      "category": "structure",
+      "name": "Teoría Unificada de Comienzos (TUCAP)",
+      "description": "Estructura de tres bloques en la entrada del artículo",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "tres bloques narrativos"
+      },
+      "examples": {
+        "incorrect": "Entradas sin estructura narrativa clara",
+        "correct": "1) Dato interesante, 2) Ampliación, 3) Voz experta",
+        "explanation": "Mantener el interés del lector progresivamente"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "El amigo americano",
+        "sectionId": "CHAPTER_5"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T21:07:15.117Z",
+      "updated_at": "2025-09-24T21:07:15.117Z"
+    },
+    {
+      "id": "RULE_004",
+      "category": "content",
+      "name": "Información completa",
+      "description": "Responder siempre a las 5W (quién, qué, cuándo, dónde, por qué)",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "preguntas sin responder"
+      },
+      "examples": {
+        "incorrect": "Reportajes con información incompleta",
+        "correct": "Cubrir todos los aspectos fundamentales de la noticia",
+        "explanation": "Proporcionar contexto y detalles esenciales"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "El amigo americano",
+        "sectionId": "CHAPTER_5"
+      },
+      "priority": 10,
+      "autofix": false,
+      "created_at": "2025-09-24T21:07:15.117Z",
+      "updated_at": "2025-09-24T21:07:15.117Z"
+    },
+    {
+      "id": "RULE_005",
+      "category": "style",
+      "name": "Evitar citas directas como entrada",
+      "description": "No comenzar artículos con citas textuales",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.7,
+        "pattern": "primera frase entrecomillada"
+      },
+      "examples": {
+        "incorrect": "Abrir noticia con comillas sin contexto",
+        "correct": "Introducir contexto antes de cualquier cita",
+        "explanation": "Las citas pueden desorientar al lector"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "El amigo americano",
+        "sectionId": "CHAPTER_5"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T21:07:15.117Z",
+      "updated_at": "2025-09-24T21:07:15.117Z"
+    },
+    {
+      "id": "RULE_006",
+      "category": "style",
+      "name": "Final memorable",
+      "description": "Concluir el artículo con una frase brillante o significativa",
+      "severity": "suggestion",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.65,
+        "pattern": "última frase impactante"
+      },
+      "examples": {
+        "incorrect": "Terminar sin punto culminante",
+        "correct": "Cerrar con un detalle revelador o irónico",
+        "explanation": "Dejar una impresión duradera en el lector"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "El amigo americano",
+        "sectionId": "CHAPTER_5"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T21:07:15.117Z",
+      "updated_at": "2025-09-24T21:07:15.117Z"
+    },
+    {
+      "id": "RULE_001",
+      "category": "clarity",
+      "name": "Preferir palabras cortas",
+      "description": "Usar palabras cortas y simples en lugar de términos complejos o extensos",
+      "severity": "suggestion",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "palabras largas/complejas"
+      },
+      "examples": {
+        "incorrect": "utilización, considerable, esquema",
+        "correct": "uso, grande, mapa",
+        "explanation": "Las palabras cortas facilitan la comprensión y llegan a más lectores"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "Pensando en el lector",
+        "sectionId": "CHAPTER_6"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T21:07:30.375Z",
+      "updated_at": "2025-09-24T21:07:30.375Z"
+    },
+    {
+      "id": "RULE_002",
+      "category": "structure",
+      "name": "Estructura de párrafos: de lo general a lo específico",
+      "description": "Desarrollar ideas en párrafos comenzando con una afirmación general y avanzando hacia detalles específicos",
+      "severity": "suggestion",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.8,
+        "pattern": "párrafos con estructura general-específico"
+      },
+      "examples": {
+        "incorrect": "Comenzar directamente con un detalle sin contexto",
+        "correct": "Iniciar con afirmación general, luego aportar ejemplos, estadísticas o declaraciones de expertos",
+        "explanation": "Facilita la comprensión gradual del tema"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "Pensando en el lector",
+        "sectionId": "CHAPTER_6"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T21:07:30.375Z",
+      "updated_at": "2025-09-24T21:07:30.375Z"
+    },
+    {
+      "id": "RULE_003",
+      "category": "style",
+      "name": "Uso estratégico de citas directas",
+      "description": "No abusar de citas textuales, usar solo declaraciones más llamativas y elocuentes",
+      "severity": "suggestion",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "citas directas extensas"
+      },
+      "examples": {
+        "incorrect": "Citar largos fragmentos literales de entrevistados",
+        "correct": "Parafrasear información básica y usar comillas solo para frases reveladoras",
+        "explanation": "Mantiene la inmediatez y fuerza de la información"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "Pensando en el lector",
+        "sectionId": "CHAPTER_6"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T21:07:30.375Z",
+      "updated_at": "2025-09-24T21:07:30.375Z"
+    },
+    {
+      "id": "RULE_004",
+      "category": "clarity",
+      "name": "Explicar términos técnicos",
+      "description": "Aclarar términos especializados con descripciones breves comprensibles para lectores generales",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.9,
+        "pattern": "términos técnicos sin contexto"
+      },
+      "examples": {
+        "incorrect": "Mencionar 'tasa Tobin' sin explicación",
+        "correct": "Tasa Tobin: un impuesto minúsculo a transacciones financieras",
+        "explanation": "Evita que lectores se pierdan por jerga técnica"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "Pensando en el lector",
+        "sectionId": "CHAPTER_6"
+      },
+      "priority": 9,
+      "autofix": false,
+      "created_at": "2025-09-24T21:07:30.375Z",
+      "updated_at": "2025-09-24T21:07:30.375Z"
+    },
+    {
+      "id": "RULE_005",
+      "category": "structure",
+      "name": "Transiciones entre párrafos",
+      "description": "Usar palabras de transición y mantener conexión lógica entre ideas",
+      "severity": "suggestion",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.7,
+        "pattern": "conectores entre párrafos"
+      },
+      "examples": {
+        "incorrect": "Cambios abruptos entre párrafos sin conexión",
+        "correct": "Usar palabras como 'sin embargo', 'por otra parte', 'además'",
+        "explanation": "Ayuda al lector a seguir el hilo narrativo"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "Pensando en el lector",
+        "sectionId": "CHAPTER_6"
+      },
+      "priority": 5,
+      "autofix": false,
+      "created_at": "2025-09-24T21:07:30.375Z",
+      "updated_at": "2025-09-24T21:07:30.375Z"
+    },
+    {
+      "id": "EDIT_RULE_001",
+      "category": "clarity",
+      "name": "Evitar frases largas y complejas",
+      "description": "Reducir extensión de oraciones para mejorar legibilidad",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "oraciones > 30 palabras"
+      },
+      "examples": {
+        "incorrect": "Una frase de 62 palabras con múltiples incisos y construcciones rebuscadas",
+        "correct": "Frase concisa y directa que transmite la información esencial",
+        "explanation": "Frases más cortas facilitan la comprensión del lector"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "La vieja dama y el nuevo editor",
+        "sectionId": "CHAPTER_8"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T21:08:07.858Z",
+      "updated_at": "2025-09-24T21:08:07.858Z"
+    },
+    {
+      "id": "EDIT_RULE_002",
+      "category": "style",
+      "name": "Priorizar verbos sobre sustantivos",
+      "description": "Usar verbos en lugar de nominalización para dar dinamismo",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "sustantivos abstractos innecesarios"
+      },
+      "examples": {
+        "incorrect": "Hacer una comunicación de la suspensión",
+        "correct": "Comunicar la suspensión",
+        "explanation": "Los verbos dan más dinamismo y claridad al texto"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "La vieja dama y el nuevo editor",
+        "sectionId": "CHAPTER_8"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T21:08:07.858Z",
+      "updated_at": "2025-09-24T21:08:07.858Z"
+    },
+    {
+      "id": "EDIT_RULE_003",
+      "category": "editing",
+      "name": "Leer el texto en voz alta",
+      "description": "Revisar el texto leyéndolo en voz alta para detectar errores",
+      "severity": "suggestion",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.8,
+        "pattern": "lectura en voz alta"
+      },
+      "examples": {
+        "incorrect": "Texto no revisado con frases artificiosas",
+        "correct": "Texto fluido y natural tras lectura en voz alta",
+        "explanation": "Ayuda a detectar repeticiones, frases poco naturales y errores"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "La vieja dama y el nuevo editor",
+        "sectionId": "CHAPTER_8"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T21:08:07.858Z",
+      "updated_at": "2025-09-24T21:08:07.858Z"
+    },
+    {
+      "id": "EDIT_RULE_004",
+      "category": "structure",
+      "name": "Información más importante al inicio",
+      "description": "Colocar los datos más relevantes en los primeros párrafos",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.82,
+        "pattern": "información principal no está al inicio"
+      },
+      "examples": {
+        "incorrect": "Información clave oculta en párrafos posteriores",
+        "correct": "Primer párrafo con datos principales de la noticia",
+        "explanation": "Captura la atención del lector y transmite lo esencial rápidamente"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "La vieja dama y el nuevo editor",
+        "sectionId": "CHAPTER_8"
+      },
+      "priority": 9,
+      "autofix": false,
+      "created_at": "2025-09-24T21:08:07.858Z",
+      "updated_at": "2025-09-24T21:08:07.858Z"
+    },
+    {
+      "id": "EDIT_RULE_005",
+      "category": "editing",
+      "name": "Eliminación de redundancias",
+      "description": "Suprimir información repetitiva o innecesaria",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "frases o palabras repetidas"
+      },
+      "examples": {
+        "incorrect": "Las ventas han respondido aun cuando la revista ha sido vendida",
+        "correct": "La revista vendió más de 10.000 ejemplares en papel",
+        "explanation": "Cada palabra debe aportar información única"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "La vieja dama y el nuevo editor",
+        "sectionId": "CHAPTER_8"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T21:08:07.858Z",
+      "updated_at": "2025-09-24T21:08:07.858Z"
+    },
+    {
+      "id": "SECTION_RULE_001",
+      "category": "style",
+      "name": "Longitud de frases",
+      "description": "Evitar frases excesivamente largas, preferiblemente menos de 50 palabras",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "frases con más de 50 palabras"
+      },
+      "examples": {
+        "incorrect": "Frase de 62 palabras que hace difícil la comprensión del texto",
+        "correct": "Frases concisas y directas que no superen las 30-40 palabras",
+        "explanation": "Frases largas dificultan la lectura y comprensión del texto periodístico"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "Algo más ambicioso",
+        "sectionId": "CHAPTER_9"
+      },
+      "priority": 9,
+      "autofix": false,
+      "created_at": "2025-09-24T21:08:22.457Z",
+      "updated_at": "2025-09-24T21:08:22.457Z"
+    },
+    {
+      "id": "SECTION_RULE_002",
+      "category": "style",
+      "name": "Priorizar verbos sobre sustantivos",
+      "description": "Usar verbos en lugar de sustantivos para dar dinamismo al texto",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.8,
+        "pattern": "sustantivos abstractos"
+      },
+      "examples": {
+        "incorrect": "Uso de sustantivos como 'suspensión de militancia'",
+        "correct": "Usar verbos directos como 'suspender' o 'expulsar'",
+        "explanation": "Los verbos dan más dinamismo y claridad al texto periodístico"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "Algo más ambicioso",
+        "sectionId": "CHAPTER_9"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T21:08:22.457Z",
+      "updated_at": "2025-09-24T21:08:22.457Z"
+    },
+    {
+      "id": "SECTION_RULE_003",
+      "category": "clarity",
+      "name": "Evitar redundancias",
+      "description": "Eliminar información repetitiva o innecesaria en el texto",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "frases o conceptos repetidos"
+      },
+      "examples": {
+        "incorrect": "Repetir frases como 'hechos que motivaron el expediente'",
+        "correct": "Mencionar la información una sola vez de manera concisa",
+        "explanation": "Las redundancias cansan al lector y restan claridad"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "Algo más ambicioso",
+        "sectionId": "CHAPTER_9"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T21:08:22.457Z",
+      "updated_at": "2025-09-24T21:08:22.457Z"
+    },
+    {
+      "id": "SECTION_RULE_004",
+      "category": "structure",
+      "name": "Uso de transiciones",
+      "description": "Utilizar transiciones efectivas entre párrafos para mejorar el flujo",
+      "severity": "suggestion",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.7,
+        "pattern": "conectores y frases de transición"
+      },
+      "examples": {
+        "incorrect": "Cambios abruptos entre párrafos sin conexión",
+        "correct": "Usar transiciones como 'En ese documento', 'Además'",
+        "explanation": "Las buenas transiciones facilitan la lectura y comprensión"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "Algo más ambicioso",
+        "sectionId": "CHAPTER_9"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T21:08:22.457Z",
+      "updated_at": "2025-09-24T21:08:22.457Z"
+    },
+    {
+      "id": "SECTION_RULE_005",
+      "category": "attribution",
+      "name": "Citas textuales",
+      "description": "Comprimir citas usando corchetes y puntos suspensivos sin alterar el sentido",
+      "severity": "suggestion",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "citas directas largas"
+      },
+      "examples": {
+        "incorrect": "Citas textuales extensas que saturan el texto",
+        "correct": "Citas comprimidas con [...] entre corchetes",
+        "explanation": "Permite mantener la esencia de la cita sin cansar al lector"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "Algo más ambicioso",
+        "sectionId": "CHAPTER_9"
+      },
+      "priority": 5,
+      "autofix": false,
+      "created_at": "2025-09-24T21:08:22.457Z",
+      "updated_at": "2025-09-24T21:08:22.457Z"
+    },
+    {
+      "id": "WRITING_RULE_001",
+      "category": "writing_process",
+      "name": "Planificación previa a la escritura",
+      "description": "Antes de escribir, definir claramente la motivación y objetivo del proyecto",
+      "severity": "recommendation",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "planificación|motivación"
+      },
+      "examples": {
+        "incorrect": "Comenzar a escribir sin rumbo ni propósito claro",
+        "correct": "Anotar qué atrae del proyecto para mantener motivación",
+        "explanation": "Ayuda a mantener el enfoque y superar momentos de desmotivación"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "En busca del editor ausente",
+        "sectionId": "CHAPTER_10"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T21:08:38.876Z",
+      "updated_at": "2025-09-24T21:08:38.876Z"
+    },
+    {
+      "id": "EDITING_RULE_002",
+      "category": "editing",
+      "name": "Eliminación de contenido poco relevante",
+      "description": "Estar dispuesto a eliminar frases o secciones brillantes que no contribuyan al texto global",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.8,
+        "pattern": "matar a tus bebés|eliminar"
+      },
+      "examples": {
+        "incorrect": "Mantener párrafos atractivos pero innecesarios",
+        "correct": "Eliminar secciones que no añaden valor, aunque sean interesantes",
+        "explanation": "Priorizar la claridad y coherencia del texto sobre brillantez individual"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "En busca del editor ausente",
+        "sectionId": "CHAPTER_10"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T21:08:38.876Z",
+      "updated_at": "2025-09-24T21:08:38.876Z"
+    },
+    {
+      "id": "WRITING_RULE_003",
+      "category": "writing_technique",
+      "name": "Escritura diaria y consistencia",
+      "description": "Escribir todos los días para mantener el ritmo, sin agotarse completamente",
+      "severity": "recommendation",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "escribir todos los días|ritmo"
+      },
+      "examples": {
+        "incorrect": "Escribir hasta el agotamiento total",
+        "correct": "Parar antes de estar completamente exhausto, dejando clara la próxima tarea",
+        "explanation": "Facilita el inicio de la escritura al día siguiente"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "En busca del editor ausente",
+        "sectionId": "CHAPTER_10"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T21:08:38.876Z",
+      "updated_at": "2025-09-24T21:08:38.876Z"
+    },
+    {
+      "id": "EDITING_RULE_004",
+      "category": "feedback",
+      "name": "Selección cuidadosa de lectores de prueba",
+      "description": "Elegir lectores de prueba con criterio, evitando opiniones no cualificadas o excesivamente críticas",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "lectores antes de entregar|reacciones"
+      },
+      "examples": {
+        "incorrect": "Mostrar el texto a cualquier persona sin discernimiento",
+        "correct": "Seleccionar lectores con capacidad crítica constructiva y real interés",
+        "explanation": "Obtener retroalimentación útil sin dañar la confianza del escritor"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "En busca del editor ausente",
+        "sectionId": "CHAPTER_10"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T21:08:38.876Z",
+      "updated_at": "2025-09-24T21:08:38.876Z"
+    },
+    {
+      "id": "JOURNALISM_RULE_005",
+      "category": "editing",
+      "name": "Supervisión y edición profesional",
+      "description": "Implementar revisión formal de textos por un editor independiente",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.9,
+        "pattern": "editor independiente|supervisión formal"
+      },
+      "examples": {
+        "incorrect": "Publicar textos sin revisión profesional externa",
+        "correct": "Usar un editor imparcial que detecte inconsistencias y mejore el texto",
+        "explanation": "Garantizar calidad, coherencia y rigor periodístico"
+      },
+      "source": {
+        "publication": "Escritura Transparente - Chapters 4-10",
+        "section": "En busca del editor ausente",
+        "sectionId": "CHAPTER_10"
+      },
+      "priority": 9,
+      "autofix": false,
+      "created_at": "2025-09-24T21:08:38.876Z",
+      "updated_at": "2025-09-24T21:08:38.876Z"
+    }
+  ],
+  "statistics": {
+    "totalRulesExtracted": 31,
+    "sectionStats": [
+      {
+        "sectionId": "CHAPTER_4",
+        "title": "Las fuerzas de choque",
+        "rulesCount": 5,
+        "processingTime": 0
+      },
+      {
+        "sectionId": "CHAPTER_5",
+        "title": "El amigo americano",
+        "rulesCount": 6,
+        "processingTime": 0
+      },
+      {
+        "sectionId": "CHAPTER_6",
+        "title": "Pensando en el lector",
+        "rulesCount": 5,
+        "processingTime": 0
+      },
+      {
+        "sectionId": "CHAPTER_7",
+        "title": "El estilo del periodista",
+        "rulesCount": 0,
+        "processingTime": 0
+      },
+      {
+        "sectionId": "CHAPTER_8",
+        "title": "La vieja dama y el nuevo editor",
+        "rulesCount": 5,
+        "processingTime": 0
+      },
+      {
+        "sectionId": "CHAPTER_9",
+        "title": "Algo más ambicioso",
+        "rulesCount": 5,
+        "processingTime": 0
+      },
+      {
+        "sectionId": "CHAPTER_10",
+        "title": "En busca del editor ausente",
+        "rulesCount": 5,
+        "processingTime": 0
+      }
+    ]
+  }
+}

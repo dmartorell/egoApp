@@ -1,0 +1,132 @@
+{
+  "sectionHash": "7380eeec3529fd58ee9b7eb0e3d17489",
+  "rules": [
+    {
+      "id": "LEAD_RULE_001",
+      "category": "structure",
+      "name": "La primera oración es crucial",
+      "description": "La primera oración debe inducir al lector a leer la segunda, y cada oración subsiguiente debe mantener el interés",
+      "severity": "critical",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.92,
+        "pattern": "Primera oración debe ser atractiva"
+      },
+      "examples": {
+        "incorrect": "Un párrafo introductorio plano y sin gancho",
+        "correct": "Inicio con una pregunta provocativa o dato sorprendente que genere curiosidad",
+        "explanation": "Cada oración debe 'jalar' al lector hacia la siguiente"
+      },
+      "source": {
+        "publication": "AI Extracted",
+        "section": "Part II: Methods - The Lead and the Ending"
+      },
+      "priority": 10,
+      "autofix": false,
+      "created_at": "2025-09-24T21:36:36.446Z",
+      "updated_at": "2025-09-24T21:36:36.446Z"
+    },
+    {
+      "id": "LEAD_RULE_002",
+      "category": "style",
+      "name": "Técnicas para un buen inicio",
+      "description": "El lead debe capturar al lector usando: novedad, paradoja, humor, sorpresa, idea inusual, dato interesante o pregunta",
+      "severity": "warning",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.85,
+        "pattern": "Técnicas de apertura creativas"
+      },
+      "examples": {
+        "incorrect": "Inicio directo y sin gancho",
+        "correct": "Comenzar con un dato curioso o pregunta provocativa",
+        "explanation": "Despertar la curiosidad del lector desde el primer momento"
+      },
+      "source": {
+        "publication": "AI Extracted",
+        "section": "Part II: Methods - The Lead and the Ending"
+      },
+      "priority": 8,
+      "autofix": false,
+      "created_at": "2025-09-24T21:36:36.446Z",
+      "updated_at": "2025-09-24T21:36:36.446Z"
+    },
+    {
+      "id": "ENDING_RULE_001",
+      "category": "structure",
+      "name": "Evitar resúmenes obvios",
+      "description": "No terminar con frases como 'En resumen...' o 'Las conclusiones son...' que repiten información ya presentada",
+      "severity": "error",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.78,
+        "pattern": "Frases de resumen estándar"
+      },
+      "examples": {
+        "incorrect": "En suma, podemos concluir que...",
+        "correct": "Finalizar con un pensamiento provocativo o reflexivo que trascienda lo ya dicho",
+        "explanation": "El final debe ser original y mantener el interés del lector"
+      },
+      "source": {
+        "publication": "AI Extracted",
+        "section": "Part II: Methods - The Lead and the Ending"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T21:36:36.446Z",
+      "updated_at": "2025-09-24T21:36:36.446Z"
+    },
+    {
+      "id": "WRITING_RULE_001",
+      "category": "research",
+      "name": "Recopilar más material del necesario",
+      "description": "Siempre recopilar más detalles de los que se utilizarán, para poder elegir los más efectivos",
+      "severity": "suggestion",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.75,
+        "pattern": "Recopilación exhaustiva de información"
+      },
+      "examples": {
+        "incorrect": "Usar solo la información mínima requerida",
+        "correct": "Tener un exceso de material para seleccionar los detalles más impactantes",
+        "explanation": "Permite mayor flexibilidad y calidad en la escritura"
+      },
+      "source": {
+        "publication": "AI Extracted",
+        "section": "Part II: Methods - The Lead and the Ending"
+      },
+      "priority": 6,
+      "autofix": false,
+      "created_at": "2025-09-24T21:36:36.446Z",
+      "updated_at": "2025-09-24T21:36:36.446Z"
+    },
+    {
+      "id": "NARRATIVE_RULE_001",
+      "category": "style",
+      "name": "Usar narrativa para mantener interés",
+      "description": "Contar historias es el método más antiguo y efectivo para mantener la atención del lector",
+      "severity": "suggestion",
+      "detection": {
+        "type": "ai",
+        "confidence": 0.8,
+        "pattern": "Estructura narrativa en la escritura"
+      },
+      "examples": {
+        "incorrect": "Presentación directa de datos sin contexto",
+        "correct": "Introducir información mediante una narración atractiva",
+        "explanation": "Las personas están naturalmente atraídas por historias"
+      },
+      "source": {
+        "publication": "AI Extracted",
+        "section": "Part II: Methods - The Lead and the Ending"
+      },
+      "priority": 7,
+      "autofix": false,
+      "created_at": "2025-09-24T21:36:36.446Z",
+      "updated_at": "2025-09-24T21:36:36.446Z"
+    }
+  ],
+  "extractedAt": "2025-09-24T21:36:36.446Z",
+  "tokensUsed": 41902
+}
