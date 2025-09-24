@@ -1,6 +1,7 @@
 {
   "dependencies": {
     "@anthropic-ai/sdk": "^0.63.1",
+    "@egoapp/shared": "file:../shared",
     "dotenv": "^17.2.2",
     "fs-extra": "^11.3.2",
     "pdf-parse": "^1.1.1"
