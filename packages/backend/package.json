@@ -17,8 +17,7 @@
     "clean": "rm -rf dist .turbo node_modules/.cache"
   },
   "dependencies": {
-    "@anthropic-ai/sdk": "^0.13.1",
-    "fastify": "^4.24.3"
+    "@anthropic-ai/sdk": "^0.13.1"
   },
   "devDependencies": {
     "@types/jest": "^29.5.8",

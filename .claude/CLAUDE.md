@@ -10,7 +10,7 @@ EgoApp is a web application designed to analyze journalistic texts and suggest s
 
 This is a **Turborepo monorepo** with three main packages:
 
-- **@egoapp/backend** - Fastify API server
+- **@egoapp/backend** - Express.js API server
 - **@egoapp/frontend** - React + Vite application
 - **@egoapp/shared** - Shared types and utilities
 
@@ -27,7 +27,7 @@ This is a **Turborepo monorepo** with three main packages:
 - **Monorepo**: Turborepo + Yarn workspaces for unified development
 - **Type Safety**: TypeScript across all packages with shared types
 - **Frontend**: React 18 + Vite for modern development experience
-- **Backend**: Fastify for high-performance API server
+- **Backend**: Express.js for flexible API server
 - **AI Integration**: Anthropic Claude SDK for text analysis
 - **Database Strategy**: PostgreSQL for user data + SQLite for journalism rules
 - **Testing**: Package-specific testing (Jest for backend, Vitest for frontend)
