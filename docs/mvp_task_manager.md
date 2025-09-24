@@ -30,7 +30,7 @@
 
 ### 🔄 DECISION POINT 1: Project Structure
 
-**Decision Required**: Choose repos architecture
+**Decision Required**: Choose repository architecture
 
 #### Option A: Monorepo ⭐ Recommended
 
