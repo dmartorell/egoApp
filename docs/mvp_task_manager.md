@@ -186,19 +186,25 @@ Fallback: Local NLP for basic checks
   - [ ] Structured extraction of style guidelines
   - [ ] Create searchable index
 
+- [ ] Extract rules from "La Escritura Transparente" (PDF in assets/)
+  - [ ] OCR processing if needed
+  - [ ] Focus on clarity and transparency principles
+  - [ ] Extract practical writing guidelines
+
 - [ ] AP Stylebook guidelines
   - [ ] Identify top 50 most relevant rules
   - [ ] Create comparison matrix with Spanish equivalents
 
-- [ ] Fundéu recommendations
+- [ ] Fundeu recommendations
   - [ ] Web scraping of common errors database
   - [ ] Categorize by frequency and severity
 
 - [ ] García Márquez journalism principles
-  - [ ] Extract from "El mejor oficio del mundo"
+  - [ ] Research online sources and articles
   - [ ] Focus on narrative techniques
 
 - [ ] Leñero and Marín manual
+  - [ ] Research available excerpts and summaries
   - [ ] Structure and lead writing rules
   - [ ] Genre-specific guidelines
 
@@ -1197,6 +1203,7 @@ test('complete analysis flow', async () => {
 ### Documentation
 
 - [Manual de estilo de El País](./assets/manual-de-estilo-de-el-pais.pdf)
+- [La Escritura Transparente](./assets/LA_ESCRITURA_TRANSPARENTE.pdf)
 - [AP Stylebook](https://www.apstylebook.com/)
 - [Fundéu](https://www.fundeu.es/)
 
