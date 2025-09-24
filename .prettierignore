@@ -65,6 +65,9 @@ CHANGELOG.html
 .eslintignore
 .prettierignore
 
+# Claude Code configuration
+.claude/
+
 # Binary and media files
 *.png
 *.jpg
