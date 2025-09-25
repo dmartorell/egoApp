@@ -221,3 +221,6 @@ assets/*
 # Exclude research materials during development
 research/temp/
 research/raw/
+
+# Backend cache directory
+packages/backend/data/cache/

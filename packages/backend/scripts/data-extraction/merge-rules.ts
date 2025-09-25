@@ -13,10 +13,12 @@ interface MergerOptions {
 interface ExtractedRulesData {
   source: {
     name: string;
-    extractedAt: string;
+    extractedAt?: string;
+    documentId?: string;
   };
   rules?: JournalismRule[];
-  all_rules?: JournalismRule[];
+  allRules?: JournalismRule[];
+  all_rules?: JournalismRule[]; // Legacy support
 }
 
 class RuleMerger {
@@ -284,10 +286,14 @@ async function mergeExtractedRules(): Promise<void> {
     // Load extracted rules from different sources
     console.log('📖 Loading extracted rules...');
 
-    const elPaisPath = path.join(dataDir, 'el-pais-rules.json');
+    const elPaisPath = path.join(dataDir, 'el-pais-toc-guided-rules.json');
     const transparentePath = path.join(
       dataDir,
-      'escritura-transparente-rules.json'
+      'escritura-transparente-toc-guided-rules.json'
+    );
+    const onWritingWellPath = path.join(
+      dataDir,
+      'on-writing-well-toc-guided-rules.json'
     );
 
     const sources: {
@@ -299,14 +305,14 @@ async function mergeExtractedRules(): Promise<void> {
     // Load El País rules if available
     if (await fs.pathExists(elPaisPath)) {
       const elPaisData: ExtractedRulesData = await fs.readJSON(elPaisPath);
+      const rules =
+        elPaisData.allRules || elPaisData.all_rules || elPaisData.rules || [];
       sources.push({
         name: 'El País',
         data: elPaisData,
-        rules: elPaisData.rules || [],
+        rules,
       });
-      console.log(
-        `📄 Loaded ${elPaisData.rules?.length || 0} rules from El País`
-      );
+      console.log(`📄 Loaded ${rules.length} rules from El País`);
     } else {
       console.warn('⚠️  El País rules not found, skipping...');
     }
@@ -315,16 +321,40 @@ async function mergeExtractedRules(): Promise<void> {
     if (await fs.pathExists(transparentePath)) {
       const transparenteData: ExtractedRulesData =
         await fs.readJSON(transparentePath);
+      const rules =
+        transparenteData.allRules ||
+        transparenteData.all_rules ||
+        transparenteData.rules ||
+        [];
       sources.push({
         name: 'Escritura Transparente',
         data: transparenteData,
-        rules: transparenteData.all_rules || transparenteData.rules || [],
+        rules,
       });
       console.log(
-        `📄 Loaded ${transparenteData.all_rules?.length || transparenteData.rules?.length || 0} rules from Escritura Transparente`
+        `📄 Loaded ${rules.length} rules from Escritura Transparente`
       );
     } else {
       console.warn('⚠️  Escritura Transparente rules not found, skipping...');
+    }
+
+    // Load On Writing Well rules if available
+    if (await fs.pathExists(onWritingWellPath)) {
+      const onWritingWellData: ExtractedRulesData =
+        await fs.readJSON(onWritingWellPath);
+      const rules =
+        onWritingWellData.allRules ||
+        onWritingWellData.all_rules ||
+        onWritingWellData.rules ||
+        [];
+      sources.push({
+        name: 'On Writing Well',
+        data: onWritingWellData,
+        rules,
+      });
+      console.log(`📄 Loaded ${rules.length} rules from On Writing Well`);
+    } else {
+      console.warn('⚠️  On Writing Well rules not found, skipping...');
     }
 
     if (sources.length === 0) {
@@ -340,7 +370,7 @@ async function mergeExtractedRules(): Promise<void> {
     const mergedRules = await merger.merge(ruleArrays, {
       deduplication: true,
       confidence_weighting: true,
-      source_priority: ['el_pais', 'escritura_transparente'],
+      source_priority: ['el_pais', 'escritura_transparente', 'on_writing_well'],
     });
 
     // Validate merged rules
@@ -365,7 +395,7 @@ async function mergeExtractedRules(): Promise<void> {
       merged_at: new Date().toISOString(),
       sources: sources.map(source => ({
         name: source.name,
-        extracted_at: source.data.source?.extractedAt,
+        extracted_at: source.data.source?.extractedAt || 'Unknown',
         rules_count: source.rules.length,
       })),
       validation_result: validationResult,

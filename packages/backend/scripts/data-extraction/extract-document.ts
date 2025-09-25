@@ -1,5 +1,11 @@
 #!/usr/bin/env tsx
 
+import dotenv from 'dotenv';
+import * as path from 'path';
+
+// Load environment variables
+dotenv.config({ path: path.resolve(process.cwd(), '.env') });
+
 import { ToCGuidedExtractor } from '../../src/services/pdf/tocGuidedExtractor.service';
 import { listDocumentIds } from '../../src/config/documents';
 import { elPaisToCConfig } from '../../src/config/toc/el-pais-toc.config';

@@ -29,7 +29,8 @@
       "Bash(yarn lint:fix:*)",
       "Bash(node:*)",
       "Bash(yarn tsc:*)",
-      "Bash(yarn extract:toc-guided:*)"
+      "Bash(yarn extract:toc-guided:*)",
+      "Bash(DISABLE_AI_CACHE=true yarn extract:el-pais)"
     ],
     "deny": [],
     "ask": []
